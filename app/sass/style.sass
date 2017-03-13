@@ -711,6 +711,9 @@ a
   box-shadow: none
   &--size
     width: 100%   
++r(768)
+  .button
+    font: 400 14px/16px $main-open-sans 
 .form
   &__input
     text-align: center
@@ -1117,7 +1120,8 @@ a
       font: 400 18px/27px $main-open-sans
 +comment("condition styles")  
 .condition
-  padding-top: 70px  
+  padding: 70px 0 60px 
+  background-color: #f7f7f7
 .service
   text-align: center
   background-color: #f2f2f2
@@ -1147,6 +1151,8 @@ a
   &__btn
     padding: 20px
 +r(768)  
+  .condition
+    padding: 70px 0 85px
   .service
     padding: 45px
     &__name    
@@ -1159,3 +1165,102 @@ a
       font: 600 24px/30px $main-open-sans
     &__text  
       font: 400 18px/27px $main-open-sans
++comment("scheme styles") 
+.scheme
+  padding: 65px 0    
+  &__subheading
+    color: $color-grey 
+    font: 400 14px/21px $main-open-sans
+    &--span
+      color: $color-orange
+      text-transform: uppercase
+      font-weight: 700
+  &__img
+    text-align: center
+    img
+      display: inline-block
++r(768)   
+  .scheme
+    padding: 85px 0  
+    &__subheading 
+      font: 400 16px/24px $main-open-sans
++r(992)      
+  .scheme
+    &__subheading
+      font: 400 20px/27px $main-open-sans
++comment("table styles")       
+.table-ttx
+  &__image
+    text-align: center
+    img
+      display: inline-block      
++comment("cost styles")    
+.cost
+  padding: 65px 0 75px
+  background: url(../img/cost.jpg) no-repeat
+  background-size: cover
+  &__heading
+    padding-bottom: 45px  
+  &__btn
+    width: 280px  
++r(768) 
+  .cost
+    padding: 100px 0
+    &__heading
+      padding-bottom: 60px
++r(992)    
+  .cost
+    padding: 80px 0 115px
+    &__heading
+      padding-bottom: 50px  
++comment("quality styles")        
+.quality
+  background-color: #f7f7f7
+  padding: 75px 0
+  &__heading
+    margin-bottom: 50px
+  &__text
+    position: absolute
+    width: 100%
+    left: 0
+    top: 100px
+    color: #fff
+    font: 600 16px/24px $main-open-sans
+    padding: 0 5px
+  &__item
+    position: relative
+    text-align: center
+    margin-bottom: 20px
+    &--1
+      background: url(../img/quality1.jpg) no-repeat
+      background-size: cover
+    &--2
+      background: url(../img/quality2.jpg) no-repeat
+      background-size: cover
+    &--3
+      background: url(../img/quality3.jpg) no-repeat
+      background-size: cover
+    &--4
+      background: url(../img/quality4.jpg) no-repeat
+      background-size: cover
++r(768)  
+  .quality
+    padding: 85px 0
+    &__heading
+      margin-bottom: 70px
+    &__text
+      top: 115px
+      padding: 0 15px
+      font: 600 20px/30px $main-open-sans
+    &__item
+      height: 190px
+      margin-bottom: 30px
++r(992)      
+  .quality
+    &__text
+      top: 200px
+      padding: 0 20px
+      font: 600 24px/36px $main-open-sans
+    &__item
+      height: 300px
+     

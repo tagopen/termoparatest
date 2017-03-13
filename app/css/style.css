@@ -225,6 +225,10 @@ a {
   .button--size {
     width: 100%; }
 
+@media only screen and (min-width: 768px) {
+  .button {
+    font: 400 14px/16px "Open Sans", sans-serif; } }
+
 .form__input {
   text-align: center;
   padding: 15px 0;
@@ -652,7 +656,8 @@ a {
 /* C O N D I T I O N    S T Y L E S         */
 /* ---------------------------------------- */
 .condition {
-  padding-top: 70px; }
+  padding: 70px 0 60px;
+  background-color: #f7f7f7; }
 
 .service {
   text-align: center;
@@ -685,6 +690,8 @@ a {
     padding: 20px; }
 
 @media only screen and (min-width: 768px) {
+  .condition {
+    padding: 70px 0 85px; }
   .service {
     padding: 45px; }
     .service__name {
@@ -697,3 +704,116 @@ a {
     font: 600 24px/30px "Open Sans", sans-serif; }
   .service__text {
     font: 400 18px/27px "Open Sans", sans-serif; } }
+
+/* ---------------------------------------- */
+/* S C H E M E    S T Y L E S               */
+/* ---------------------------------------- */
+.scheme {
+  padding: 65px 0; }
+  .scheme__subheading {
+    color: #151515;
+    font: 400 14px/21px "Open Sans", sans-serif; }
+    .scheme__subheading--span {
+      color: #ff5800;
+      text-transform: uppercase;
+      font-weight: 700; }
+  .scheme__img {
+    text-align: center; }
+    .scheme__img img {
+      display: inline-block; }
+
+@media only screen and (min-width: 768px) {
+  .scheme {
+    padding: 85px 0; }
+    .scheme__subheading {
+      font: 400 16px/24px "Open Sans", sans-serif; } }
+
+@media only screen and (min-width: 992px) {
+  .scheme__subheading {
+    font: 400 20px/27px "Open Sans", sans-serif; } }
+
+/* ---------------------------------------- */
+/* T A B L E    S T Y L E S                 */
+/* ---------------------------------------- */
+.table-ttx__image {
+  text-align: center; }
+  .table-ttx__image img {
+    display: inline-block; }
+
+/* ---------------------------------------- */
+/* C O S T    S T Y L E S                   */
+/* ---------------------------------------- */
+.cost {
+  padding: 65px 0 75px;
+  background: url(../img/cost.jpg) no-repeat;
+  background-size: cover; }
+  .cost__heading {
+    padding-bottom: 45px; }
+  .cost__btn {
+    width: 280px; }
+
+@media only screen and (min-width: 768px) {
+  .cost {
+    padding: 100px 0; }
+    .cost__heading {
+      padding-bottom: 60px; } }
+
+@media only screen and (min-width: 992px) {
+  .cost {
+    padding: 80px 0 115px; }
+    .cost__heading {
+      padding-bottom: 50px; } }
+
+/* ---------------------------------------- */
+/* Q U A L I T Y    S T Y L E S             */
+/* ---------------------------------------- */
+.quality {
+  background-color: #f7f7f7;
+  padding: 75px 0; }
+  .quality__heading {
+    margin-bottom: 50px; }
+  .quality__text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100px;
+    color: #fff;
+    font: 600 16px/24px "Open Sans", sans-serif;
+    padding: 0 5px; }
+  .quality__item {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px; }
+    .quality__item--1 {
+      background: url(../img/quality1.jpg) no-repeat;
+      background-size: cover; }
+    .quality__item--2 {
+      background: url(../img/quality2.jpg) no-repeat;
+      background-size: cover; }
+    .quality__item--3 {
+      background: url(../img/quality3.jpg) no-repeat;
+      background-size: cover; }
+    .quality__item--4 {
+      background: url(../img/quality4.jpg) no-repeat;
+      background-size: cover; }
+
+@media only screen and (min-width: 768px) {
+  .quality {
+    padding: 85px 0; }
+    .quality__heading {
+      margin-bottom: 70px; }
+    .quality__text {
+      top: 115px;
+      padding: 0 15px;
+      font: 600 20px/30px "Open Sans", sans-serif; }
+    .quality__item {
+      height: 190px;
+      margin-bottom: 30px; } }
+
+@media only screen and (min-width: 992px) {
+  .quality__text {
+    top: 200px;
+    padding: 0 20px;
+    font: 600 24px/36px "Open Sans", sans-serif; }
+  .quality__item {
+    height: 300px; } }
