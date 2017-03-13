@@ -1,0 +1,1161 @@
+@charset 'UTF-8'
+
+
+// Media Query width
+=r($width)
+  @media only screen and (min-width: $width+ "px")
+    @content
+=rx($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+
+// Media Query height
+=rh($height)
+  @media only screen and (min-height: $height + "px")
+    @content
+=rhx($height)
+  @media only screen and (max-height: $height + "px")
+    @content
+
+// Обрезание текста с 3 точиями
+=text-overflow
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+%pseudo
+  position: relative
+  &:before,&:after
+    content: ' '
+    position: absolute
+    top: 0
+    left: 0
+        
+=pseudo
+  @extend %pseudo
+
+=coverdiv
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+=cover
+  background-size: cover
+
+=contain
+  background-size: contain
+
+=size($width: 100%, $height: 100%)
+  background-size: $width $height
+
+// retina, also available as +hdpi
+=retina
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+    @content
+
+=box
+  +box-sizing(border-box)
+
+// Центрирование блока по горизонтали и по вертикали
+=vcenter
+  position: absolute
+  top: 50%
+  left: 50%
+  +translate(-50%,-50%)
+
+// simple gradient
+=g($color1, $color2)
+  +background-image(linear-gradient($color1, $color2))
+
+=gh($color1, $color2)
+  +background-image(linear-gradient(left, $color1, $color2))
+
+// font-family
+=font($alias, $name, $font-style:normal, $font-weight:normal)
+  @font-face
+    font-family: $alias
+    src: url("../font/" + $name + "/" + $name + ".eot")
+    src: url("../font/" + $name + "/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../font/" + $name + "/" + $name + ".woff2") format("woff2"), url("../font/" + $name + "/" + $name + ".woff") format("woff"), url("../font/" + $name + "/" + $name + ".ttf") format("truetype")
+    font-weight: $font-weight
+    font-style: $font-style
+
+// ROTATE
+=rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0)
+  transform: rotate($deg + deg)
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand')
+  zoom: 1
+
+// TRANSITION
+=transition($what)
+  transition: $what
+
+// TRANSFORM
+=transform($what)
+  transform: $what
+
+// GRAYSCALE
+=grayscale($gray: 100%)
+  filter: grayscale($gray)
+  @if ($gray == 100%)
+    filter: gray /* IE 6-9 */
+  @else
+    filter: none
+
+=tr($what)
+  +transition($what)
+
+=hide-text
+  font: 0/0 a
+  text-shadow: none
+  color: transparent
+
+=hidetext
+  +hide-text
+
+=justify
+  text-align: justify
+  line-height: 0
+  font-size: 0
+  text-justify: newspaper
+  zoom: 1
+  text-align-last: justify
+  &:after
+    content: ""
+    display: inline-block
+    width: 100%
+    height: 0px
+    visibility: hidden
+    overflow: hidden
+=vertical
+  text-align: center
+  font-size: 0
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    width: 0
+    height: 100%
+
+=clr
+  &:after
+    content: " "
+    display: table
+    clear: both
+  *zoom: 1
+
+=placeholder-color($color)
+  &:-moz-placeholder,
+  &::-moz-placeholder
+    color: $color
+    opacity: 1
+  &::-webkit-input-placeholder
+    color: $color
+
+=placeholder
+  &:-ms-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &::-webkit-input-placeholder
+    @content
+  &::placeholder
+    @content
+
+=placeholder-animation
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &:-ms-input-placeholder
+    text-indent: 0px
+    transition: text-indent 0.3s ease
+  &:focus::-webkit-input-placeholder,
+  &:focus::-moz-placeholder,
+  &:focus:-moz-placeholder,
+  &:focus:-ms-input-placeholder      
+    text-indent: 500px
+    transition: text-indent 0.3s ease
+
+
+=unselectable
+  user-select: none
+
+=touchaction($what)
+  touch-action: $what
+
+=nosel
+  +unselectable
+
+=prevent-text
+    -ms-word-break: break-all
+    word-break: break-all
+    word-break: break-word
+    -webkit-hyphens: auto
+    -moz-hyphens: auto
+    hyphens: auto
+
+=font-smoothing($val: antialiased)
+  -webkit-font-smoothing: $val
+  -moz-font-smoothing: $val
+  -ms-font-smoothing: $val
+  -o-font-smoothing: $val
+
+=selection
+  & ::selection
+    @content
+  & ::-moz-selection
+    @content
+
+=sel
+  +selection
+
+=scrollbar
+  &::-webkit-scrollbar
+    @content
+
+=scrollbar-track
+  &::-webkit-scrollbar-track
+    @content
+
+=scrollbar-thumb
+  &::-webkit-scrollbar-thumb
+    @content
+
+=scrollbar-track-piece
+  &::-webkit-scrollbar-track-piece
+    @content
+
+//triangle
+=arr($width, $height, $bg, $direction)
+  width: 0px
+  height: 0px
+  border-style: solid
+  @if $direction == t
+    border-width: 0 $width / 2 + px $height + px $width / 2 + px
+    border-color: transparent transparent $bg transparent
+  @if $direction == r
+    border-width: $height / 2 + px 0 $height / 2 + px $width + px
+    border-color: transparent transparent transparent $bg
+  @if $direction == b
+    border-width: $height + px $width / 2 + px 0 $width / 2 + px
+    border-color: $bg transparent transparent transparent
+  @if $direction == l
+    border-width: $height / 2 + px $width + px $height / 2 + px 0
+    border-color: transparent $bg transparent transparent
+  @if $direction == tl
+    border-width: $height + px $width + px 0 0
+    border-color: $bg transparent transparent transparent
+  @if $direction == tr
+    border-width: 0 $width + px $height + px 0
+    border-color: transparent $bg transparent transparent
+  @if $direction == br
+    border-width: 0 0 $height + px $width + px
+    border-color: transparent transparent $bg transparent
+  @if $direction == bl
+    border-width: $height + px 0 0 $width + px
+    border-color: transparent transparent transparent $bg
+// example
+// +arr(500,50, #000, l)
+// +arr(500,50, #000, bl)
+
+=blur($var)
+  filter: blur($var)
+    
+=scale($var)
+  transform: scale($var)
+
+=counter($var)
+  counter-reset: $var
+  > li, > dt
+    &:before
+      content: counter($var)
+      counter-increment: $var
+
+@function makelongshadow($color)
+  $val: 0px 0px $color
+  @for $i from 1 through 200
+    $val: #{$val}, #{$i}px #{$i}px #{$color}
+  @return $val
+
+=longshadow($color)
+  text-shadow: makelongshadow($color)
+
+=br($radius) 
+  border-radius: $radius
+    
+=bs($bshadow)
+  box-shadow: $bshadow
+
+=ts($string) 
+  text-shadow: $string
+
+=links($link, $visit, $hover, $active)
+  a
+    color: $link
+    &:visited
+      color: $visit
+    &:hover
+      color: $hover
+    &:active
+      color: $active
+            
+=opacity($trans)
+  opacity: $trans
+  filter: alpha(opactiy=($trans * 100))
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})"
+
+=ic
+  .ic
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    &:before
+      content: ''
+      display: inline-block
+      vertical-align: middle
+=ica
+  &:before
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+=debug
+  *
+    outline: 2px dotted red !important
+    *
+      outline: 2px dotted green !important
+      *
+        outline: 2px dotted orange !important
+        *
+          outline: 2px dotted blue !important
+          *
+            outline: 1px solid red !important
+            *
+              outline: 1px solid green !important
+              *
+                outline: 1px solid orange !important
+                *
+                  outline: 1px solid blue !important
+
+@function append-str ($string, $statement)
+  $text: $string + $statement + ' '
+  @return $text
+=comment($text)
+  $string: to_upper_case("#{$text}")
+  $length: str-length($string)
+  $list: ''
+  $separator: ''
+  @for $i from 1 through $length
+    $current_char: str-slice($string, $i, $i)
+    @if $current_char == ' '
+      $list: append-str($list, '  ')
+    @else
+      $list: append-str($list, $current_char)
+
+  $list_length: str-length($list)
+  $separator_length: 40
+  @if $list_length < 40
+    @for $i from 1 through 40 - $list_length
+      $list: append-str($list, '')
+  @else if $list_length < 80
+    $separator_length: $list_length
+  // generate separator line
+  @for $i from 1 through $separator_length
+    $separator: $separator + '-' 
+  /* #{$separator} */
+  /* #{$list}
+  /* #{$separator} */
+
+=cm($comment)
+    /* #{$comment} */
+
+// разъежающий text-decoration с центра в стороны
+=a_text-decoration
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    margin-left: 50%
+    margin-right: 50%
+    height: 2px
+    left: 0
+    right: 0
+    bottom: -12px
+    background-color: #3949ab
+    +transition(all .3s ease-out)
+  &:hover
+    &:before
+      margin-left: 0
+      margin-right: 0
+// Выезжающий text-decoration с лева на право
+=a_text-decoration-left
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    width: 0
+    height: 2px
+    left: 0
+    bottom: -12px
+    background-color: #3949ab
+    +transition(all .3s ease-out)
+    &:hover
+      &:before
+        width: 100%
+
+// Выплывающий border !!!!!!!!!Баг со сторонами. Выпадает не с указанной стороны
+=a_border($side: bottom, $border-width: 5, $border-color: #ff8c00)
+  $direction: #{0 -$border-width + 'px'}
+  @switch $side
+    @when top
+      $direction: #{0 $border-width + 'px'}
+    @when right
+      $direction: #{$border-width + 'px' 0}
+    @when bottom
+      $direction: #{0 -$border-width + 'px'}
+    @when left
+      $direction: #{-$border-width + 'px' 0}
+
+  +transition(all .3s ease-out)
+  &:hover
+    +bs(inset $direction $border-color)
+
+
+// Requires SASS syntax and not SCSS in order to work (sass 3.2 ?)
+// Experimental support is scoped within keyframes so for instance -moz-keyframes won't contain -webkit- properties
+
+
+// Mixin to set every support to false
+=reset-experimental-support
+  $experimental-support-for-mozilla: false
+  $experimental-support-for-webkit: false
+  $experimental-support-for-opera: false
+  $experimental-support-for-microsoft: false
+  $experimental-support-for-khtml: false
+
+
+=keyframes($name, $moz: $experimental-support-for-mozilla, $webkit: $experimental-support-for-webkit, $o: $experimental-support-for-opera, $ms: $experimental-support-for-microsoft, $khtml: $experimental-support-for-khtml, $official: true)
+
+  // Save support
+  $original-experimental-support-for-mozilla:   $experimental-support-for-mozilla
+  $original-experimental-support-for-webkit:    $experimental-support-for-webkit
+  $original-experimental-support-for-opera:     $experimental-support-for-opera
+  $original-experimental-support-for-microsoft: $experimental-support-for-microsoft
+  $original-experimental-support-for-khtml:     $experimental-support-for-khtml
+
+  @if $moz
+    +reset-experimental-support
+    $experimental-support-for-mozilla: true
+
+    @-moz-keyframes #{$name}
+      @content
+
+
+  @if $webkit
+
+    +reset-experimental-support
+    $experimental-support-for-webkit: true
+
+    @-webkit-keyframes #{$name}
+      @content
+
+  @if $o
+
+    +reset-experimental-support
+    $experimental-support-for-opera: true
+
+    @-o-keyframes #{$name}
+      @content
+
+  @if $ms
+
+    +reset-experimental-support
+    $experimental-support-for-microsoft: true
+
+    @-ms-keyframes #{$name}
+      @content
+
+  @if $khtml
+
+    +reset-experimental-support
+    $experimental-support-for-khtml: true
+
+    @-khtml-keyframes #{$name}
+      @content
+
+  // Restore support
+  $experimental-support-for-mozilla:   $original-experimental-support-for-mozilla
+  $experimental-support-for-webkit:    $original-experimental-support-for-webkit
+  $experimental-support-for-opera:     $original-experimental-support-for-opera
+  $experimental-support-for-microsoft: $original-experimental-support-for-microsoft
+  $experimental-support-for-khtml:     $original-experimental-support-for-khtml
+
+  @if $official
+    @keyframes #{$name}
+      @content
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$preloader-bg: #ff5800
+$preloader-color: #fff
+
+$font-font-awesome: 'FontAwesome'
+$font-sans-serif: sans-serif
+$main-open-sans: 'Open Sans', sans-serif
+
+//== Buttons
+//
+//## For each buttons, define text, background and border color.
+
+$btn-default-color: #333
+$btn-default-bg: #da4b00
+$btn-default-border: #ccc
+$color-grey: #151515
+$color-orange: #ff5800
+
+// @import base/reset
++comment('preloader styles')
+.loaded #loading
+  display: block
+#loading
+  position: fixed
+  display: none
+  background-color: $preloader-bg
+  height: 100%
+  width: 100%
+  margin-top: 0px
+  top: 0px
+  z-index: 9999
+#loading-center
+  width: 100%
+  height: 100%
+  position: relative
+#loading-center-absolute
+  position: absolute
+  left: 50%
+  top: 50%
+  height: 200px
+  width: 200px
+  margin-top: -100px
+  margin-left: -100px
+  transform: rotate(-135deg)
+.object
+  border-radius: 50% 50% 50% 50%
+  position: absolute
+  border-top: 5px solid $preloader-color
+  border-bottom: 5px solid transparent
+  border-left: 5px solid $preloader-color
+  border-right: 5px solid transparent
+  animation: animate 2s infinite
+#object_one
+  left: 75px
+  top: 75px
+  width: 50px
+  height: 50px
+#object_two
+  left: 65px
+  top: 65px
+  width: 70px
+  height: 70px
+  animation-delay: 0.2s
+#object_three
+  left: 55px
+  top: 55px
+  width: 90px
+  height: 90px
+  animation-delay: 0.4s
+#object_four
+  left: 45px
+  top: 45px
+  width: 110px
+  height: 110px
+  animation-delay: 0.6s
+@keyframes animate
+  50%
+    transform: rotate(360deg) scale(0.8)
+
+//@import partials/header
+//@import parials/sidebar
+//@import parials/footer
+
+//@import components/navbar-sticky
+//@import components/dropdown-menu
+
++comment('old-browser jReject notification')
+#jr_overlay
+  position: absolute
+  top: 0
+  left: 0
+  margin: 0
+  padding: 0
+  z-index: 2147483646
+#jr_wrap
+  position: absolute
+  margin: 0
+  padding: 0
+  width: 100%
+  z-index: 2147483647
+#jr_header
+  display: block
+  margin: 0
+  margin-bottom: 0.5em
+  padding: 5px
+  padding-bottom: 0
+  font: bold 1.3em/1 Helvetica, Arial, sans-serif
+  color: #333
+#jr_inner
+  position: relative
+  margin: 0 auto
+  padding: 20px
+  height: auto
+  background: #FFF
+  border: 1px solid #CCC
+  color: #4F4F4F
+  font: 400 12px/1"Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif
+  box-sizing: border-box
+  p
+    padding: 5px
+    margin: 0
+  ul
+    margin: 0
+    padding: 0
+    list-style-image: none
+    list-style-position: outside
+    list-style-type: none
+    li
+      margin: 0 10px 10px 10px
+      padding: 0
+      width: 120px
+      height: 122px
+      float: left
+      text-align: center
+      cursor: pointer
+  li
+    a
+      margin: 0
+      padding: 0
+      color: #333
+      font-size: 0.8em
+      text-decoration: none
+      &:hover 
+        text-decoration: underline
+  .jr_icon
+    margin: 1px auto
+    padding: 0
+    width: 100px
+    height: 100px
+    background: transparent no-repeat scroll left top
+    cursor: pointer
+#jr_close
+  margin: 0
+  padding: 0
+  clear: both
+  a
+    display: block
+    margin: 0
+    padding: 0
+    width: auto
+    color: #000
+    text-decoration: underline
+  p
+    margin: 0
+    padding: 10px 0 0 0
+
+//@import vendors/slick
+//@import vendors/slick-theme
+
++comment('general style')
++ic
+.text-danger
+  color: #e74c3c
+  text-align: left
+a
+  outline: none  
+.heading
+  font: 700 20px/30px $main-open-sans
+  color: $color-grey
+  text-align: center
+  margin: 0 0 30px
+  &:after
+    display: block
+    margin: 15px auto 0
+    content: ''
+    height: 5px
+    width: 100px
+    background-color: $color-orange
+  &--color-white
+    color: #fefefe 
++r(768)     
+  .heading
+    font: 700 24px/36px $main-open-sans
++r(992) 
+  .heading
+    font: 700 32px/36px $main-open-sans   
+.button
+  text-align: center
+  color: #fff
+  padding: 15px 0
+  background: $btn-default-bg
+  background-image: linear-gradient(to top, #ff5800 0%, #ff8a4c 100%)
+  font: 400 12px/14px $main-open-sans
+  border: 0
+  box-shadow: none
+  &--size
+    width: 100%   
+.form
+  &__input
+    text-align: center
+    padding: 15px 0
+    color: $color-grey
+    font: 400 12px/14px $main-open-sans     
++comment("home page style")
++comment("header styles")
+.navbar
+  margin-bottom: 20px
+.logo
+  display: inline-block
+  text-align: center
+  &__img
+    display: inline-block
+    margin-bottom: 20px
+  &:hover,
+  &:focus
+    text-decoration: none
+  &__text
+    font: 400 12px/18px $main-open-sans
+    color: $color-grey
+    margin-bottom: 15px
+.contact
+  text-align: center
+  &__number
+    display: block
+    color: $color-grey
+    font: 600 16px/24px $main-open-sans  
+    margin-bottom: 5px  
+    letter-spacing: 1px
+    &:hover,
+    &:focus
+      text-decoration: none
+  &__btn
+    position: relative
+    display: inline-block
+    color:  $color-grey 
+    font: 400 12px/24px $main-open-sans  
+    border-bottom: 1px dashed $color-grey 
+    &:hover,
+    &:focus
+      text-decoration: none
+    &:before
+      display: inline-block
+      position: absolute
+      left: -30px
+      top: 5px
+      content: '\f095'
+      font-family: $font-font-awesome
+      color: $color-orange
+      margin-right: 10px
+      font-size: 12px
+      border: 2px solid $color-orange
+      border-radius: 50%
+      text-align: center
+      height: 18px
+      width: 18px
+      line-height: 16px
+.header
+  padding: 20px 0 80px
+  background: url(../img/bg1-320.jpg) no-repeat
+  background-size: cover
+  &__heading
+    color: $color-grey 
+    font: 700 24px/36px $main-open-sans 
+    margin: 0 0 15px
+    &:after
+      display: block
+      margin: 15px auto 0
+      content: ''
+      height: 5px
+      width: 100px
+      background-color: $color-orange
+  &__subheading  
+    color: $color-grey
+    font: 600 18px/27px $main-open-sans 
+    margin-bottom: 20px
+  &__form-title
+    color: $color-grey 
+    font: 400 14px/21px $main-open-sans 
+    margin-bottom: 15px
++r(768)    
+  .navbar
+    margin-bottom: 75px
+  .logo
+    text-align: left
+    &__text
+      margin-bottom: 0
+  .contact
+    text-align: right
+  .header
+    padding-bottom: 100px
+    background: url(../img/bg1.jpg) no-repeat
+    background-size: cover
+    &__heading
+      font: 700 30px/45px $main-open-sans 
+      &:after
+        display: none
+    &__subheading  
+      font: 600 20px/30px $main-open-sans 
+      &:after
+        display: block
+        margin: 25px auto 0
+        content: ''
+        height: 5px
+        width: 100px
+        background-color: $color-orange
+    &__form-title
+      margin-bottom: 25px    
++r(992)   
+  .header
+    padding-bottom: 115px
+    &__heading
+      font: 700 36px/45px $main-open-sans 
+    &__subheading  
+      font: 600 24px/36px $main-open-sans 
+    &__form-title
+      margin-bottom: 35px  
++comment("intro styles")   
+.intro
+  padding: 60px 0 0
+  background: url(../img/bg2.jpg) no-repeat
+  background-size: cover
+  &__text
+    color: $color-grey
+    font: 400 16px/24px $main-open-sans
+    margin-bottom: 60px
+    color: #fefefe
++r(768)
+  .intro
+    &__col
+      float: right
+    &__heading
+      text-align: left  
+      margin-bottom: 40px
+      &:after
+        margin: 15px 0 0
+    &__text
+      margin-bottom: 40px  
++r(992)      
+  .intro
+    &__text  
+      font: 400 18px/27px $main-open-sans
+      margin-bottom: 50px
++comment("about styles")    
+.about
+  padding: 75px 0   
+  &__box
+    margin-bottom: 20px
+    text-align: center
+    img
+      display: inline-block
+  &__link
+    position: relative
+    display: inline-block   
+  &__info
+    position: absolute
+    bottom: 20px
+    width: 100%
+    text-align: center
+  &__text  
+    display: inline-block
+    color: #fff
+    font: 600 13px/21px $main-open-sans
+    margin-bottom: 0
+    padding: 0 5px
+    &:after
+      display: block
+      margin: 10px auto 0
+      content: ''
+      height: 5px
+      width: 100%
+      background-color: $color-orange
++r(768)  
+  .about
+    &__box
+      position: relative
+      margin-right: -50px
+      margin-bottom: 95px  
+      &--position
+        margin: 60px -50px 30px 0  
+      &--1
+        z-index: 16
+      &--2
+        z-index: 15
+      &--3
+        z-index: 14
+      &--4
+        z-index: 13
+      &--5
+        z-index: 12
+      &--6
+        z-index: 11
+      &--7
+        z-index: 10
+      &--8
+        z-index: 9 
+    &__text    
+      font: 600 16px/21px $main-open-sans  
+      padding: 0 10px
++r(992)     
+  .about
+    &__box
+      &--position
+        margin-top: 90px 
+    &__text    
+      font: 600 18px/21px $main-open-sans  
++comment("sort styles")    
+.sort
+  padding: 50px 0 0
+  &__subheading
+    text-align: center
+    color: $color-grey
+    font: 600 14px/21px $main-open-sans
+    margin-bottom: 45px
+  &__row
+    margin-bottom: 70px  
+.product
+  padding: 15px
+  box-shadow: 2.5px 4.3px 15px rgba(0, 3, 2, 0.25)
+  background-color: #fff
+  margin-bottom: 30px
+  &__name
+    color: $color-grey
+    font: 700 14px/27px $main-open-sans
+    margin-bottom: 20px  
+  &__all
+    display: inline-block
+    color: $color-grey 
+    font: 400 italic 14px/15px $main-open-sans
+    margin-bottom: 10px 
+    &:before
+      content: '\f101 '
+      font-family: $font-font-awesome
+      display: inline-block
+      margin-right: 5px
+      font-style: normal
+      color: $color-orange
+  &__status  
+    color: $color-grey 
+    font: 400 italic 12px/15px $main-open-sans
+    margin-bottom: 10px
+  &__btn-group
+    margin-bottom: 20px  
+  &__radio
+    display: inline-block
+    margin: 0
+    &-label
+      padding-left: 0
+    &-input
+      display: none              
+    &-icon  
+      position: relative
+      display: inline-block
+      height: 16px
+      width: 16px
+      margin-bottom: -4px
+      margin-right: 5px
+      border: 1px solid rgba(255, 88, 0, 0.4)
+      background-color: #fff
+      &:before 
+        content: ''
+        border-radius: inherit
+        height: 16px
+        width: 16px
+        position: absolute
+        left: 0
+        top: 0  
+      &--black
+        &:before
+          background-color: #000   
+  &__btn
+    width: 100%        
+  &__image
+    display: inline-block        
+.price
+  margin-bottom: 15px
+  &:after
+    display: block
+    margin: 8px 0 0
+    content: ''
+    height: 3px
+    width: 45px
+    background-color: $color-orange
+  &__text  
+    color: $color-grey 
+    font: 400 12px/16px $main-open-sans 
+    margin-bottom: 10px  
+  &__old  
+    font: 400 14px/16px $main-open-sans 
+    text-decoration: line-through
+  &__new
+    color: $color-orange 
+    font: 700 14px/16px $main-open-sans 
+  &__discount  
+    color: $color-orange 
+    font: 600 14px/16px $main-open-sans  
+.description
+  margin-bottom: 15px
+  &__item
+    color: $color-grey 
+    font: 400 10px/15px $main-open-sans
+    margin-bottom: 5px
+  &__text
+    font-weight: 600   
++r(768)  
+  .sort
+    &__subheading
+      font: 600 16px/24px $main-open-sans
+      margin-bottom: 75px
+    &__row
+      margin-bottom: 100px  
+  .product
+    &__name    
+      font: 700 16px/27px $main-open-sans  
+    &__btn
+      width: 130px  
+  .price
+    &__text  
+      font: 400 14px/16px $main-open-sans 
+    &__old  
+      font: 400 16px/16px $main-open-sans 
+    &__new
+      font: 700 16px/16px $main-open-sans 
+    &__discount  
+      font: 600 16px/16px $main-open-sans  
+  .description
+    &__item   
+      font: 400 12px/15px $main-open-sans          
++r(992)  
+  .sort
+    &__subheading
+      font: 600 18px/27px $main-open-sans
+  .product
+    &__name    
+      font: 700 18px/27px $main-open-sans 
+    &__btn
+      width: 150px  
+  .price
+    &__text  
+      font: 400 16px/18px $main-open-sans   
+    &__old  
+      font: 400 18px/18px $main-open-sans 
+    &__new
+      font: 700 18px/18px $main-open-sans 
+    &__discount  
+      font: 600 18px/18px $main-open-sans           
++comment("test styles") 
+.test
+  padding: 75px 0
+  background: url(../img/testbg.jpg) no-repeat
+  background-size: cover
+  &__heading
+    margin-bottom: 45px
+  &__subheading
+    text-align: center
+    font: 600 16px/20px $main-open-sans
+    color: $color-grey
+    margin-bottom: 25px
+  &__list
+    padding: 0
+    text-align: center
+  &__item
+    list-style-type: none
+    color: $color-grey
+    font: 400 14px/21px $main-open-sans
+    &:before
+      display: inline-block
+      content: '\f00c' 
+      font-family: 'FontAwesome' 
+      height: 14px
+      width: 14px
+      text-align: center
+      line-height: 12px
+      border-radius: 50%
+      border: 1px solid $color-orange
+      color: $color-orange
+      font-size: 12px
+      margin-right: 10px
+  &__btn
+    display: block
+    margin: 20px auto 0
+    padding: 15px 30px    
++r(768)  
+  .test
+    &__subheading  
+      font: 600 20px/22px $main-open-sans 
+      margin-bottom: 10px 
+    &__item  
+      font: 400 16px/24px $main-open-sans
+      &:before
+        height: 16px
+        width: 16px
+        line-height: 16px
+        font-size: 14px
++r(992)  
+  .test
+    &__heading
+      margin-bottom: 65px  
+    &__subheading
+      margin-bottom: 35px  
+    &__item  
+      font: 400 18px/27px $main-open-sans
++comment("condition styles")  
+.condition
+  padding-top: 70px  
+.service
+  text-align: center
+  background-color: #f2f2f2
+  box-shadow: 7.5px 13px 35px rgba(0, 3, 2, 0.2)
+  margin-bottom: 20px
+  padding: 45px 30px  
+  &__img
+    text-align: center
+    margin-bottom: 20px
+    img
+      display: inline-block 
+  &__name
+    color: $color-grey 
+    font: 600 16px/20px $main-open-sans
+    margin-bottom: 30px
+    &:after
+      content: ''
+      display: block
+      margin: 15px auto 0   
+      height: 3px
+      width: 70px
+      background-color: $color-orange
+  &__text    
+    color: $color-grey 
+    font: 400 14px/21px $main-open-sans
+    margin-bottom: 20px
+  &__btn
+    padding: 20px
++r(768)  
+  .service
+    padding: 45px
+    &__name    
+      font: 600 20px/24px $main-open-sans
+    &__text  
+      font: 400 16px/24px $main-open-sans
++r(992)  
+  .service
+    &__name    
+      font: 600 24px/30px $main-open-sans
+    &__text  
+      font: 400 18px/27px $main-open-sans

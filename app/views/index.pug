@@ -1,0 +1,109 @@
+extends base/_layout.pug
+
+block styles
+
+block scripts
+
+block content
+  header.header
+    include components/_nav.pug
+    .container
+      .row
+        .col-xs-12.col-lg-10.col-lg-offset-1.text-center
+          h1.header__heading Энергосберегающие обогреватели Termoplaza 
+        .col-xs-12.col-sm-8.col-sm-offset-2.text-center  
+          .header__subheading равномерно отапливают все помещение, при этом в 2 раза экономичнее и на 300% эффективнее аналогов
+          .header__form-title Оставьте свой e-mail адрес и получите полный каталог элетроообогревателей TermoPlaza с актуальными ценами на <b>12.02.2017</b>
+        .col-xs-12.col-sm-6.col-sm-offset-3.col-lg-4.col-lg-offset-4  
+          form.clearfix.contactForm(name="Регистрация" method="post" action="mail/mail.php")
+            .form-group.form__group
+              input.form-control.form__input(placeholder="Введите ваш телефон" required="" data-validation-required-message="Please enter your phone number." name="phone" aria-invalid="false" type="tel")
+            .text-center
+              button.btn.button.button--size( data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")      Записаться на просмотр коттеджей
+  section.intro
+    .container
+      .row
+        .col-xs-12.col-sm-7.intro__col   
+          h2.heading.intro__heading.heading--color-white Наиболее эффективный вид обогрева на рынке Украины
+        .col-xs-12.col-sm-5 
+          .intro__image
+            img.img-responsive(src='img/termo1.png' alt='termo1')
+        .col-xs-12.col-sm-7.intro__col 
+          p.intro__text В панелях Termoplaza установлен <b>немецкий обогревательный элемент</b>. Благодаря нему электроэнергия преобразуется в тепло <b>на 300% эффективнее</b>, чем у аналогов
+      .row
+        .col-xs-12.col-sm-7   
+          h2.heading.intro__heading.heading--color-white Пожаробезопасные
+        .col-xs-12.col-sm-5.intro__col 
+          .intro__image
+            img.img-responsive(src='img/termo2.png' alt='termo1')
+        .col-xs-12.col-sm-7
+          p.intro__text Наши панели <b>прошли 31 испытание на безопасность</b>. Это подтверждено множеством сертификатов, которые мы можем предоставить. Обогреватели Termoplaza <b>не оставляют ожогов!</b>
+  section.about
+    .container
+      .row
+        .col-xs-12.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-3
+          h2.heading.about__heading В каких случаях используют панели Termoplaza    
+      .row
+        .col-xs-6.col-sm-3
+          .about__box.about__box--1
+            a.about__link(href="#")
+              .about__img
+                img.img-responsive(src='img/about1.jpg' alt='about img')
+                .about__info
+                  p.about__text Как основное отопление 
+        .col-xs-6.col-sm-3
+          .about__box.about__box--2.about__box--position
+            a.about__link(href="#")
+              .about__img
+                img.img-responsive(src='img/about2.jpg' alt='about img')
+                .about__info
+                  p.about__text Как дополнительное отопление  
+        .col-xs-6.col-sm-3
+          .about__box.about__box--3
+            a.about__link(href="#")
+              .about__img
+                img.img-responsive(src='img/about3.jpg' alt='about img')
+                .about__info
+                  p.about__text В офисах
+        .col-xs-6.col-sm-3
+          .about__box.about__box--4.about__box--position
+            a.about__link(href="#")
+              .about__img
+                img.img-responsive(src='img/about4.jpg' alt='about img')
+                .about__info
+                  p.about__text В квартирах
+      .row        
+        .col-xs-6.col-sm-3
+          .about__box.about__box--5
+            a.about__link(href="#")
+              .about__img
+                img.img-responsive(src='img/about5.jpg' alt='about img')
+                .about__info
+                  p.about__text В частном доме
+        .col-xs-6.col-sm-3
+          .about__box.about__box--6.about__box--position
+            a.about__link(href="#")
+              .about__img
+                img.img-responsive(src='img/about6.jpg' alt='about img')
+                .about__info
+                  p.about__text На даче
+        .col-xs-6.col-sm-3
+          .about__box.about__box--7
+            a.about__link(href="#")
+              .about__img 
+                img.img-responsive(src='img/about7.jpg' alt='about img')
+                .about__info
+                  p.about__text На предприятии  
+        .col-xs-6.col-sm-3
+          .about__box.about__box--8.about__box--position
+            a.about__link(href="#")
+              .about__img
+                img.img-responsive(src='img/about8.jpg' alt='about img')
+                .about__info
+                  p.about__text В больших промышленных помещениях     
+  include partials/_sort1.pug  
+  include partials/_sort2.pug  
+  include partials/_test.pug    
+  include partials/_condition.pug 
+  include partials/_sort3.pug                             
+block footer
