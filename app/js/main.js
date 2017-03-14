@@ -37,75 +37,7 @@
   if ($("a.fancyimage").length) {
     $("a.fancyimage").fancybox(); 
   }
-  
-  // Привет верстальщику
-  $(function () {
-    var count = 0;
 
-    $('.test__btn--egg').on('mouseover', function (e) {
-      var ink = $(this),
-          inkX = ink.offset().left,
-          inkY = ink.offset().top,
-          inkW = ink.width(),
-          inkH = ink.height(),
-          coef = 3,
-          inkNewX = 0,
-          inkNewY = 0,
-          x = (e.pageX),
-          y = (e.pageY),
-          text = ['Лол. Доганяй', 'Больше экшена', 'У ты какой.', 'Ааа, горит','Попробуй найди', 'TROLOLO', '卐', 'Суслик спрятался', 'Привет верстальщику'];
-
-      $(this).css({
-        'position':'relative'
-      });
-
-      switch (count) {
-        case 0:
-          ink.css({top: '-50px', left: '-140px'});
-          break;
-        case 1: 
-          ink.css({top: '-250px', left: '-250px'});
-          break;
-        case 2:
-          ink.css({top: '-150px', left: '0px'});
-          ink.css({'background': '#00ba9e'});
-          break;
-        case 3:
-          ink.css({top: '50px', left: '50px'});
-          ink.css({'background': '#da4b00'});
-          break;
-        case 4:
-          ink.css({top: '0', left: '0'});
-          ink.css({'background': '#a29999'});
-          break;
-        case 5:
-          ink.css({top: '0', left: $(window).width() + 15 + 'px'});
-          ink.css({'background': '#da4b00'});
-          break;
-        case 6:
-          ink.css({top: '0px', left: '0px'});
-          ink.css({'background': '#da4b00'});
-          break;
-        case 7:
-          ink.css({top: '-90px', left: '-99px'});
-          break;
-        case 8:
-          ink.css({top: '2px', left: '2px'});
-          break;
-        case 9:
-          ink.css({top: '150px', left: '150px'});
-          break;
-      }
-
-      ink.text(text[count]);
-
-      if(count == text.length - 1) {
-        ink.hide();
-      }
-
-      count ++;
-    });
-  });
 
   $('.test__btn[data-target]').on('click', function(e) {
  
@@ -121,4 +53,37 @@
     e.preventDefault();
   });
 
+$('.comment__slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: true,
+  mobileFirst: true,
+  centerMode: true,
+  swipeToSlide: '15',
+  responsive: [
+      {
+      breakpoint: 767,
+      settings: {
+        arrows: false,
+        dots: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerPadding: '0'
+      }
+    },
+    {
+      breakpoint: 0,
+      settings: {
+        dots: true,
+        arrows: false,
+        speed: 300,
+        centerMode: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
 })(jQuery); // End of use strict

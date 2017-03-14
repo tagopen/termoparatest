@@ -190,12 +190,12 @@
   +unselectable
 
 =prevent-text
-    -ms-word-break: break-all
-    word-break: break-all
-    word-break: break-word
-    -webkit-hyphens: auto
-    -moz-hyphens: auto
-    hyphens: auto
+  -ms-word-break: break-all
+  word-break: break-all
+  word-break: break-word
+  -webkit-hyphens: auto
+  -moz-hyphens: auto
+  hyphens: auto
 
 =font-smoothing($val: antialiased)
   -webkit-font-smoothing: $val
@@ -373,7 +373,7 @@
   /* #{$separator} */
 
 =cm($comment)
-    /* #{$comment} */
+  /* #{$comment} */
 
 // разъежающий text-decoration с центра в стороны
 =a_text-decoration
@@ -670,8 +670,8 @@ $color-orange: #ff5800
     margin: 0
     padding: 10px 0 0 0
 
-//@import vendors/slick
-//@import vendors/slick-theme
+@import vendors/slick
+@import vendors/slick-theme
 
 +comment('general style')
 +ic
@@ -703,7 +703,7 @@ a
 .button
   text-align: center
   color: #fff
-  padding: 15px 0
+  padding: 15px 25px
   background: $btn-default-bg
   background-image: linear-gradient(to top, #ff5800 0%, #ff8a4c 100%)
   font: 400 12px/14px $main-open-sans
@@ -714,6 +714,7 @@ a
 +r(768)
   .button
     font: 400 14px/16px $main-open-sans 
+    padding: 15px 35px
 .form
   &__input
     text-align: center
@@ -739,8 +740,8 @@ a
     margin-bottom: 15px
 .contact
   text-align: center
-  &__number
-    display: block
+  &__link
+    display: inline-block
     color: $color-grey
     font: 600 16px/24px $main-open-sans  
     margin-bottom: 5px  
@@ -869,7 +870,32 @@ a
       display: inline-block
   &__link
     position: relative
-    display: inline-block   
+    display: block 
+    height: 130px  
+    &--1
+      background: url(../img/about1.jpg) no-repeat
+      background-size: cover
+    &--2
+      background: url(../img/about2.jpg) no-repeat
+      background-size: cover
+    &--3
+      background: url(../img/about3.jpg) no-repeat
+      background-size: cover
+    &--4
+      background: url(../img/about4.jpg) no-repeat
+      background-size: cover
+    &--5
+      background: url(../img/about5.jpg) no-repeat
+      background-size: cover
+    &--6
+      background: url(../img/about6.jpg) no-repeat
+      background-size: cover
+    &--7
+      background: url(../img/about7.jpg) no-repeat
+      background-size: cover
+    &--8
+      background: url(../img/about8.jpg) no-repeat
+      background-size: cover        
   &__info
     position: absolute
     bottom: 20px
@@ -890,36 +916,42 @@ a
       background-color: $color-orange
 +r(768)  
   .about
+    &__heading
+      margin-bottom: 60px
     &__box
-      position: relative
-      margin-right: -50px
-      margin-bottom: 95px  
+      transform: scale(1.25)
+      margin-bottom: 130px 
       &--position
-        margin: 60px -50px 30px 0  
+        position: relative
+        top: 60px
       &--1
-        z-index: 16
-      &--2
-        z-index: 15
-      &--3
-        z-index: 14
-      &--4
-        z-index: 13
-      &--5
         z-index: 12
-      &--6
+      &--2
         z-index: 11
-      &--7
+      &--3
         z-index: 10
+      &--4
+        z-index: 9
+      &--5
+        z-index: 8
+      &--6
+        z-index: 7
+      &--7
+        z-index: 6
       &--8
-        z-index: 9 
+        z-index: 5 
+    &__link
+      height: 200px
     &__text    
       font: 600 16px/21px $main-open-sans  
       padding: 0 10px
 +r(992)     
   .about
     &__box
-      &--position
-        margin-top: 90px 
+      transform: scale(1.15)
+      margin-bottom: 180px
+    &__link
+      height: 300px    
     &__text    
       font: 600 18px/21px $main-open-sans  
 +comment("sort styles")    
@@ -1191,26 +1223,187 @@ a
   &__image
     text-align: center
     img
-      display: inline-block      
+      display: inline-block
++comment("material styles") 
+.material
+  padding: 70px 0   
+.fact    
+  margin-bottom: 45px      
+  &__box
+    height: 180px
+    position: relative
+    z-index: 15
+    margin-bottom: 35px
+    &:before
+      display: block
+      height: 100%
+      width: 100%
+      content: ''
+      background: transparent
+      border: 5px solid #ffab7f
+      position: absolute
+      z-index: 10
+      top: 10px
+      left: -10px
+    &--border-right
+      &:before
+        right: -10px
+        left: auto  
+  &__image
+    height: 100%
+    width: 100%
+    position: relative
+    z-index: 15
+    &--1
+      background: url(../img/fact1.jpg) no-repeat
+      background-size: cover
+    &--2
+      background: url(../img/fact2.jpg) no-repeat
+      background-size: cover
+    &--3
+      background: url(../img/fact3.jpg) no-repeat
+      background-size: cover
+    &--4
+      background: url(../img/fact4.jpg) no-repeat
+      background-size: cover
+  &__text
+    position: relative
+    color: $color-grey 
+    font: 600 16px/24px $main-open-sans   
+  &__number
+    position: absolute
+    display: inline-block
+    top: -35px
+    left: -10px
+    font: 600 140px/140px $main-open-sans  
+    color: rgba(21,21,21,0.1)
+    &--right
+      left: auto
+      right: -10px
++r(768)  
+  .material
+    padding: 90px 0
+  .fact
+    margin-bottom: 0
+    &__col
+      float: right
+    &__box
+      height: 220px
+      &:before
+        top: 20px
+        left: -20px
+      &--border-right
+        &:before
+          right: -20px
+          left: auto  
+    &__content
+      font-size: 0
+      line-height: 255px      
+    &__text
+      display: inline-block
+      vertical-align: middle
+      color: $color-grey 
+      font: 600 18px/normal $main-open-sans  
+    &__number
+      font: 600 187px/190px $main-open-sans 
+      top: -65px
+      left: -20px  
+      &--right
+        right: -70px
+        left: auto 
+      &:after 
+        position: relative
+        z-index: 25
+        display: block
+        margin: -20px 0 0 -45px
+        content: ''
+        height: 5px
+        width: 200px
+        background-color: $color-orange
++r(992)     
+  .fact
+    &__box
+      height: 350px  
+      &:before
+        border: 10px solid #ffab7f 
+    &__content
+      line-height: 350px    
+    &__text
+      color: $color-grey 
+      font: 600 20px/normal $main-open-sans 
+    &__number
+      left: -30px
+      &--right
+        left: auto
+        right: -110px      
 +comment("cost styles")    
 .cost
   padding: 65px 0 75px
   background: url(../img/cost.jpg) no-repeat
   background-size: cover
+  overflow: hidden
   &__heading
     padding-bottom: 45px  
+    position: relative
+  &__icon
+    &--tablet
+      position: absolute
+      left: -40px
+      top: 147px
+      display: inline-block
+      background: url(../img/icons/tablet1200.png) no-repeat
+      background-size: contain
+      height: 200px
+      width: 200px 
+    &--arrow
+      position: absolute
+      right: 0
+      top: 100px
+      display: inline-block
+      background: url(../img/icons/arrow320.png) no-repeat
+      background-size: contain
+      height: 85px
+      width: 29px  
   &__btn
     width: 280px  
+    position: relative
+    z-index: 25
 +r(768) 
   .cost
     padding: 100px 0
     &__heading
       padding-bottom: 60px
+    &__icon
+      &--tablet
+        height: 300px
+        width: 300px
+        top: 100px
+      &--arrow
+        background: url(../img/icons/arrow1200.png) no-repeat
+        background-size: contain 
+        height: 99px
+        width: 57px
+        right: 30px
 +r(992)    
   .cost
     padding: 80px 0 115px
     &__heading
       padding-bottom: 50px  
+    &__icon
+      &--tablet
+        width: 463px
+        height: 462px
+        left: -150px
+      &--arrow
+        right: 70px
+        top: 100px  
++r(1200)  
+  .cost
+    &__icon
+      &--tablet
+        left: -200px
+      &--arrow
+        top: 125px      
 +comment("quality styles")        
 .quality
   background-color: #f7f7f7
@@ -1221,7 +1414,7 @@ a
     position: absolute
     width: 100%
     left: 0
-    top: 100px
+    top: 80px
     color: #fff
     font: 600 16px/24px $main-open-sans
     padding: 0 5px
@@ -1229,6 +1422,7 @@ a
     position: relative
     text-align: center
     margin-bottom: 20px
+    height: 160px
     &--1
       background: url(../img/quality1.jpg) no-repeat
       background-size: cover
@@ -1247,7 +1441,7 @@ a
     &__heading
       margin-bottom: 70px
     &__text
-      top: 115px
+      top: 95px
       padding: 0 15px
       font: 600 20px/30px $main-open-sans
     &__item
@@ -1261,7 +1455,138 @@ a
       font: 600 24px/36px $main-open-sans
     &__item
       height: 300px
-     
++comment('comment style')  
+.comment
+  padding-bottom: 150px
+  &__slider
+    .slick
+      &-dots
+        bottom: -60px
+        li
+          height: 20px
+          width: 20px
+          button
+            margin: 0 auto
+            padding: 0
+            height: 15px
+            width: 15px
+            background-color: #e6e6e6
+            border-radius: 50%
+            &:before
+              content: ''
+              display: none
+          &.slick-active
+            .comment__img
+              border: 2px solid $color-orange
+            button
+              height: 20px
+              width: 20px
+              background-color: $color-orange
+              position: relative
+              top: -4px 
+  &__item
+    text-align: center    
+    padding-top: 2px
+    &.slick-current
+      .comment__img
+        box-shadow: 0px 0px 0px 2px $color-orange        
+  &__img
+    display: inline-block
+    padding: 10px
+    border-radius: 50%  
+    margin-bottom: 25px
+  &__text  
+    color: $color-grey
+    font: 400 14px/21px $main-open-sans
+  &__name
+    color: $color-grey
+    font: 600 16px/18px $main-open-sans
+    margin-bottom: 20px
++r(768)
+  .comment
+    &__text
+      font: 400 16px/21px $main-open-sans 
+      opacity: 0
+      visibility: hidden
+      transition: all 0.6s ease
+    &__item
+      &.slick-current
+        .comment__text
+          opacity: 1
+          visibility: visible  
+    &__name
+      font: 600 20px/21px $main-open-sans   
++r(992)   
+  .comment
+    &__text
+      font: 400 18px/24px $main-open-sans 
+    &__name
+      font: 600 24px/30px $main-open-sans   
++comment('map style')    
+.map
+  height: 500px
+  position: relative
+  &__heading
+    position: absolute
+    top: 65px
+    text-align: center
+    background-color: rgba(255,255,255,0.9)
+    padding: 15px
+    color: $color-grey
+    font: 700 20px/36px $main-open-sans 
+    width: 100%
+  &__subheading
+    display: block
+    margin-top: 10px
+    font: 600 16px/20px $main-open-sans 
+  iframe
+    height: 100%
+    width: 100%      
++r(768)    
+  .map
+    &__heading
+      left: 50%
+      margin-left: -230px
+      width: 460px
++comment('footer style') 
+.footer
+  padding: 30px 0    
+  &__btn
+    margin-bottom: 25px 
+  &__text
+    text-align: center
+    font: 600 16px/20px $main-open-sans 
+    color: $color-grey
+    margin-bottom: 25px
+  &__link 
+    color: $color-grey  
+    &:hover,
+    &:focus
+      text-decoration: none
+.social
+  &__icon
+    color: $color-orange  
+.contact
+  &__icon
+    display: inline-block
+    margin-right: 10px
+    height: 18px
+    width: 18px
+    vertical-align: middle
+    &--kyivstar
+      background: url(../img/icons/kyivstar.png) no-repeat
+    &--life
+      background: url(../img/icons/life.png) no-repeat
+    &--mts
+      background: url(../img/icons/mts.png) no-repeat 
++r(768)
+  .footer
+    &__text
+      text-align: left   
+    &__col
+      float: right  
+    .contact
+      text-align: center        
 +comment('page test style')
 .social
   &__item
