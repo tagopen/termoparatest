@@ -1,4 +1,5 @@
 include ../utils/_variables.pug
+block variables
 doctype html
 html(lang='ru' prefix='og: http://ogp.me/ns#')
   head
@@ -12,7 +13,7 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
 
     // Multilanguage localization
     link(rel='alternate' href='/' hreflang='x-default')/
-    link(rel='alternate' href='/en/' hreflang='en')/
+    //-link(rel='alternate' href='/en/' hreflang='en')/
     link(rel='alternate' href='/ru/' hreflang='ru')/
     
     // Mobile viewport optimization
@@ -30,22 +31,22 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     meta(name='format-detection' content='address=no')/
 
     // Microformats Open Graph
-    meta(property='og:title' content='My Site')/
-    meta(property='og:site_name' content='My Site')/
-    meta(property='og:description' content='My Site is cool')/
+    meta(property='og:title' content=microTitle)/
+    meta(property='og:site_name' content=microSiteName)/
+    meta(property='og:description' content=microDescription)/
     meta(property='og:type' content='website')/
     meta(property='og:locale' content='ru_RU')/
-    meta(property='og:locale:alternate' content='en_US')/
-    meta(property='og:image' content='img/logo/microformat.png')/
-    meta(property='og:image:type' content='image/png')/
-    meta(property='og:url' content='http://url.com')/
+    //-meta(property='og:locale:alternate' content='en_US')/
+    meta(property='og:image' content=microImage)/
+    meta(property='og:image:type' content=microImageType)/
+    meta(property='og:url' content=microUrl)/
 
     // Microformats Twitter Cards
     meta(name='twitter:card' content='summary')/
     meta(name='twitter:site' content='@flickr')/
-    meta(name='twitter:title' content='My Site')/
-    meta(name='twitter:description' content='My Site is cool')/
-    meta(name='twitter:image' content='img/logo/microformat.png')/
+    meta(name='twitter:title' content=microTitle)/
+    meta(name='twitter:description' content=microDescription)/
+    meta(name='twitter:image' content=microImage)/
     
     // build:css css/bundle.min.css
 
@@ -54,11 +55,10 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     link(rel='stylesheet' href='css/bootstrap.css')
     // Open Sans CSS
     link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet')
-    // Font-Awesome CSS    
+    // Font-Awesome CSS
     link(rel='stylesheet' href='css/font-awesome.css')
     block styles
     // Custom CSS 
-    link(rel='stylesheet' href='css/jquery.fancybox.css')
     link(rel='stylesheet' href='css/style.css')
 
     // endbuild
@@ -73,8 +73,7 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
   body.body
     div.wrapper
       block content
-    footer.footer
-      block footer
+    block footer
   include _loaded.pug
 
     // build:js js/bundle.min.js
@@ -88,11 +87,6 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     // Old browsers reject JavaScript
     script(src='js/jquery.reject.js')
     block scripts
-    // Slick-Slider JavaScript
-    script(src='js/slick.js')
-    // Fancybox JavaScript    
-    script(src='js/jquery.fancybox.js')
-    script(src='js/jquery.fancybox.pack.js')    
     // Custom JavaScript
     script(src='js/main.js')
 
