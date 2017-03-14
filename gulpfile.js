@@ -9,7 +9,7 @@ var gulp          = require('gulp'),
 gulp.task('sass', function() {
   return gulp.src(['app/sass/**/*.+(scss|sass)'])
     .pipe($.plumber())
-    .pipe($.sass({
+    .pipe($.compass({
       css: 'app/css',
       sass: 'app/sass',
       image: 'app/img'
@@ -23,7 +23,8 @@ gulp.task('scripts', ['bower'], function() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.js',
       'bower_components/slick-carousel/slick/slick.js',
-      'bower_components/bootstrap/dist/js/bootstrap.js'
+      'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/jquery.maskedinput/dist/jquery.maskedinput.js'
     ])
   .pipe($.plumber())
   .pipe(gulp.dest('app/js'));
@@ -48,50 +49,6 @@ gulp.task('fonts', function () {
 gulp.task('bower', function() {
   return $.bower();
 });
-
-gulp.task('sprites', function () {
-  return gulp.src('assets/svg/*.svg')
-    .pipe(svgSprite({
-      svgId: "svg-%f"
-    }))
-    .pipe(gulp.dest("assets"));
-});
-
-gulp.task('svgSprite', function () {
-  return gulp.src('app/img/icons/**/*.svg')
-    .pipe($.svgmin({
-      js2svg: {
-        pretty: true
-      }
-    }))
-    .pipe($.cheerio({
-      run: function ($) {
-        $('[fill]').removeAttr('fill');
-        $('[stroke]').removeAttr('stroke');
-        $('[style]').removeAttr('style');
-      },
-      parserOptions: {xmlMode: true}
-    }))
-    .pipe($.replace('&gt;', '>'))
-    // build svg sprite
-    .pipe($.svgSprites({
-      preview: false,
-      selector: "ic--%f",
-      mode: {
-        symbol: {
-          sprite: "../sprite.svg",
-          render: {
-            scss: {
-              dest:'../../../sass/_sprite.scss',
-              template: '../sass/base/_sprite_template.scss'
-            }
-          }
-        }
-      }
-    }))
-    .pipe(gulp.dest('app/img'));
-});
-
 
 gulp.task('css-libs', ['sass'], function() {
   return gulp.src([
@@ -209,10 +166,7 @@ gulp.task('dev', ['clean', 'pug', 'fonts', 'img', 'sass', 'scripts'], function()
   //  .pipe($.concat({path: 'bundle.min.js', cwd: ''}))
   // .pipe(gulp.dest('demo/js'));
 
-  var buildmail = gulp.src('app/mail/**/*')
-    .pipe(gulp.dest('dist/mail'));
-
-  var BuildJs =  gulp.src('app/*.html')
+  var BuildJs =  gulp.src('app/**/*.html')
     .pipe($.plumber({
       handleError: function (err) {
         console.log(err);

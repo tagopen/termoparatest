@@ -20,6 +20,7 @@
     "jquery": "~2.2.4",
     "slick-carousel": "^1.6.0",
     "bootstrap": "^3.3.7",
-    "bootstrap-carousel-swipe": "*"
+    "bootstrap-carousel-swipe": "*",
+    "jquery.maskedinput": "^1.4.1"
   }
 }
