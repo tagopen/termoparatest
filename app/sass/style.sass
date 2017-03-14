@@ -1586,7 +1586,56 @@ a
     &__col
       float: right  
     .contact
-      text-align: center        
+      text-align: center 
++comment('modals style')
+.modal 
+  &__size
+    width: 300px
+    margin: 30 auto
+  &__content
+    position: relative
+    padding: 50px 25px
+    border-radius: 0
+  &__close
+    position: absolute
+    top: 10px
+    right: 10px
+    color: $color-orange
+    opacity: 1   
+  &__head
+    text-align: center
+  &__heading
+    font: 600 18px/26px $main-open-sans 
+    color: $color-grey      
+    margin-bottom: 20px    
+  &__subheading   
+    color: $color-grey  
+    font: 600 14px/18px $main-open-sans   
+    margin-bottom: 40px
+  &__input
+    text-align: center
+  &__btn
+    width: 100%  
++r(768)
+  .modal
+    &__size
+      width: 550px
+    &__close
+      right: -25px
+      top: -25px
+      text-shadow: none
+    &__content
+      padding: 70px 50px
+    &__heading
+      font: 600 24px/36px $main-open-sans 
+    &__subheading   
+      font: 600 18px/24px $main-open-sans     
++r(992)   
+  .modal
+    &__heading
+      font: 600 30px/45px $main-open-sans 
+    &__subheading   
+      font: 600 20px/30px $main-open-sans                 
 +comment('page test style')
 .social
   &__item

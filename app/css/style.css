@@ -1684,6 +1684,73 @@ a {
   }
 }
 /* ---------------------------------------- */
+/* M O D A L S    S T Y L E                 */
+/* ---------------------------------------- */
+.modal__size {
+  width: 300px;
+  margin: 30 auto;
+}
+.modal__content {
+  position: relative;
+  padding: 50px 25px;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ff5800;
+  opacity: 1;
+}
+.modal__head {
+  text-align: center;
+}
+.modal__heading {
+  font: 600 18px/26px "Open Sans", sans-serif;
+  color: #151515;
+  margin-bottom: 20px;
+}
+.modal__subheading {
+  color: #151515;
+  font: 600 14px/18px "Open Sans", sans-serif;
+  margin-bottom: 40px;
+}
+.modal__input {
+  text-align: center;
+}
+.modal__btn {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal__size {
+    width: 550px;
+  }
+  .modal__close {
+    right: -25px;
+    top: -25px;
+    text-shadow: none;
+  }
+  .modal__content {
+    padding: 70px 50px;
+  }
+  .modal__heading {
+    font: 600 24px/36px "Open Sans", sans-serif;
+  }
+  .modal__subheading {
+    font: 600 18px/24px "Open Sans", sans-serif;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .modal__heading {
+    font: 600 30px/45px "Open Sans", sans-serif;
+  }
+  .modal__subheading {
+    font: 600 20px/30px "Open Sans", sans-serif;
+  }
+}
+/* ---------------------------------------- */
 /* P A G E    T E S T    S T Y L E          */
 /* ---------------------------------------- */
 .social__item--exam {

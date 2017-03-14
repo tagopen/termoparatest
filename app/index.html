@@ -72,7 +72,7 @@
                     <div class="contact__number"><a class="contact__link" href="tel:+380981285440">+38 (098) 128-54-40</a></div>
                     <div class="contact__number"><a class="contact__link" href="tel:+380939360818">+38 (093) 936-08-18 </a></div>
                     <div class="contact__number"><a class="contact__link" href="tel:+380992753363">+38 (099) 275-33-63</a></div>
-                  </div><a href="#" class="contact__btn" data-toggle="modal" data-target="#header__modal">Заказать обратный звонок</a>  
+                  </div><a href="#header__modal" class="contact__btn" data-toggle="modal">Заказать обратный звонок</a>  
                 </div>
               </div>
             </div>
@@ -571,8 +571,8 @@
             <div class="col-xs-12 col-sm-6">
               <div class="service">
                 <div class="service__img"><img class="img-responsive" src="img/service2.png" alt="service"></div>
-                <p class="service__name">Мгновенная рассрочка от Приват Банка</p>
-                <p class="service__text">Описание условий рассрочки для клиентов</p>
+                <p class="service__name">Государственная программа "Теплый дом"</p>
+                <p class="service__text">Государство <b>вернет Вам 35% </b>от суммы кредита на покупку оборудования, которое поможет экономить на отоплении</p>
                 <button class="btn button service__btn">Воспользоваться предложением    </button>
               </div>
             </div>
@@ -884,6 +884,32 @@
       <div class="map">
         <div class="map__heading">Наш адрес<span class="map__subheading">Киев, ул. Старонаводницкая, д.4</span></div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.5987551931175!2d30.545177761018987!3d50.4282013744652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0c4f5f8973%3A0xaea68aae784128b8!2z0LLRg9C70LjRhtGPINCh0YLQsNGA0L7QvdCw0LLQvtC00L3QuNGG0YzQutCwLCA0LCDQmtC40ZfQsg!5e0!3m2!1sru!2sua!4v1489499999616" frameborder="0" style="border:0;" allowfullscreen>        </iframe>
+      </div>
+      <div class="modal fade" id="header__modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal__size">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal__head">
+              <p class="modal__heading">Заказать обратный звонок</p>
+              <p class="modal__subheading">Введите ваши данные. В течение 5 минут наш специалист Вам перезвонит.</p>
+            </div>
+            <form class="contactForm modal__form" name="Шапка" method="post" action="mail/mail.php">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                  <div class="form-group">
+                    <input class="form-control modal__input form__name" aria-invalid="false" placeholder="Ваше имя" required="" data-validation-required-message="Please enter your name." name="name" type="text">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control modal__input form__phone" aria-invalid="false" placeholder="Ваш телефон" required="" data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                  </div>
+                  <div class="text-center">
+                    <button class="btn button modal__btn" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
     <footer class="footer">

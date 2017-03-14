@@ -1,0 +1,17 @@
+#header__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__size
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading Заказать обратный звонок
+        p.modal__subheading Введите ваши данные. В течение 5 минут наш специалист Вам перезвонит.
+      form.contactForm.modal__form(name='Шапка', method='post', action='mail/mail.php')
+        .row
+          .col-xs-12.col-sm-6.col-sm-offset-3
+            .form-group
+              input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
+            .form-group
+              input.form-control.modal__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
+            .text-center
+              button.btn.button.modal__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок
