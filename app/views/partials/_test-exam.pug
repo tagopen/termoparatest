@@ -1,0 +1,95 @@
+section.test.test--exam
+  .container
+    .row
+      .col-xs-12.col-sm-10.col-sm-offset-1
+        .tabs
+          .tabs__item.tabs__item--active
+            h2.heading.test__heading Поздравляю, вы попали на супер игру
+            .test__subheading Ответьте на 10 вопросов и вы получите:
+            ul.test__list
+              li.test__item Бесполезно потраченные 10 минут
+              li.test__item Седые волосы
+              li.test__item Леща, если не пройдете
+            button.btn.button.test__btn(data-target='#question1') Пройти тест
+          #question1.tabs__item.question
+            //- Привет верстальщику
+            h2.heading.test__heading Поздравляю, ты прошел первый этап
+            .question__number
+              | Вопрос 
+              span.question__current 1
+              |  из 
+              span.question__total 10
+            h2.question__heading
+              | Как записать бесконечный цикл в JavaScript?
+            .question__radio-group.radio-btn
+              input#question-11.radio-btn__control(type='radio', name='question1')
+              label.radio-btn__box.radio-btn__box--check(name='question1', for='question-11')
+                span.radio-btn__icon.radio-btn__icon--check
+                | while (1) {}
+            .question__radio-group.radio-btn
+              input#question-12.radio-btn__control(type='radio', name='question1')
+              label.radio-btn__box.radio-btn__box--check(name='question1', for='question-12')
+                span.radio-btn__icon.radio-btn__icon--check
+                | for (;;) {}
+            .question__radio-group.radio-btn
+              input#question-13.radio-btn__control(type='radio', name='question1')
+              label.radio-btn__box.radio-btn__box--check(name='question1', for='question-13')
+                span.radio-btn__icon.radio-btn__icon--check
+                | do {} while(true)
+            .question__radio-group.radio-btn
+              input#question-14.radio-btn__control(type='radio', name='question1')
+              label.radio-btn__box.radio-btn__box--check(name='question1', for='question-14')
+                span.radio-btn__icon.radio-btn__icon--check
+                | while (!false) {}
+            button.btn.button.test__btn(data-target='#question2') Далее  
+          #question2.tabs__item.question
+            //- Привет верстальщику
+            .question__number
+              | Вопрос 
+              span.question__current 2
+              |  из 
+              span.question__total 10
+            h2.question__heading
+              | В чем разница между Object.getOwnPropertyNames() и Object.keys()
+            .question__radio-group.radio-btn
+              input#question-21.radio-btn__control(type='radio', name='question2')
+              label.radio-btn__box.radio-btn__box--check(name='question1', for='question-21')
+                span.radio-btn__icon.radio-btn__icon--check
+                | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+            .question__radio-group.radio-btn
+              input#question-22.radio-btn__control(type='radio', name='question2')
+              label.radio-btn__box.radio-btn__box--check(name='question1', for='question-22')
+                span.radio-btn__icon.radio-btn__icon--check
+                | Object.keys() возвращает перечислимые свойства из объекта или массива.
+            .question__radio-group.radio-btn
+              input#question-23.radio-btn__control(type='radio', name='question2')
+              label.radio-btn__box.radio-btn__box--check(name='question1', for='question-23')
+                span.radio-btn__icon.radio-btn__icon--check
+                | Object.keys() возвращает перечислимые свойства из объекта или массива.
+            .question__radio-group.radio-btn
+              input#question-24.radio-btn__control(type='radio', name='question2')
+              label.radio-btn__box.radio-btn__box--check(name='question1', for='question-24')
+                span.radio-btn__icon.radio-btn__icon--check
+                | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+            button.btn.button.test__btn(data-target='#finally') Далее 
+
+          #finally.tabs__item.question
+            h2.question__heading
+              | Позравляю, ты Senior
+            .question__descr
+              | Оставь свои данные, чтоб я мог тебе звонить в 3 часа ночи и задалбывать всякой фигней
+            form.contactForm.form(name='Форма Тестов', method='post', action='./mail/mail.php', novalidate)
+              .row
+                .col-xs-12
+                  .form-group
+                    input.form-control.form__input.form__input--message(name='name', type='text', placeholder='Введите ваше имя', data-validation-required-message='Введите корректные данные.', required)
+                    p.help-block.text-danger
+                .col-xs-12
+                  .form-group
+                    input.form-control.form__input.form__input--phone(name='phone', type='tel', data-validation-required-message='Введите корректные данные.', placeholder='Введите ваш телефон', required)
+                    p.help-block.text-danger
+                .clearfix
+                .col-xs-12
+                  .success
+                .col-sm-6.col-sm-offset-3.text-center
+                  button.btn.button.test__btn(type='submit', data-loading-text="Файл отправляется...") Звони когда хочешь

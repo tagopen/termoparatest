@@ -1,98 +1,124 @@
-// Old browser notification
-$(function() { 
-  $.reject({
-    reject: {
-      msie: 9
-    },
-    imagePath: 'img/icons/jReject/',
-    display: [ 'chrome','firefox','safari','opera' ],
-    closeCookie: true,
-    cookieSettings: {
-      expires: 60*60*24*365
-    },
-    header: 'Ваш браузер устарел!',
-    paragraph1: 'Вы пользуетесь устаревшим браузером, который не поддерживает современные веб-стандарты и представляет угрозу вашей безопасности.',
-    paragraph2: 'Пожалуйста, установите современный браузер:',
-    closeMessage: 'Закрывая это уведомление вы соглашаетесь с тем, что сайт в вашем браузере может отображаться некорректно.',
-    closeLink: 'Закрыть это уведомление',
-  });
-});
+(function($) {
+  "use strict"; // Start of use strict
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-/*$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+  $(window).load(function(){
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+      $('body').addClass('ios');
+    };
+    $('body').removeClass('loaded'); 
+  });
+
+  // Old browser notification
+  $(function() { 
+    $.reject({
+      reject: {
+        msie: 9
+      },
+      imagePath: 'img/icons/jReject/',
+      display: [ 'chrome','firefox','safari','opera' ],
+      closeCookie: true,
+      cookieSettings: {
+        expires: 60*60*24*365
+      },
+      header: 'Ваш браузер устарел!',
+      paragraph1: 'Вы пользуетесь устаревшим браузером, который не поддерживает современные веб-стандарты и представляет угрозу вашей безопасности.',
+      paragraph2: 'Пожалуйста, установите современный браузер:',
+      closeMessage: 'Закрывая это уведомление вы соглашаетесь с тем, что сайт в вашем браузере может отображаться некорректно.',
+      closeLink: 'Закрыть это уведомление',
     });
-});*/
-
-
-// Fixed navbar on Scroll
-/*if(!$('.navbar-toggle').is(':visible')) {
-  $('.navbar').affix({
-    offset: {
-      top: $('header').innerHeight()
-    }
-  }); 
-}*/
-
-// Highlight the top nav as scrolling occurs
-/*$('body').scrollspy({
-    target: '.navbar-fixed-top'
-})*/
-
-// Navbar class active
-/*$(document).ready( function () {
-  $(".nav li").click( function () {
-    $(".nav li").removeClass("active");
-    $(this).addClass("active");
   });
-});*/
 
-// Dropdowns on hover on desktop
-/*var navbarToggle = '.navbar-toggle'; // name of navbar toggle, BS3 = '.navbar-toggle', BS4 = '.navbar-toggler'  
-$('.dropdown, .dropup').each(function() {
-  var dropdown = $(this),
-    dropdownToggle = $('[data-toggle="dropdown"]', dropdown),
-    dropdownHoverAll = dropdownToggle.data('dropdown-hover-all') || false;
-  
-  // Mouseover
-  dropdown.hover(function(){
-    var notMobileMenu = $(navbarToggle).size() > 0 && $(navbarToggle).css('display') === 'none' && $(document).width() >= 992 ;
-    if ((dropdownHoverAll === true || (dropdownHoverAll === false && notMobileMenu))) { 
-      dropdownToggle.trigger('click');
-    }
-  });
-});*/
-
-
-// Close dropdowns on "esc"
-/*$('.dropdown-menu').bind('keydown',function(event) {
-  // ESC = Keycode 27
-  if (event.keyCode == 27) {
-    $(this).parrent().find('.dropdown-toggle').dropdown('toggle');
+  // Masked phone
+  if ($("[name=phone]").length) {
+    $("[name=phone]").mask("+ 38 (999) 999-99-99");
   }
-});*/
 
-// Closes the Responsive Menu on Menu Item Click
-/*$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});*/
+  // Fancy Box
+  if ($("a.fancyimage").length) {
+    $("a.fancyimage").fancybox(); 
+  }
+  
+  // Привет верстальщику
+  $(function () {
+    var count = 0;
 
-// Equal height
-/*$('.equial').equialHeight();*/
+    $('.test__btn--egg').on('mouseover', function (e) {
+      var ink = $(this),
+          inkX = ink.offset().left,
+          inkY = ink.offset().top,
+          inkW = ink.width(),
+          inkH = ink.height(),
+          coef = 3,
+          inkNewX = 0,
+          inkNewY = 0,
+          x = (e.pageX),
+          y = (e.pageY),
+          text = ['Лол. Доганяй', 'Больше экшена', 'У ты какой.', 'Ааа, горит','Попробуй найди', 'TROLOLO', '卐', 'Суслик спрятался', 'Привет верстальщику'];
 
-/*$('.slider').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  adaptiveHeight: true
-});*/
+      $(this).css({
+        'position':'relative'
+      });
 
-$(document).ready(function() { 
-  $("a.fancyimage").fancybox(); 
-}); 
+      switch (count) {
+        case 0:
+          ink.css({top: '-50px', left: '-140px'});
+          break;
+        case 1: 
+          ink.css({top: '-250px', left: '-250px'});
+          break;
+        case 2:
+          ink.css({top: '-150px', left: '0px'});
+          ink.css({'background': '#00ba9e'});
+          break;
+        case 3:
+          ink.css({top: '50px', left: '50px'});
+          ink.css({'background': '#da4b00'});
+          break;
+        case 4:
+          ink.css({top: '0', left: '0'});
+          ink.css({'background': '#a29999'});
+          break;
+        case 5:
+          ink.css({top: '0', left: $(window).width() + 15 + 'px'});
+          ink.css({'background': '#da4b00'});
+          break;
+        case 6:
+          ink.css({top: '0px', left: '0px'});
+          ink.css({'background': '#da4b00'});
+          break;
+        case 7:
+          ink.css({top: '-90px', left: '-99px'});
+          break;
+        case 8:
+          ink.css({top: '2px', left: '2px'});
+          break;
+        case 9:
+          ink.css({top: '150px', left: '150px'});
+          break;
+      }
+
+      ink.text(text[count]);
+
+      if(count == text.length - 1) {
+        ink.hide();
+      }
+
+      count ++;
+    });
+  });
+
+  $('.test__btn[data-target]').on('click', function(e) {
+ 
+    var $contentItem  = $('.tabs__item'),
+        itemPosition = $(this).data('target'),
+        $question    = $('.question');
+
+    $contentItem.filter(itemPosition)
+    .addClass('tabs__item--active')
+    .siblings()
+    .removeClass('tabs__item--active');
+
+    e.preventDefault();
+  });
+
+})(jQuery); // End of use strict

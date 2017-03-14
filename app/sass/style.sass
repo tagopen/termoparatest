@@ -1067,6 +1067,7 @@ a
   padding: 75px 0
   background: url(../img/testbg.jpg) no-repeat
   background-size: cover
+  text-align: center
   &__heading
     margin-bottom: 45px
   &__subheading
@@ -1083,19 +1084,16 @@ a
     font: 400 14px/21px $main-open-sans
     &:before
       display: inline-block
-      content: '\f00c' 
-      font-family: 'FontAwesome' 
+      content: '\f05d' 
+      font: 400 14px/14px $font-font-awesome
       height: 14px
       width: 14px
       text-align: center
-      line-height: 12px
       border-radius: 50%
-      border: 1px solid $color-orange
       color: $color-orange
-      font-size: 12px
       margin-right: 10px
   &__btn
-    display: block
+    display: inline-block
     margin: 20px auto 0
     padding: 15px 30px    
 +r(768)  
@@ -1108,8 +1106,8 @@ a
       &:before
         height: 16px
         width: 16px
-        line-height: 16px
-        font-size: 14px
+        font-size: 20px
+        line-height: 22px
 +r(992)  
   .test
     &__heading
@@ -1264,3 +1262,22 @@ a
     &__item
       height: 300px
      
++comment('page test style')
+.social
+  &__item
+    &--exam
+      display: inline-block
+.header
+  &--exam
+    padding: 0
+.test
+  &--exam
+    background: none
+.tabs
+  &__item
+    display: none
+    &--active
+      display: block
+
+
+

@@ -74,7 +74,7 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     div.wrapper
       block content
     block footer
-  include _loaded.pug
+    include _loaded.pug
 
     // build:js js/bundle.min.js
 
@@ -87,6 +87,8 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     // Old browsers reject JavaScript
     script(src='js/jquery.reject.js')
     block scripts
+    // Phone masked input JavaScript
+    script(src='js/jquery.maskedinput.js')
     // Custom JavaScript
     script(src='js/main.js')
 

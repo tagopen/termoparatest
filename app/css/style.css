@@ -598,7 +598,8 @@ a {
 .test {
   padding: 75px 0;
   background: url(../img/testbg.jpg) no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  text-align: center; }
   .test__heading {
     margin-bottom: 45px; }
   .test__subheading {
@@ -615,20 +616,17 @@ a {
     font: 400 14px/21px "Open Sans", sans-serif; }
     .test__item:before {
       display: inline-block;
-      content: '\f00c';
-      font-family: 'FontAwesome';
+      content: '\f05d';
+      font: 400 14px/14px "FontAwesome";
       height: 14px;
       width: 14px;
       text-align: center;
-      line-height: 12px;
       -webkit-border-radius: 50%;
               border-radius: 50%;
-      border: 1px solid #ff5800;
       color: #ff5800;
-      font-size: 12px;
       margin-right: 10px; }
   .test__btn {
-    display: block;
+    display: inline-block;
     margin: 20px auto 0;
     padding: 15px 30px; }
 
@@ -641,8 +639,8 @@ a {
     .test__item:before {
       height: 16px;
       width: 16px;
-      line-height: 16px;
-      font-size: 14px; } }
+      font-size: 20px;
+      line-height: 22px; } }
 
 @media only screen and (min-width: 992px) {
   .test__heading {
@@ -817,3 +815,20 @@ a {
     font: 600 24px/36px "Open Sans", sans-serif; }
   .quality__item {
     height: 300px; } }
+
+/* ---------------------------------------- */
+/* P A G E    T E S T    S T Y L E          */
+/* ---------------------------------------- */
+.social__item--exam {
+  display: inline-block; }
+
+.header--exam {
+  padding: 0; }
+
+.test--exam {
+  background: none; }
+
+.tabs__item {
+  display: none; }
+  .tabs__item--active {
+    display: block; }

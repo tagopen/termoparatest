@@ -1,0 +1,30 @@
+extends base/_layout.pug
+block variables
+
+
+block styles
+
+block scripts
+block content
+  .content
+    header.header.header--exam
+      include components/_nav.pug
+      include partials/_test-exam.pug
+block footer
+  footer.footer
+    .container
+      .row
+        .col-xs-12
+          .text-center.social
+            .social__item.social__item--exam
+              a.social__link(href='#')
+                i.fa.social__icon(class='fa-instagram')
+            .social__item.social__item--exam
+              a.social__link(href='#')
+                i.fa.social__icon(class='fa-vk')
+            .social__item.social__item--exam
+              a.social__link(href='#')
+                i.fa.social__icon(class='fa-odnoklassniki')
+            .social__item.social__item--exam
+              a.social__link(href='#')
+                i.fa.social__icon(class='fa-paper-plane')
