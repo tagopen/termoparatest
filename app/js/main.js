@@ -87,3 +87,31 @@ $('.comment__slider').slick({
   ]
 });
 })(jQuery); // End of use strict
+
+ // Equal height plugin
+  $.fn.equialHeight = (function() {
+    var $tallestcolumn = 0;
+    var $currentHeight = 0;
+    $.each($(this), function (index, value) {
+      $currentHeight = $(this).height();
+      if($currentHeight > $tallestcolumn)
+      {
+        $tallestcolumn = $currentHeight;
+      }
+    });
+    $(this).height($tallestcolumn);
+    return $(this);
+  });
+  // Equial Height
+  $(window).on('resize', function(){
+    // Only 768+
+    if( $( window ).width() >= 768 ) {
+      $('.product--group1').equialHeight();
+      $('.product--group2').equialHeight();
+      $('.product--group3').equialHeight();
+      $('.service').equialHeight();
+    }
+
+    $('.comment__img').equialHeight();
+    $('.comment__text').equialHeight();
+  }).trigger('resize');
