@@ -75,41 +75,49 @@
               </div>
             </div>
           </div>
-          <footer class="footer">
+          <div class="thanks">
             <div class="container">
               <div class="row">
-                <div class="col-xs-12 col-sm-3 col-sm-push-4 col-md-4 col-md-push-4 text-center">
-                  <button class="btn button footer__btn" data-toggle="modal" data-target="#callback__modal">Заказать звонок</button>
+                <div class="col-xs-12 text-center">
+                  <h2 class="heading thanks__heading">Спасибо! Ваша заявка отправлена</h2>
                 </div>
-                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-pull-3 col-sm-offset-0 col-md-4 col-md-pull-4">
-                  <div class="footer__text"><a class="footer__link" href="mailto:info@termoplaza.net">info@termoplaza.net </a>г. Киев, ул. Старонаводницкая, д.4</div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="thanks__video">
+                    <iframe src="https://www.youtube.com/embed/r9thhtcq9GM" frameborder="0" allowfullscreen></iframe>
+                  </div>
                 </div>
-                <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0 col-md-4">
-                  <div class="row">
-                    <div class="col-xs-10 footer__col">
-                      <div class="contact">
-                        <div class="contact__phone">
-                          <div class="contact__number"><a class="contact__link" href="tel:+380981285440"> 
-                              <div class="contact__icon contact__icon--kyivstar"></div>+38 (098) 128-54-40</a></div>
-                          <div class="contact__number"><a class="contact__link" href="tel:+380939360818"> 
-                              <div class="contact__icon contact__icon--life"></div>+38 (093) 936-08-18 </a></div><a class="contact__number"><a class="contact__link" href="tel:+380992753363"> 
-                              <div class="contact__icon contact__icon--mts"></div>+38 (099) 275-33-63</a></a>
+                <div class="col-xs-12 col-sm-6 text-center"> 
+                  <div class="modal-dialog buyer__modal">
+                    <div class="modal-content buyer__content">
+                      <div class="modal__head">
+                        <p class="modal__subheading modal__subheading--color-white">Оставьте дополнительные контакты и получите рекомендации по выбору обогревателей на 2017 год.</p>
+                      </div>
+                      <form class="contactForm modal__form" name="Шапка" method="post" action="./mail/mail.php" novalidate>
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                            <div class="form-group">
+                              <input class="form-control modal__input modal__input--color-white form__name" placeholder="Ваш Email" required data-validation-required-message="Заполните поле корректно." name="email" type="text">
+                              <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                              <input class="form-control modal__input modal__input--color-white form__phone" placeholder="Ваш телефон" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel">
+                              <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="clearfix">
+                              <div class="success"></div>
+                            </div>
+                            <div class="text-center">
+                              <button class="btn button buyer__btn" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить материалы</button>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-xs-2">
-                      <div class="social">
-                        <div class="social__item"><a class="social__link" href="https://www.instagram.com/obigrivachi/"><i class="fa social__icon fa-instagram"></i></a></div>
-                        <div class="social__item"><a class="social__link" href="https://vk.com/paneli_termoplaza"><i class="fa social__icon fa-vk"></i></a></div>
-                        <div class="social__item"><a class="social__link" href="https://ok.ru/group/54940480241672"><i class="fa social__icon fa-odnoklassniki"></i></a></div>
-                        <div class="social__item"><a class="social__link" href="https://telegram.me/termopIaza_bot"><i class="fa social__icon fa-paper-plane"></i></a></div>
-                      </div>
+                      </form>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </footer>
+          </div>
         </header>
       </div>
     </div>

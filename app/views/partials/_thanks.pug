@@ -1,28 +1,26 @@
-footer.footer
+.thanks
   .container
     .row
-      .col-xs-12.col-sm-3.col-sm-push-4.col-md-4.col-md-push-4.text-center
-        button.btn.button.footer__btn(data-toggle='modal', data-target='#callback__modal') Заказать звонок
-      .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-pull-3.col-sm-offset-0.col-md-4.col-md-pull-4
-        .footer__text
-          a.footer__link(href="mailto:info@termoplaza.net") info@termoplaza.net 
-          | г. Киев, ул. Старонаводницкая, д.4
-      .col-xs-10.col-xs-offset-1.col-sm-5.col-sm-offset-0.col-md-4
-        .row
-          .col-xs-10.footer__col
-            .contact
-              .contact__phone
-                .contact__number
-                  a.contact__link(href="tel:+380981285440") 
-                    .contact__icon.contact__icon--kyivstar
-                    | +38 (098) 128-54-40
-                .contact__number
-                  a.contact__link(href="tel:+380939360818") 
-                    .contact__icon.contact__icon--life
-                    | +38 (093) 936-08-18 
-                a.contact__number
-                  a.contact__link(href="tel:+380992753363") 
-                    .contact__icon.contact__icon--mts
-                    | +38 (099) 275-33-63
-          .col-xs-2
-            include ../components/_social.pug          
+      .col-xs-12.text-center
+        h2.heading.thanks__heading Спасибо! Ваша заявка отправлена
+      .col-xs-12.col-sm-6
+        .thanks__video
+          iframe(src="https://www.youtube.com/embed/r9thhtcq9GM" frameborder="0" allowfullscreen)
+      .col-xs-12.col-sm-6.text-center  
+        .modal-dialog.buyer__modal
+          .modal-content.buyer__content
+            .modal__head
+              p.modal__subheading.modal__subheading--color-white Оставьте дополнительные контакты и получите рекомендации по выбору обогревателей на 2017 год.
+            form.contactForm.modal__form(name='Шапка', method='post', action='./mail/mail.php', novalidate)
+              .row
+                .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+                  .form-group
+                    input.form-control.modal__input.modal__input--color-white.form__name(placeholder='Ваш Email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')
+                    p.help-block.text-danger
+                  .form-group
+                    input.form-control.modal__input.modal__input--color-white.form__phone(placeholder='Ваш телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                    p.help-block.text-danger
+                  .clearfix
+                    .success
+                  .text-center
+                    button.btn.button.buyer__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить материалы
