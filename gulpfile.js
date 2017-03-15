@@ -9,7 +9,7 @@ var gulp          = require('gulp'),
 gulp.task('sass', function() {
   return gulp.src(['app/sass/**/*.+(scss|sass)'])
     .pipe($.plumber())
-    .pipe($.compass({
+    .pipe($.sass({
       css: 'app/css',
       sass: 'app/sass',
       image: 'app/img'

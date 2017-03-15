@@ -1,0 +1,27 @@
+extends base/_layout.pug
+block variables
+
+
+block styles
+
+block scripts
+block content
+  .content
+    header.header.header--examnav.navbar
+      div.container
+        .row
+          .col-xs-12.col-sm-4
+            .logo
+              a.logo__img(href='#')
+                img.img-responsive(src='img/logo/logo.png' alt='logo')
+              p.logo__text Производство и продажа энергосберегающих обогревателей с доставкой по Украине  
+          .col-xs-12.col-sm-4.pull-right
+            .navbar__contact.contact
+              .contact__phone
+                .contact__number
+                  a.contact__link(href="tel:+380981285440") +38 (098) 128-54-40
+                .contact__number
+                  a.contact__link(href="tel:+380939360818") +38 (093) 936-08-18 
+                .contact__number
+                  a.contact__link(href="tel:+380992753363") +38 (099) 275-33-63  
+      include partials/_thanks.pug
