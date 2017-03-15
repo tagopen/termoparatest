@@ -1889,6 +1889,11 @@ a {
   color: #ff5800;
   font: 600 18px/26px "Open Sans", sans-serif;
 }
+.question__descr {
+  color: #151515;
+  font: 600 16px/20px "Open Sans", sans-serif;
+  margin-bottom: 30px;
+}
 
 .radio-btn__control {
   display: none;
