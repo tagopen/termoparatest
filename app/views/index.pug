@@ -22,12 +22,15 @@ block content
           .header__subheading равномерно отапливают все помещение, при этом в 2 раза экономичнее и на 300% эффективнее аналогов
           .header__form-title Оставьте свой e-mail адрес и получите полный каталог элетроообогревателей TermoPlaza с актуальными ценами на <b>12.02.2017</b>
         .col-xs-12.col-sm-6.col-sm-offset-3.col-lg-4.col-lg-offset-4  
-          form.clearfix.contactForm(name="Регистрация" method="post" action="mail/mail.php")
+          form.contactForm.form(name='Регистрация' method='post' action='./mail/mail.php', novalidate)
             .form-group.form__group
-              input.form-control.form__input(placeholder="Введите ваш телефон" required="" data-validation-required-message="Please enter your phone number." name="phone" aria-invalid="false" type="tel")
-            .text-center
-              button.btn.button.button--size( data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")      Записаться на просмотр коттеджей
-
+              input.form-control.form__input(placeholder="Введите ваш E-mail" data-validation-required-message='Заполните поле корректно.' name='email' type='email' required)
+              p.help-block.text-danger
+            .clearfix
+              .col-xs-12
+                .success
+            .col-xs-12.text-center
+              button.btn.button.button--size(data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...", type='submit') Записаться на просмотр коттеджей
   include partials/_intro.pug 
   include partials/_about.pug  
   include partials/_table.pug                     
