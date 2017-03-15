@@ -1,4 +1,4 @@
-#header__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+#callback__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
   .modal-dialog.modal__size
     .modal-content.modal__content
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
@@ -6,12 +6,55 @@
       .modal__head
         p.modal__heading Заказать обратный звонок
         p.modal__subheading Введите ваши данные. В течение 5 минут наш специалист Вам перезвонит.
-      form.contactForm.modal__form(name='Шапка', method='post', action='mail/mail.php')
+      form.contactForm.modal__form(name='Шапка', method='post', action='./mail/mail.php', novalidate)
         .row
           .col-xs-12.col-sm-6.col-sm-offset-3
             .form-group
-              input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required='', data-validation-required-message='Please enter your name.', name='name', type='text')
+              input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required, data-validation-required-message='Заполните поле корректно.', name='name', type='text')
             .form-group
-              input.form-control.modal__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required='', data-validation-required-message='Please enter your phone number.', name='phone', type='tel')
+              input.form-control.modal__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+            .clearfix
+              .success
+            .text-center
+              button.btn.button.modal__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок
+#product__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__size
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading Заказать обратный звонок
+        p.modal__subheading Введите ваши данные. В течение 5 минут наш специалист Вам перезвонит.
+      form.contactForm.modal__form(name='Шапка', method='post', action='./mail/mail.php', novalidate)
+        .row
+          .col-xs-12.col-sm-6.col-sm-offset-3
+            .form-group
+              input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required, data-validation-required-message='Заполните поле корректно.', name='name', type='text')
+            .form-group
+              input.form-control.modal__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+            .clearfix
+              .success
+            .text-center
+              button.btn.button.modal__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок
+#service__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__size
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading Оставьте ваши контакты
+        p.modal__subheading.
+          и получите доступ к подробному описанию государственной программы “Теплый дом” и других вариантах рассрочки. Если же у Вас остануться вопросы, то наш специалист любезно вас проконсультирует. 
+      form.contactForm.modal__form(name='Шапка', method='post', action='./mail/mail.php', novalidate)
+        .row
+          .col-xs-12.col-sm-8.col-sm-offset-2
+            .form-group
+              input.form-control.modal__input.form__name(placeholder='Введите Ваш Email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')
+              p.help-block.text-danger
+            .form-group
+              input.form-control.modal__input.form__phone(placeholder='Ваш телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+              p.help-block.text-danger
+            .clearfix
+              .success
             .text-center
               button.btn.button.modal__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок

@@ -516,8 +516,10 @@ $main-open-sans: 'Open Sans', sans-serif
 //
 //## For each buttons, define text, background and border color.
 
-$btn-default-color: #333
+$btn-default-color: #fff
+$btn-default-color-hover: $btn-default-color
 $btn-default-bg: #da4b00
+$btn-default-bg-hover: $btn-default-bg * 1.2
 $btn-default-border: #ccc
 $color-grey: #151515
 $color-orange: #ff5800
@@ -702,13 +704,18 @@ a
     font: 700 32px/36px $main-open-sans   
 .button
   text-align: center
-  color: #fff
+  color: $btn-default-color
   padding: 15px 25px
   background: $btn-default-bg
   background-image: linear-gradient(to top, #ff5800 0%, #ff8a4c 100%)
   font: 400 12px/14px $main-open-sans
   border: 0
   box-shadow: none
+  &:hover,
+  &:focus
+    color: $btn-default-color-hover
+    background: $btn-default-bg-hover
+
   &--size
     width: 100%   
 +r(768)

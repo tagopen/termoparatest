@@ -55,7 +55,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
   </head>
-  <body class="body">
+  <body class="body loaded">
     <div class="wrapper">
       <header class="header">
         <nav class="navbar">
@@ -72,7 +72,7 @@
                     <div class="contact__number"><a class="contact__link" href="tel:+380981285440">+38 (098) 128-54-40</a></div>
                     <div class="contact__number"><a class="contact__link" href="tel:+380939360818">+38 (093) 936-08-18 </a></div>
                     <div class="contact__number"><a class="contact__link" href="tel:+380992753363">+38 (099) 275-33-63</a></div>
-                  </div><a href="#header__modal" class="contact__btn" data-toggle="modal">Заказать обратный звонок</a>  
+                  </div><a href="#callback__modal" class="contact__btn" data-toggle="modal">Заказать обратный звонок</a>  
                 </div>
               </div>
             </div>
@@ -88,12 +88,18 @@
               <div class="header__form-title">Оставьте свой e-mail адрес и получите полный каталог элетроообогревателей TermoPlaza с актуальными ценами на <b>12.02.2017</b></div>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4"> 
-              <form class="clearfix contactForm" name="Регистрация" method="post" action="mail/mail.php">
+              <form class="contactForm form" name="Регистрация" method="post" action="./mail/mail.php" novalidate>
                 <div class="form-group form__group">
-                  <input class="form-control form__input" placeholder="Введите ваш телефон" required="" data-validation-required-message="Please enter your phone number." name="phone" aria-invalid="false" type="tel">
+                  <input class="form-control form__input" placeholder="Введите ваш E-mail" data-validation-required-message="Заполните поле корректно." name="email" type="email" required>
+                  <p class="help-block text-danger"></p>
                 </div>
-                <div class="text-center">
-                  <button class="btn button button--size" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">     Записаться на просмотр коттеджей</button>
+                <div class="clearfix">
+                  <div class="col-xs-12">
+                    <div class="success"></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 text-center">
+                  <button class="btn button button--size" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется..." type="submit">Записаться на просмотр коттеджей</button>
                 </div>
               </form>
             </div>
@@ -243,7 +249,7 @@
                           <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
-                      <button class="btn button product__btn">Купить                   </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить                   </button>
                     </div>
                   </div>
                 </div>
@@ -282,7 +288,7 @@
                           <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
-                      <button class="btn button product__btn">Купить    </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить    </button>
                     </div>
                   </div>
                 </div>
@@ -321,7 +327,7 @@
                           <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
-                      <button class="btn button product__btn">Купить          </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить          </button>
                     </div>
                   </div>
                 </div>
@@ -360,7 +366,7 @@
                           <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
-                      <button class="btn button product__btn">Купить    </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить    </button>
                     </div>
                   </div>
                 </div>
@@ -413,7 +419,7 @@
                           <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
-                      <button class="btn button product__btn">Купить                   </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить                   </button>
                     </div>
                   </div>
                 </div>
@@ -452,7 +458,7 @@
                           <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
-                      <button class="btn button product__btn">Купить   </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить   </button>
                     </div>
                   </div>
                 </div>
@@ -491,7 +497,7 @@
                           <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
-                      <button class="btn button product__btn">Купить          </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить          </button>
                     </div>
                   </div>
                 </div>
@@ -530,7 +536,7 @@
                           <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
-                      <button class="btn button product__btn">Купить  </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить  </button>
                     </div>
                   </div>
                 </div>
@@ -565,7 +571,7 @@
                 <div class="service__img"><img class="img-responsive" src="img/service1.png" alt="service"></div>
                 <p class="service__name">Мгновенная рассрочка от Приват Банка</p>
                 <p class="service__text">Описание условий рассрочки для клиентов</p>
-                <button class="btn button service__btn">Воспользоваться предложением</button>
+                <button class="btn button service__btn" data-toggle="modal" data-target="#service__modal">Воспользоваться предложением</button>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -573,7 +579,7 @@
                 <div class="service__img"><img class="img-responsive" src="img/service2.png" alt="service"></div>
                 <p class="service__name">Государственная программа "Теплый дом"</p>
                 <p class="service__text">Государство <b>вернет Вам 35% </b>от суммы кредита на покупку оборудования, которое поможет экономить на отоплении</p>
-                <button class="btn button service__btn">Воспользоваться предложением    </button>
+                <button class="btn button service__btn" data-toggle="modal" data-target="#service__modal">Воспользоваться предложением    </button>
               </div>
             </div>
           </div>
@@ -621,12 +627,12 @@
                       </div>
                       <div class="product__descr description">
                         <div class="description__item"> <span class="description__text"> <i class="fa fa-check" aria-hidden="true"> </i></span> монтаж на стену</div>
-                        <div class="description__item"> <span class="description__text"> <i class="fa fa-check" aria-hidden="true"> </i></span> напряжение: 220В ± 10% </div>
-                        <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"> </i></span> максимальная сила тока 16А</div>
-                        <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"> </i></span> гарантия 1 год</div>
+                        <div class="description__item"> <span class="description__text"> <i class="fa fa-check" aria-hidden="true"></i></span> напряжение: 220В ± 10% </div>
+                        <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"></i></span> максимальная сила тока 16А</div>
+                        <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"></i></span> гарантия 1 год</div>
                       </div><a class="product__all" href="#">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
-                      <button class="btn button product__btn">Купить                  </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить                  </button>
                     </div>
                   </div>
                 </div>
@@ -655,7 +661,7 @@
                         <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"> </i></span> гарантия 5 лет</div>
                       </div><a class="product__all" href="#">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
-                      <button class="btn button product__btn">Купить   </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить   </button>
                     </div>
                   </div>
                 </div>
@@ -684,7 +690,7 @@
                         <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"> </i></span> гарантия 5 лет</div>
                       </div><a class="product__all" href="#">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
-                      <button class="btn button product__btn">Купить           </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить           </button>
                     </div>
                   </div>
                 </div>
@@ -713,7 +719,7 @@
                         <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"> </i></span> гарантия 5 лет</div>
                       </div><a class="product__all" href="#">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
-                      <button class="btn button product__btn">Купить  </button>
+                      <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить  </button>
                     </div>
                   </div>
                 </div>
@@ -885,7 +891,7 @@
         <div class="map__heading">Наш адрес<span class="map__subheading">Киев, ул. Старонаводницкая, д.4</span></div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.5987551931175!2d30.545177761018987!3d50.4282013744652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0c4f5f8973%3A0xaea68aae784128b8!2z0LLRg9C70LjRhtGPINCh0YLQsNGA0L7QvdCw0LLQvtC00L3QuNGG0YzQutCwLCA0LCDQmtC40ZfQsg!5e0!3m2!1sru!2sua!4v1489499999616" frameborder="0" style="border:0;" allowfullscreen>        </iframe>
       </div>
-      <div class="modal fade" id="header__modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal fade" id="callback__modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal__size">
           <div class="modal-content modal__content">
             <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
@@ -893,14 +899,77 @@
               <p class="modal__heading">Заказать обратный звонок</p>
               <p class="modal__subheading">Введите ваши данные. В течение 5 минут наш специалист Вам перезвонит.</p>
             </div>
-            <form class="contactForm modal__form" name="Шапка" method="post" action="mail/mail.php">
+            <form class="contactForm modal__form" name="Шапка" method="post" action="./mail/mail.php" novalidate>
               <div class="row">
                 <div class="col-xs-12 col-sm-6 col-sm-offset-3">
                   <div class="form-group">
-                    <input class="form-control modal__input form__name" aria-invalid="false" placeholder="Ваше имя" required="" data-validation-required-message="Please enter your name." name="name" type="text">
+                    <input class="form-control modal__input form__name" aria-invalid="false" placeholder="Ваше имя" required data-validation-required-message="Заполните поле корректно." name="name" type="text">
                   </div>
                   <div class="form-group">
-                    <input class="form-control modal__input form__phone" aria-invalid="false" placeholder="Ваш телефон" required="" data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                    <input class="form-control modal__input form__phone" aria-invalid="false" placeholder="Ваш телефон" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel">
+                  </div>
+                  <div class="clearfix">
+                    <div class="success"></div>
+                  </div>
+                  <div class="text-center">
+                    <button class="btn button modal__btn" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="product__modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal__size">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal__head">
+              <p class="modal__heading">Заказать обратный звонок</p>
+              <p class="modal__subheading">Введите ваши данные. В течение 5 минут наш специалист Вам перезвонит.</p>
+            </div>
+            <form class="contactForm modal__form" name="Шапка" method="post" action="./mail/mail.php" novalidate>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                  <div class="form-group">
+                    <input class="form-control modal__input form__name" aria-invalid="false" placeholder="Ваше имя" required data-validation-required-message="Заполните поле корректно." name="name" type="text">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control modal__input form__phone" aria-invalid="false" placeholder="Ваш телефон" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel">
+                  </div>
+                  <div class="clearfix">
+                    <div class="success"></div>
+                  </div>
+                  <div class="text-center">
+                    <button class="btn button modal__btn" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="service__modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal__size">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal__head">
+              <p class="modal__heading">Оставьте ваши контакты</p>
+              <p class="modal__subheading">и получите доступ к подробному описанию государственной программы “Теплый дом” и других вариантах рассрочки. Если же у Вас остануться вопросы, то наш специалист любезно вас проконсультирует. </p>
+            </div>
+            <form class="contactForm modal__form" name="Шапка" method="post" action="./mail/mail.php" novalidate>
+              <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                  <div class="form-group">
+                    <input class="form-control modal__input form__name" placeholder="Введите Ваш Email" required data-validation-required-message="Заполните поле корректно." name="email" type="text">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control modal__input form__phone" placeholder="Ваш телефон" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="clearfix">
+                    <div class="success"></div>
                   </div>
                   <div class="text-center">
                     <button class="btn button modal__btn" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
@@ -916,7 +985,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-3 col-sm-push-4 col-md-4 col-md-push-4 text-center">
-            <button class="btn button footer__btn">Заказать звонок</button>
+            <button class="btn button footer__btn" data-toggle="modal" data-target="#callback__modal">Заказать звонок</button>
           </div>
           <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-pull-3 col-sm-offset-0 col-md-4 col-md-pull-4">
             <div class="footer__text"><a class="footer__link" href="mailto:info@termoplaza.net">info@termoplaza.net </a>г. Киев, ул. Старонаводницкая, д.4</div>
@@ -936,10 +1005,10 @@
               </div>
               <div class="col-xs-2">
                 <div class="social">
-                  <div class="social__item"><a class="social__link" href="#"><i class="fa social__icon fa-instagram"></i></a></div>
-                  <div class="social__item"><a class="social__link" href="#"><i class="fa social__icon fa-vk"></i></a></div>
-                  <div class="social__item"><a class="social__link" href="#"><i class="fa social__icon fa-odnoklassniki"></i></a></div>
-                  <div class="social__item"><a class="social__link" href="#"><i class="fa social__icon fa-paper-plane"></i></a></div>
+                  <div class="social__item"><a class="social__link" href="https://www.instagram.com/obigrivachi/"><i class="fa social__icon fa-instagram"></i></a></div>
+                  <div class="social__item"><a class="social__link" href="https://vk.com/paneli_termoplaza"><i class="fa social__icon fa-vk"></i></a></div>
+                  <div class="social__item"><a class="social__link" href="https://ok.ru/group/54940480241672"><i class="fa social__icon fa-odnoklassniki"></i></a></div>
+                  <div class="social__item"><a class="social__link" href="https://telegram.me/termopIaza_bot"><i class="fa social__icon fa-paper-plane"></i></a></div>
                 </div>
               </div>
             </div>
