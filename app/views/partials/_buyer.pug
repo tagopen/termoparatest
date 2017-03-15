@@ -1,0 +1,34 @@
+.buyer
+  .container
+    .row
+      .col-xs-12.col-sm-8.col-sm-offset-2
+        h2.heading.buyer__heading Для потенциальных партнеров
+    .row
+      .col-xs-12.col-sm-6.col-md-5
+        .buyer__box
+          .test__subheading.test__subheading--left С нами работают уже более 100 партнеров по всей Украине
+          .test__title В их перечень входят:
+          ul.test__list.test__list--left
+            li.test__item Монтажные бригады;
+            li.test__item Строительные подрядные организации; 
+            li.test__item Розничные магазины по продаже климатического оборудования; 
+            li.test__item Интернет магазины(под склад, дропшипинг)
+      .col-xs-12.col-sm-6.pull-right   
+        .modal-dialog.buyer__modal
+          .modal-content.buyer__content
+            .modal__head
+              p.modal__subheading.modal__subheading--color-white Оставьте ваши контакты, что бы мы отправили вам маркетинг-кит и коммерческое предложение для партнеров
+            form.contactForm.modal__form(name='Шапка', method='post', action='./mail/mail.php', novalidate)
+              .row
+                .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+                  .form-group
+                    input.form-control.modal__input.modal__input--color-white.form__name(placeholder='Ваш Email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')
+                    p.help-block.text-danger
+                  .form-group
+                    input.form-control.modal__input.modal__input--color-white.form__phone(placeholder='Ваш телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                    p.help-block.text-danger
+                  .clearfix
+                    .success
+                  .text-center
+                    button.btn.button.buyer__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить материалы
+          .buyer__icon          

@@ -499,6 +499,10 @@ a {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+.button:hover, .button:focus {
+  color: #fff;
+  background: #ff5a00;
+}
 .button--size {
   width: 100%;
 }
@@ -506,7 +510,6 @@ a {
 @media only screen and (min-width: 768px) {
   .button {
     font: 400 14px/16px "Open Sans", sans-serif;
-    padding: 15px 35px;
   }
 }
 .form__input {
@@ -1045,6 +1048,12 @@ a {
   color: #151515;
   margin-bottom: 25px;
 }
+.test__title {
+  color: #151515;
+  font: 600 14px/21px "Open Sans", sans-serif;
+  margin-bottom: 10px;
+  text-align: center;
+}
 .test__list {
   padding: 0;
   text-align: center;
@@ -1077,6 +1086,16 @@ a {
     font: 600 20px/22px "Open Sans", sans-serif;
     margin-bottom: 10px;
   }
+  .test__subheading--left {
+    text-align: left;
+  }
+  .test__title {
+    font: 600 16px/24px "Open Sans", sans-serif;
+    text-align: left;
+  }
+  .test__list--left {
+    text-align: left;
+  }
   .test__item {
     font: 400 16px/24px "Open Sans", sans-serif;
   }
@@ -1093,6 +1112,9 @@ a {
   }
   .test__subheading {
     margin-bottom: 35px;
+  }
+  .test__title {
+    font: 600 18px/27px "Open Sans", sans-serif;
   }
   .test__item {
     font: 400 18px/27px "Open Sans", sans-serif;
@@ -1514,7 +1536,7 @@ a {
 /* C O M M E N T    S T Y L E               */
 /* ---------------------------------------- */
 .comment {
-  padding-bottom: 150px;
+  padding-bottom: 60px;
 }
 .comment__slider .slick-dots {
   bottom: -60px;
@@ -1630,6 +1652,78 @@ a {
   }
 }
 /* ---------------------------------------- */
+/* B U Y E R    S T Y L E                   */
+/* ---------------------------------------- */
+.buyer {
+  padding: 60px 0;
+  background: url(../img/buyer.png) no-repeat;
+  background-size: cover;
+}
+.buyer__modal {
+  width: 100%;
+  position: relative;
+}
+.buyer__content {
+  border: 10px solid rgba(255, 255, 255, 0.07);
+  -webkit-box-shadow: 0 0 15px rgba(0, 3, 2, 0.25);
+          box-shadow: 0 0 15px rgba(0, 3, 2, 0.25);
+  background-color: #ff5800;
+  padding: 20px;
+}
+.buyer__heading {
+  margin-bottom: 35px;
+}
+.buyer__btn {
+  background: #fff;
+  color: #151515;
+  width: 100%;
+}
+.buyer__btn:hover, .buyer__btn:focus, .buyer__btn:visited {
+  color: #ff5800;
+  background: #fff;
+}
+.buyer__icon {
+  display: inline-block;
+  position: absolute;
+  left: -75px;
+  bottom: 0;
+  height: 110px;
+  width: 110px;
+  background: url(../img/icons/buyer-kit.png) no-repeat;
+  background-size: contain;
+}
+
+@media only screen and (min-width: 768px) {
+  .buyer {
+    padding: 90px 0;
+  }
+  .buyer__box {
+    padding-top: 65px;
+  }
+  .buyer__modal {
+    margin-top: 0;
+  }
+  .buyer__content {
+    padding: 30px 15px;
+  }
+  .buyer__heading {
+    margin-bottom: 50px;
+  }
+  .buyer__icon {
+    height: 150px;
+    width: 150px;
+    left: -100px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .buyer__icon {
+    width: 230px;
+    height: 236px;
+    left: -125px;
+    bottom: -60px;
+  }
+}
+/* ---------------------------------------- */
 /* F O O T E R    S T Y L E                 */
 /* ---------------------------------------- */
 .footer {
@@ -1716,8 +1810,27 @@ a {
   font: 600 14px/18px "Open Sans", sans-serif;
   margin-bottom: 40px;
 }
+.modal__subheading--color-white {
+  color: #fff;
+}
 .modal__input {
   text-align: center;
+}
+.modal__input--color-white {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.modal__input--color-white:-ms-input-placeholder {
+  color: #fff;
+}
+.modal__input--color-white::-moz-placeholder {
+  color: #fff;
+}
+.modal__input--color-white::-webkit-input-placeholder {
+  color: #fff;
+}
+.modal__input--color-white::placeholder {
+  color: #fff;
 }
 .modal__btn {
   width: 100%;

@@ -721,7 +721,6 @@ a
 +r(768)
   .button
     font: 400 14px/16px $main-open-sans 
-    padding: 15px 35px
 .form
   &__input
     text-align: center
@@ -1114,6 +1113,11 @@ a
     font: 600 16px/20px $main-open-sans
     color: $color-grey
     margin-bottom: 25px
+  &__title
+    color: $color-grey
+    font: 600 14px/21px $main-open-sans 
+    margin-bottom: 10px
+    text-align: center
   &__list
     padding: 0
     text-align: center
@@ -1140,6 +1144,14 @@ a
     &__subheading  
       font: 600 20px/22px $main-open-sans 
       margin-bottom: 10px 
+      &--left
+        text-align: left
+    &__title
+      font: 600 16px/24px $main-open-sans   
+      text-align: left
+    &__list
+      &--left
+        text-align: left 
     &__item  
       font: 400 16px/24px $main-open-sans
       &:before
@@ -1153,6 +1165,8 @@ a
       margin-bottom: 65px  
     &__subheading
       margin-bottom: 35px  
+    &__title
+      font: 600 18px/27px $main-open-sans     
     &__item  
       font: 400 18px/27px $main-open-sans
 +comment("condition styles")  
@@ -1464,7 +1478,7 @@ a
       height: 300px
 +comment('comment style')  
 .comment
-  padding-bottom: 150px
+  padding-bottom: 60px
   &__slider
     .slick
       &-dots
@@ -1555,6 +1569,61 @@ a
       left: 50%
       margin-left: -230px
       width: 460px
++comment('buyer style') 
+.buyer
+  padding: 60px 0
+  background: url(../img/buyer.png) no-repeat
+  background-size: cover
+  &__modal
+    width: 100%
+    position: relative
+  &__content
+    border: 10px solid rgba(255, 255, 255, 0.07)
+    box-shadow: 0 0 15px rgba(0, 3, 2, 0.25)
+    background-color: $color-orange 
+    padding: 20px
+  &__heading
+    margin-bottom: 35px
+  &__btn
+    background: #fff
+    color: $color-grey
+    width: 100%
+    &:hover,
+    &:focus,
+    &:visited
+      color: $color-orange 
+      background: #fff
+  &__icon
+    display: inline-block
+    position: absolute
+    left: -75px
+    bottom: 0
+    height: 110px
+    width: 110px  
+    background: url(../img/icons/buyer-kit.png) no-repeat 
+    background-size: contain 
++r(768)
+  .buyer
+    padding: 90px 0
+    &__box
+      padding-top: 65px
+    &__modal
+      margin-top: 0
+    &__content
+      padding: 30px 15px
+    &__heading
+      margin-bottom: 50px
+    &__icon
+      height: 150px
+      width: 150px  
+      left: -100px
++r(992)      
+  .buyer
+    &__icon
+      width: 230px
+      height: 236px
+      left: -125px
+      bottom: -60px
 +comment('footer style') 
 .footer
   padding: 30px 0    
@@ -1619,8 +1688,15 @@ a
     color: $color-grey  
     font: 600 14px/18px $main-open-sans   
     margin-bottom: 40px
+    &--color-white
+      color: #fff
   &__input
     text-align: center
+    &--color-white
+      color: #fff
+      border: 1px solid #fff
+      +placeholder
+        color: #fff
   &__btn
     width: 100%  
 +r(768)
