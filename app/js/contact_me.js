@@ -1,6 +1,6 @@
 $(function() {
 
-    $(".contactForm input,.contactForm textarea").jqBootstrapValidation({
+    $(".contactForm input, .contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
@@ -15,12 +15,8 @@ $(function() {
             var phone = $form.find("[name=phone]").val();
             var message = $form.find("[name=message]").val();
             var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
-            }
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "././mail/mail.php",
                 type: "POST",
                 data: {
                     form: form,
