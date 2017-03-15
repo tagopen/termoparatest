@@ -46,7 +46,7 @@
     console.log($(this));
     $(this).parents('.question')
       .find('.test__btn[data-target]')
-      .removeClass('hidden');
+      .removeClass('.test__btn--hidden');
   });
 
   $('.test__btn[data-target]').on('click', function(e) {
@@ -58,9 +58,7 @@
     $contentItem.filter(itemPosition)
     .addClass('tabs__item--active')
     .siblings()
-    .removeClass('tabs__item--active')
-    .find('.radio-btn__control')
-    .removeClass('hidden');
+    .removeClass('tabs__item--active');
 
     e.preventDefault();
   });
@@ -124,6 +122,8 @@ $(window).on('resize', function(){
     $('.product--group2').equialHeight();
     $('.product--group3').equialHeight();
     $('.service').equialHeight();
+    $('.service__text').equialHeight();
+    $('.service__name3').equialHeight();
   }
 
   $('.comment__text').equialHeight();
