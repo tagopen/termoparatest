@@ -28,6 +28,10 @@
     });
   });
 
+  $('.about__link').on('click', function(e) {
+    e.preventDefault();
+  });
+
   // Masked phone
   if ($("[name=phone]").length) {
     $("[name=phone]").mask("+ 38 (999) 999-99-99");
@@ -38,6 +42,12 @@
     $("a.fancyimage").fancybox(); 
   }
 
+  $('.radio-btn__control').on('click, change', function() {
+    console.log($(this));
+    $(this).parents('.question')
+      .find('.test__btn[data-target]')
+      .removeClass('hidden');
+  });
 
   $('.test__btn[data-target]').on('click', function(e) {
  
@@ -48,46 +58,47 @@
     $contentItem.filter(itemPosition)
     .addClass('tabs__item--active')
     .siblings()
-    .removeClass('tabs__item--active');
+    .removeClass('tabs__item--active')
+    .find('.radio-btn__control')
+    .removeClass('hidden');
 
     e.preventDefault();
   });
-
-$('.comment__slider').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  arrows: false,
-  dots: true,
-  mobileFirst: true,
-  centerMode: true,
-  swipeToSlide: '15',
-  responsive: [
-      {
-      breakpoint: 767,
-      settings: {
-        arrows: false,
-        dots: true,
-        centerMode: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerPadding: '0'
-      }
-    },
-    {
-      breakpoint: 0,
-      settings: {
-        dots: true,
-        arrows: false,
-        speed: 300,
-        centerMode: false,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-});
-})(jQuery); // End of use strict
-
+  if ($('.comment__slider').length) {
+    $('.comment__slider').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      mobileFirst: true,
+      centerMode: true,
+      swipeToSlide: '15',
+      responsive: [
+          {
+          breakpoint: 767,
+          settings: {
+            arrows: false,
+            dots: true,
+            centerMode: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerPadding: '0'
+          }
+        },
+        {
+          breakpoint: 0,
+          settings: {
+            dots: true,
+            arrows: false,
+            speed: 300,
+            centerMode: false,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  }
  // Equal height plugin
   $.fn.equialHeight = (function() {
     var $tallestcolumn = 0;
@@ -102,16 +113,18 @@ $('.comment__slider').slick({
     $(this).height($tallestcolumn);
     return $(this);
   });
-  // Equial Height
-  $(window).on('resize', function(){
-    // Only 768+
-    if( $( window ).width() >= 768 ) {
-      $('.product--group1').equialHeight();
-      $('.product--group2').equialHeight();
-      $('.product--group3').equialHeight();
-      $('.service').equialHeight();
-    }
 
-    $('.comment__img').equialHeight();
-    $('.comment__text').equialHeight();
-  }).trigger('resize');
+})(jQuery); // End of use strict
+
+// Equial Height
+$(window).on('resize', function(){
+  // Only 768+
+  if( $( window ).width() >= 768 ) {
+    $('.product--group1').equialHeight();
+    $('.product--group2').equialHeight();
+    $('.product--group3').equialHeight();
+    $('.service').equialHeight();
+  }
+
+  $('.comment__text').equialHeight();
+}).trigger('resize');
