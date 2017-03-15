@@ -8,34 +8,19 @@ section.test.test--exam
             |  из 
             span.question__total 8
             h2.question__heading
-              | Где хотите строить ваш барбекю комплекс?
+              | Вы планируете использовать обогреватели?
             .row
-              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4.col-lg-5.col-lg-offset-4.text-left    
+              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-8.col-md-offset-4.col-lg-8.col-lg-offset-4.text-left    
                 .question__radio-group.radio-btn
                   input#question-11.radio-btn__control(type='radio', name='question1')
                   label.radio-btn__box.radio-btn__box--check(name='question1', for='question-11')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | В застекленной беседке
+                    | как основное отопление
                 .question__radio-group.radio-btn
                   input#question-12.radio-btn__control(type='radio', name='question1')
                   label.radio-btn__box.radio-btn__box--check(name='question1', for='question-12')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | В открытой беседке
-                .question__radio-group.radio-btn
-                  input#question-13.radio-btn__control(type='radio', name='question1')
-                  label.radio-btn__box.radio-btn__box--check(name='question1', for='question-13')
-                    span.radio-btn__icon.radio-btn__icon--check
-                    | Под открытым навесом
-                .question__radio-group.radio-btn
-                  input#question-14.radio-btn__control(type='radio', name='question1')
-                  label.radio-btn__box.radio-btn__box--check(name='question1', for='question-14')
-                    span.radio-btn__icon.radio-btn__icon--check
-                    | В доме
-                .question__radio-group.radio-btn
-                  input#question-15.radio-btn__control(type='radio', name='question1')
-                  label.radio-btn__box.radio-btn__box--check(name='question1', for='question-15')
-                    span.radio-btn__icon.radio-btn__icon--check
-                    | В бане             
+                    | как дополнительное отопление
                 button.btn.button.test__btn.test__btn--hidden(data-target='#question2') Далее  
           #question2.tabs__item.question
             .question__number
@@ -44,30 +29,34 @@ section.test.test--exam
               |  из 
               span.question__total 8
             h2.question__heading
-              | В чем разница между Object.getOwnPropertyNames() и Object.keys()
-              
+              | Какой тип вашего помещения?              
             .row
-              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4.col-lg-5.col-lg-offset-4.text-left 
+              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-8.col-md-offset-4.col-lg-8.col-lg-offset-4.text-left 
                 .question__radio-group.radio-btn
                   input#question-21.radio-btn__control(type='radio', name='question2')
                   label.radio-btn__box.radio-btn__box--check(name='question2', for='question-21')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | Дом
                 .question__radio-group.radio-btn
                   input#question-22.radio-btn__control(type='radio', name='question2')
                   label.radio-btn__box.radio-btn__box--check(name='question2', for='question-22')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
+                    | Квартира
                 .question__radio-group.radio-btn
                   input#question-23.radio-btn__control(type='radio', name='question2')
                   label.radio-btn__box.radio-btn__box--check(name='question2', for='question-23')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
+                    | Офис
                 .question__radio-group.radio-btn
                   input#question-24.radio-btn__control(type='radio', name='question2')
                   label.radio-btn__box.radio-btn__box--check(name='question2', for='question-24')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | Промышленное помещение
+                .question__radio-group.radio-btn
+                  input#question-25.radio-btn__control(type='radio', name='question2')
+                  label.radio-btn__box.radio-btn__box--check(name='question2', for='question-25')
+                    span.radio-btn__icon.radio-btn__icon--check
+                    | Другое   
                 button.btn.button.test__btn--hidden.test__btn(data-target='#question3') Далее 
           #question3.tabs__item.question
             .question__number
@@ -76,30 +65,24 @@ section.test.test--exam
               |  из 
               span.question__total 8
             h2.question__heading
-              | В чем разница между Object.getOwnPropertyNames() и Object.keys()
-              
+              | Если ли в вашем помещении дополнительное утепление?
             .row
-              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4.col-lg-5.col-lg-offset-4.text-left 
+              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-8.col-md-offset-4.col-lg-8.col-lg-offset-4.text-left 
                 .question__radio-group.radio-btn
                   input#question-31.radio-btn__control(type='radio', name='question3')
                   label.radio-btn__box.radio-btn__box--check(name='question3', for='question-31')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | Нет
                 .question__radio-group.radio-btn
                   input#question-32.radio-btn__control(type='radio', name='question3')
                   label.radio-btn__box.radio-btn__box--check(name='question3', for='question-32')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
+                    | Есть (утепление по фасаду, утепление гипсокартоном или минеральной ватой)
                 .question__radio-group.radio-btn
                   input#question-33.radio-btn__control(type='radio', name='question3')
                   label.radio-btn__box.radio-btn__box--check(name='question3', for='question-33')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
-                .question__radio-group.radio-btn
-                  input#question-34.radio-btn__control(type='radio', name='question3')
-                  label.radio-btn__box.radio-btn__box--check(name='question3', for='question-34')
-                    span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | Не знаю
                 button.btn.button.test__btn--hidden.test__btn(data-target='#question4') Далее 
           #question4.tabs__item.question
             .question__number
@@ -108,30 +91,24 @@ section.test.test--exam
               |  из 
               span.question__total 8
             h2.question__heading
-              | В чем разница между Object.getOwnPropertyNames() и Object.keys()
-              
+              | Сколько помещений хотите отопить?
             .row
-              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4.col-lg-5.col-lg-offset-4.text-left 
+              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-8.col-md-offset-4.col-lg-8.col-lg-offset-4.text-left 
                 .question__radio-group.radio-btn
                   input#question-41.radio-btn__control(type='radio', name='question4')
                   label.radio-btn__box.radio-btn__box--check(name='question4', for='question-41')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | Одно
                 .question__radio-group.radio-btn
                   input#question-42.radio-btn__control(type='radio', name='question4')
                   label.radio-btn__box.radio-btn__box--check(name='question4', for='question-42')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
+                    | Два
                 .question__radio-group.radio-btn
                   input#question-43.radio-btn__control(type='radio', name='question4')
                   label.radio-btn__box.radio-btn__box--check(name='question4', for='question-43')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
-                .question__radio-group.radio-btn
-                  input#question-44.radio-btn__control(type='radio', name='question4')
-                  label.radio-btn__box.radio-btn__box--check(name='question4', for='question-44')
-                    span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | Более двух
                 button.btn.button.test__btn--hidden.test__btn(data-target='#question5') Далее 
           #question5.tabs__item.question
             .question__number
@@ -140,30 +117,24 @@ section.test.test--exam
               |  из 
               span.question__total 8
             h2.question__heading
-              | В чем разница между Object.getOwnPropertyNames() и Object.keys()
-              
+              | Какая высота потолков?
             .row
-              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4.col-lg-5.col-lg-offset-4.text-left 
+              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-8.col-md-offset-4.col-lg-8.col-lg-offset-4.text-left 
                 .question__radio-group.radio-btn
                   input#question-51.radio-btn__control(type='radio', name='question5')
                   label.radio-btn__box.radio-btn__box--check(name='question5', for='question-51')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | до 2-х метров
                 .question__radio-group.radio-btn
                   input#question-52.radio-btn__control(type='radio', name='question5')
                   label.radio-btn__box.radio-btn__box--check(name='question5', for='question-52')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
+                    | от 2 до 3 метров
                 .question__radio-group.radio-btn
                   input#question-53.radio-btn__control(type='radio', name='question5')
                   label.radio-btn__box.radio-btn__box--check(name='question5', for='question-53')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
-                .question__radio-group.radio-btn
-                  input#question-54.radio-btn__control(type='radio', name='question5')
-                  label.radio-btn__box.radio-btn__box--check(name='question5', for='question-54')
-                    span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | свыше 3 метров
                 button.btn.button.test__btn--hidden.test__btn(data-target='#question6') Далее 
           #question6.tabs__item.question
             .question__number
@@ -172,30 +143,19 @@ section.test.test--exam
               |  из 
               span.question__total 8
             h2.question__heading
-              | В чем разница между Object.getOwnPropertyNames() и Object.keys()
-              
+              | Какую желаемую температуру хотите получить?
             .row
-              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4.col-lg-5.col-lg-offset-4.text-left 
+              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-8.col-md-offset-4.col-lg-8.col-lg-offset-4.text-left 
                 .question__radio-group.radio-btn
                   input#question-61.radio-btn__control(type='radio', name='question6')
                   label.radio-btn__box.radio-btn__box--check(name='question6', for='question-61')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | до 20С
                 .question__radio-group.radio-btn
                   input#question-62.radio-btn__control(type='radio', name='question6')
                   label.radio-btn__box.radio-btn__box--check(name='question6', for='question-62')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
-                .question__radio-group.radio-btn
-                  input#question-63.radio-btn__control(type='radio', name='question6')
-                  label.radio-btn__box.radio-btn__box--check(name='question6', for='question-63')
-                    span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
-                .question__radio-group.radio-btn
-                  input#question-64.radio-btn__control(type='radio', name='question6')
-                  label.radio-btn__box.radio-btn__box--check(name='question6', for='question-64')
-                    span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | свыше 20С
                 button.btn.button.test__btn--hidden.test__btn(data-target='#question7') Далее 
           #question7.tabs__item.question
             .question__number
@@ -204,30 +164,34 @@ section.test.test--exam
               |  из 
               span.question__total 8
             h2.question__heading
-              | В чем разница между Object.getOwnPropertyNames() и Object.keys()
-              
+              | Какое отопление у вас на данный момент?
             .row
-              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4.col-lg-5.col-lg-offset-4.text-left 
+              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-8.col-md-offset-4.col-lg-8.col-lg-offset-4.text-left  
                 .question__radio-group.radio-btn
                   input#question-71.radio-btn__control(type='radio', name='question7')
                   label.radio-btn__box.radio-btn__box--check(name='question7', for='question-71')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | Автономное (газовое)
                 .question__radio-group.radio-btn
                   input#question-72.radio-btn__control(type='radio', name='question7')
                   label.radio-btn__box.radio-btn__box--check(name='question7', for='question-72')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
+                    | Автономное (электрическое) 
                 .question__radio-group.radio-btn
                   input#question-73.radio-btn__control(type='radio', name='question7')
                   label.radio-btn__box.radio-btn__box--check(name='question7', for='question-73')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
+                    | Централизованное отопление 
                 .question__radio-group.radio-btn
                   input#question-74.radio-btn__control(type='radio', name='question7')
                   label.radio-btn__box.radio-btn__box--check(name='question7', for='question-74')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | Твердотопливное
+                .question__radio-group.radio-btn
+                  input#question-75.radio-btn__control(type='radio', name='question7')
+                  label.radio-btn__box.radio-btn__box--check(name='question7', for='question-75')
+                    span.radio-btn__icon.radio-btn__icon--check
+                    | Нет отопления    
                 button.btn.button.test__btn--hidden.test__btn(data-target='#question8') Далее 
           #question8.tabs__item.question
             .question__number
@@ -236,48 +200,52 @@ section.test.test--exam
               |  из 
               span.question__total 8
             h2.question__heading
-              | В чем разница между Object.getOwnPropertyNames() и Object.keys()
-              
+              | Какие могут быть тепло потери?
             .row
-              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4.col-lg-5.col-lg-offset-4.text-left 
+              .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-8.col-md-offset-4.col-lg-8.col-lg-offset-4.text-left 
                 .question__radio-group.radio-btn
                   input#question-81.radio-btn__control(type='radio', name='question8')
                   label.radio-btn__box.radio-btn__box--check(name='question8', for='question-81')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | Их нет
                 .question__radio-group.radio-btn
                   input#question-82.radio-btn__control(type='radio', name='question8')
                   label.radio-btn__box.radio-btn__box--check(name='question8', for='question-82')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
+                    | Камин
                 .question__radio-group.radio-btn
                   input#question-83.radio-btn__control(type='radio', name='question8')
                   label.radio-btn__box.radio-btn__box--check(name='question8', for='question-83')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.keys() возвращает перечислимые свойства из объекта или массива.
+                    | Проходная комната
                 .question__radio-group.radio-btn
                   input#question-84.radio-btn__control(type='radio', name='question8')
                   label.radio-btn__box.radio-btn__box--check(name='question8', for='question-84')
                     span.radio-btn__icon.radio-btn__icon--check
-                    | Object.getOwnPropertyNames() возвращает перечислимые и не перечислимые свойства из объекта или массива
+                    | Трещины в стенах
+                .question__radio-group.radio-btn
+                  input#question-85.radio-btn__control(type='radio', name='question8')
+                  label.radio-btn__box.radio-btn__box--check(name='question8', for='question-85')
+                    span.radio-btn__icon.radio-btn__icon--check
+                    | Что-то другое   
                 button.btn.button.test__btn--hidden.test__btn(data-target='#finally') Далее 
           #finally.tabs__item.question
             h2.question__heading
-              | Позравляю, ты Senior
+              | Благодарим за ответы
             .question__descr
-              | Оставь свои данные, чтоб я мог тебе звонить в 3 часа ночи и задалбывать всякой фигней
+              | а теперь оставьте ваши контактные данные для дальнейшей связи.
             form.contactForm.form(name='Форма Тестов', method='post', action='./mail/mail.php', novalidate)
               .row
-                .col-xs-12
+                .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4
                   .form-group
                     input.form-control.form__input.form__input--message(name='name', type='text', placeholder='Введите ваше имя', data-validation-required-message='Введите корректные данные.', required)
                     p.help-block.text-danger
-                .col-xs-12
+                .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4
                   .form-group
                     input.form-control.form__input.form__input--phone(name='phone', type='tel', data-validation-required-message='Введите корректные данные.', placeholder='Введите ваш телефон', required)
                     p.help-block.text-danger
                 .clearfix
-                .col-xs-12
+                .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4
                   .success
                 .col-sm-6.col-sm-offset-3.text-center
-                  button.btn.button.test__btn(type='submit', data-loading-text="Файл отправляется...") Звони когда хочешь
+                  button.btn.button.test__btn(type='submit', data-loading-text="Файл отправляется...") Подобрать обогреватели
