@@ -43,10 +43,9 @@
   }
 
   $('.radio-btn__control').on('click, change', function() {
-    console.log($(this));
     $(this).parents('.question')
-      .find('.test__btn[data-target]')
-      .removeClass('.test__btn--hidden');
+      .find('.test__btn')
+      .removeClass('test__btn--hidden');
   });
 
   $('.test__btn[data-target]').on('click', function(e) {
@@ -62,6 +61,50 @@
 
     e.preventDefault();
   });
+
+  // Change product images color
+  $(function() {
+    $('.product__radio-input').on('click, change', function() {
+      var $this     = $(this),
+          $products = $this.parents('.product'),
+          color     = $this.data('color') || 'white',
+          $images = $products.find('.product__link--big');
+
+      var $currImg = $images.find('.product__img--' + color);
+      $currImg.removeClass('hidden').parent().siblings().find('.product__img').addClass('hidden');
+    });
+  });
+
+  // Product Name write to form
+  $('.product__btn').on('click', function() {
+    var $input = $('#product-name'),
+        $productName = $(this).parents('.product').find('.product__name').text();
+    $input.val($productName);
+  });
+
+  if($('.buyer__modal--inputnotexist').length) {
+    var $form     = $('.buyer__modal--inputnotexist'),
+        switchBtn = false;
+
+    if ($.cookie("existName") !== undefined) {
+      $form.find('[name=name]').removeClass('hidden');
+      switchBtn = true;
+    }
+    if ($.cookie("existEmail") !== undefined) {
+      $form.find('[name=email]').removeClass('hidden');
+      switchBtn = true;
+    }
+    if ($.cookie("existPhone") !== undefined) {
+      $form.find('[name=phone]').removeClass('hidden');
+      switchBtn = true;
+    }
+    
+    $.removeCookie("existName");
+    $.removeCookie("existPhone");
+    $.removeCookie("existEmail");
+  }
+
+  // SLick slider init
   if ($('.comment__slider').length) {
     $('.comment__slider').slick({
       slidesToShow: 3,

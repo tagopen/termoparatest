@@ -56,7 +56,7 @@
   <body class="body loaded">
     <div class="wrapper">
       <div class="content">
-        <header class="header header--examnav navbar">
+        <header class="header header--examnav navbar header--margin">
           <div class="container">
             <div class="row">
               <div class="col-xs-12 col-sm-4">
@@ -79,218 +79,221 @@
             <div class="container">
               <div class="row">
                 <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                  <div class="tabs">
-                    <div class="tabs__item question tabs__item--active" id="question1"><span class="question__current">Вопрос 1</span> из <span class="question__total">8</span>
-                      <h2 class="question__heading">Вы планируете использовать обогреватели?</h2>
-                      <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left">   
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-11" type="radio" name="question1">
-                            <label class="radio-btn__box radio-btn__box--check" name="question1" for="question-11"><span class="radio-btn__icon radio-btn__icon--check"></span>как основное отопление</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-12" type="radio" name="question1">
-                            <label class="radio-btn__box radio-btn__box--check" name="question1" for="question-12"><span class="radio-btn__icon radio-btn__icon--check"></span>как дополнительное отопление</label>
-                          </div>
-                          <button class="btn button test__btn test__btn--hidden" data-target="#question2">Далее  </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tabs__item question" id="question2">
-                      <div class="question__number">Вопрос <span class="question__current">2</span> из <span class="question__total">8</span></div>
-                      <h2 class="question__heading">Какой тип вашего помещения?              </h2>
-                      <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-21" type="radio" name="question2">
-                            <label class="radio-btn__box radio-btn__box--check" name="question2" for="question-21"><span class="radio-btn__icon radio-btn__icon--check"></span>Дом</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-22" type="radio" name="question2">
-                            <label class="radio-btn__box radio-btn__box--check" name="question2" for="question-22"><span class="radio-btn__icon radio-btn__icon--check"></span>Квартира</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-23" type="radio" name="question2">
-                            <label class="radio-btn__box radio-btn__box--check" name="question2" for="question-23"><span class="radio-btn__icon radio-btn__icon--check"></span>Офис</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-24" type="radio" name="question2">
-                            <label class="radio-btn__box radio-btn__box--check" name="question2" for="question-24"><span class="radio-btn__icon radio-btn__icon--check"></span>Промышленное помещение</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-25" type="radio" name="question2">
-                            <label class="radio-btn__box radio-btn__box--check" name="question2" for="question-25"><span class="radio-btn__icon radio-btn__icon--check"></span>Другое   </label>
-                          </div>
-                          <button class="btn button test__btn--hidden test__btn" data-target="#question3">Далее </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tabs__item question" id="question3">
-                      <div class="question__number">Вопрос <span class="question__current">3</span> из <span class="question__total">8</span></div>
-                      <h2 class="question__heading">Если ли в вашем помещении дополнительное утепление?</h2>
-                      <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-31" type="radio" name="question3">
-                            <label class="radio-btn__box radio-btn__box--check" name="question3" for="question-31"><span class="radio-btn__icon radio-btn__icon--check"></span>Нет</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-32" type="radio" name="question3">
-                            <label class="radio-btn__box radio-btn__box--check" name="question3" for="question-32"><span class="radio-btn__icon radio-btn__icon--check"></span>Есть (утепление по фасаду, утепление гипсокартоном или минеральной ватой)</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-33" type="radio" name="question3">
-                            <label class="radio-btn__box radio-btn__box--check" name="question3" for="question-33"><span class="radio-btn__icon radio-btn__icon--check"></span>Не знаю</label>
-                          </div>
-                          <button class="btn button test__btn--hidden test__btn" data-target="#question4">Далее </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tabs__item question" id="question4">
-                      <div class="question__number">Вопрос <span class="question__current">4</span> из <span class="question__total">8</span></div>
-                      <h2 class="question__heading">Сколько помещений хотите отопить?</h2>
-                      <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-41" type="radio" name="question4">
-                            <label class="radio-btn__box radio-btn__box--check" name="question4" for="question-41"><span class="radio-btn__icon radio-btn__icon--check"></span>Одно</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-42" type="radio" name="question4">
-                            <label class="radio-btn__box radio-btn__box--check" name="question4" for="question-42"><span class="radio-btn__icon radio-btn__icon--check"></span>Два</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-43" type="radio" name="question4">
-                            <label class="radio-btn__box radio-btn__box--check" name="question4" for="question-43"><span class="radio-btn__icon radio-btn__icon--check"></span>Более двух</label>
-                          </div>
-                          <button class="btn button test__btn--hidden test__btn" data-target="#question5">Далее </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tabs__item question" id="question5">
-                      <div class="question__number">Вопрос <span class="question__current">5</span> из <span class="question__total">8</span></div>
-                      <h2 class="question__heading">Какая высота потолков?</h2>
-                      <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-51" type="radio" name="question5">
-                            <label class="radio-btn__box radio-btn__box--check" name="question5" for="question-51"><span class="radio-btn__icon radio-btn__icon--check"></span>до 2-х метров</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-52" type="radio" name="question5">
-                            <label class="radio-btn__box radio-btn__box--check" name="question5" for="question-52"><span class="radio-btn__icon radio-btn__icon--check"></span>от 2 до 3 метров</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-53" type="radio" name="question5">
-                            <label class="radio-btn__box radio-btn__box--check" name="question5" for="question-53"><span class="radio-btn__icon radio-btn__icon--check"></span>свыше 3 метров</label>
-                          </div>
-                          <button class="btn button test__btn--hidden test__btn" data-target="#question6">Далее </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tabs__item question" id="question6">
-                      <div class="question__number">Вопрос <span class="question__current">6</span> из <span class="question__total">8</span></div>
-                      <h2 class="question__heading">Какую желаемую температуру хотите получить?</h2>
-                      <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-61" type="radio" name="question6">
-                            <label class="radio-btn__box radio-btn__box--check" name="question6" for="question-61"><span class="radio-btn__icon radio-btn__icon--check"></span>до 20С</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-62" type="radio" name="question6">
-                            <label class="radio-btn__box radio-btn__box--check" name="question6" for="question-62"><span class="radio-btn__icon radio-btn__icon--check"></span>свыше 20С</label>
-                          </div>
-                          <button class="btn button test__btn--hidden test__btn" data-target="#question7">Далее </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tabs__item question" id="question7">
-                      <div class="question__number">Вопрос <span class="question__current">7</span> из <span class="question__total">8</span></div>
-                      <h2 class="question__heading">Какое отопление у вас на данный момент?</h2>
-                      <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-71" type="radio" name="question7">
-                            <label class="radio-btn__box radio-btn__box--check" name="question7" for="question-71"><span class="radio-btn__icon radio-btn__icon--check"></span>Автономное (газовое)</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-72" type="radio" name="question7">
-                            <label class="radio-btn__box radio-btn__box--check" name="question7" for="question-72"><span class="radio-btn__icon radio-btn__icon--check"></span>Автономное (электрическое) </label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-73" type="radio" name="question7">
-                            <label class="radio-btn__box radio-btn__box--check" name="question7" for="question-73"><span class="radio-btn__icon radio-btn__icon--check"></span>Централизованное отопление </label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-74" type="radio" name="question7">
-                            <label class="radio-btn__box radio-btn__box--check" name="question7" for="question-74"><span class="radio-btn__icon radio-btn__icon--check"></span>Твердотопливное</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-75" type="radio" name="question7">
-                            <label class="radio-btn__box radio-btn__box--check" name="question7" for="question-75"><span class="radio-btn__icon radio-btn__icon--check"></span>Нет отопления    </label>
-                          </div>
-                          <button class="btn button test__btn--hidden test__btn" data-target="#question8">Далее </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tabs__item question" id="question8">
-                      <div class="question__number">Вопрос <span class="question__current">8</span> из <span class="question__total">8</span></div>
-                      <h2 class="question__heading">Какие могут быть тепло потери?</h2>
-                      <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-81" type="radio" name="question8">
-                            <label class="radio-btn__box radio-btn__box--check" name="question8" for="question-81"><span class="radio-btn__icon radio-btn__icon--check"></span>Их нет</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-82" type="radio" name="question8">
-                            <label class="radio-btn__box radio-btn__box--check" name="question8" for="question-82"><span class="radio-btn__icon radio-btn__icon--check"></span>Камин</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-83" type="radio" name="question8">
-                            <label class="radio-btn__box radio-btn__box--check" name="question8" for="question-83"><span class="radio-btn__icon radio-btn__icon--check"></span>Проходная комната</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-84" type="radio" name="question8">
-                            <label class="radio-btn__box radio-btn__box--check" name="question8" for="question-84"><span class="radio-btn__icon radio-btn__icon--check"></span>Трещины в стенах</label>
-                          </div>
-                          <div class="question__radio-group radio-btn">
-                            <input class="radio-btn__control" id="question-85" type="radio" name="question8">
-                            <label class="radio-btn__box radio-btn__box--check" name="question8" for="question-85"><span class="radio-btn__icon radio-btn__icon--check"></span>Что-то другое   </label>
-                          </div>
-                          <button class="btn button test__btn--hidden test__btn" data-target="#finally">Далее </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tabs__item question" id="finally">
-                      <h2 class="question__heading">Благодарим за ответы</h2>
-                      <div class="question__descr">а теперь оставьте ваши контактные данные для дальнейшей связи.</div>
-                      <form class="contactForm form" name="Форма Тестов" method="post" action="./mail/mail.php" novalidate>
+                  <form class="contactForm" method="post" action="./mail/mail.php" novalidate>
+                    <div class="tabs">
+                      <div class="tabs__item question tabs__item--active" id="question1">
+                        <div class="question__number">Вопрос <span class="question__current">1</span> из <span class="question__total">8</span></div>
+                        <h2 class="question__heading">Вы планируете использовать обогреватели?</h2>
                         <div class="row">
-                          <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                            <div class="form-group">
-                              <input class="form-control form__input form__input--message" name="name" type="text" placeholder="Введите ваше имя" data-validation-required-message="Введите корректные данные." required>
-                              <p class="help-block text-danger"></p>
+                          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left">   
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-11" type="radio" name="question[][1]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][1]" for="question-11"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">как основное отопление</span></label>
                             </div>
-                          </div>
-                          <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                            <div class="form-group">
-                              <input class="form-control form__input form__input--phone" name="phone" type="tel" data-validation-required-message="Введите корректные данные." placeholder="Введите ваш телефон" required>
-                              <p class="help-block text-danger"></p>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-12" type="radio" name="question[][1]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][1]" for="question-12"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">как дополнительное отопление</span></label>
                             </div>
-                          </div>
-                          <div class="clearfix"></div>
-                          <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                            <div class="success"></div>
-                          </div>
-                          <div class="col-sm-6 col-sm-offset-3 text-center">
-                            <button class="btn button test__btn" type="submit" data-loading-text="Файл отправляется...">Подобрать обогреватели</button>
+                            <button class="btn button test__btn test__btn--hidden" data-target="#question2">Далее  </button>
                           </div>
                         </div>
-                      </form>
+                      </div>
+                      <div class="tabs__item question" id="question2">
+                        <div class="question__number">Вопрос <span class="question__current">2</span> из <span class="question__total">8</span></div>
+                        <h2 class="question__heading">Какой тип вашего помещения?              </h2>
+                        <div class="row">
+                          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-21" type="radio" name="question[][2]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][2]" for="question-21"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Дом</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-22" type="radio" name="question[][2]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][2]" for="question-22"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Квартира</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-23" type="radio" name="question[][2]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][2]" for="question-23"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Офис</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-24" type="radio" name="question[][2]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][2]" for="question-24"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Промышленное помещение</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-25" type="radio" name="question[][2]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][2]" for="question-25"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Другое   </span></label>
+                            </div>
+                            <button class="btn button test__btn--hidden test__btn" data-target="#question3">Далее </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item question" id="question3">
+                        <div class="question__number">Вопрос <span class="question__current">3</span> из <span class="question__total">8</span></div>
+                        <h2 class="question__heading">Если ли в вашем помещении дополнительное утепление?</h2>
+                        <div class="row">
+                          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-31" type="radio" name="question[][3]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][3]" for="question-31"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Нет</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-32" type="radio" name="question[][3]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][3]" for="question-32"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Есть (утепление по фасаду, утепление гипсокартоном или минеральной ватой)</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-33" type="radio" name="question[][3]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][3]" for="question-33"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Не знаю</span></label>
+                            </div>
+                            <button class="btn button test__btn--hidden test__btn" data-target="#question4">Далее </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item question" id="question4">
+                        <div class="question__number">Вопрос <span class="question__current">4</span> из <span class="question__total">8</span></div>
+                        <h2 class="question__heading">Сколько помещений хотите отопить?</h2>
+                        <div class="row">
+                          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-41" type="radio" name="question[][4]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][4]" for="question-41"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Одно</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-42" type="radio" name="question[][4]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][4]" for="question-42"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Два</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-43" type="radio" name="question[][4]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][4]" for="question-43"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Более двух</span></label>
+                            </div>
+                            <button class="btn button test__btn--hidden test__btn" data-target="#question5">Далее </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item question" id="question5">
+                        <div class="question__number">Вопрос <span class="question__current">5</span> из <span class="question__total">8</span></div>
+                        <h2 class="question__heading">Какая высота потолков?</h2>
+                        <div class="row">
+                          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-51" type="radio" name="question[][5]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][5]" for="question-51"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">до 2-х метров</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-52" type="radio" name="question[][5]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][5]" for="question-52"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">от 2 до 3 метров</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-53" type="radio" name="question[][5]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][5]" for="question-53"><span class="radio-btn__icon radio-btn__icon--check"></span>свыше 3 метров</label>
+                            </div>
+                            <button class="btn button test__btn--hidden test__btn" data-target="#question6">Далее </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item question" id="question6">
+                        <div class="question__number">Вопрос <span class="question__current">6</span> из <span class="question__total">8</span></div>
+                        <h2 class="question__heading">Какую желаемую температуру хотите получить?</h2>
+                        <div class="row">
+                          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-61" type="radio" name="question[][6]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][6]" for="question-61"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">до 20С</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-62" type="radio" name="question[][6]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][6]" for="question-62"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">свыше 20С</span></label>
+                            </div>
+                            <button class="btn button test__btn--hidden test__btn" data-target="#question7">Далее </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item question" id="question7">
+                        <div class="question__number">Вопрос <span class="question__current">7</span> из <span class="question__total">8</span></div>
+                        <h2 class="question__heading">Какое отопление у вас на данный момент?</h2>
+                        <div class="row">
+                          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-71" type="radio" name="question[][7]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][7]" for="question-71"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Автономное (газовое)</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-72" type="radio" name="question[][7]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][7]" for="question-72"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Автономное (электрическое) </span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-73" type="radio" name="question[][7]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][7]" for="question-73"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Централизованное отопление </span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-74" type="radio" name="question[][7]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][7]" for="question-74"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Твердотопливное</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-75" type="radio" name="question[][7]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][7]" for="question-75"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Нет отопления    </span></label>
+                            </div>
+                            <button class="btn button test__btn--hidden test__btn" data-target="#question8">Далее </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item question" id="question8">
+                        <div class="question__number">Вопрос <span class="question__current">8</span> из <span class="question__total">8</span></div>
+                        <h2 class="question__heading">Какие могут быть тепло потери?</h2>
+                        <div class="row">
+                          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 text-left"> 
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-81" type="radio" name="question[][8]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][8]" for="question-81"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Их нет</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-82" type="radio" name="question[][8]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][8]" for="question-82"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Камин</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-83" type="radio" name="question[][8]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][8]" for="question-83"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Проходная комната</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-84" type="radio" name="question[][8]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][8]" for="question-84"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Трещины в стенах</span></label>
+                            </div>
+                            <div class="question__radio-group radio-btn">
+                              <input class="radio-btn__control" id="question-85" type="radio" name="question[][8]">
+                              <label class="radio-btn__box radio-btn__box--check" name="question[][8]" for="question-85"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Что-то другое   </span></label>
+                            </div>
+                            <button class="btn button test__btn--hidden test__btn" data-target="#finally">Далее </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item question" id="finally">
+                        <h2 class="question__heading">Благодарим за ответы</h2>
+                        <div class="question__descr">а теперь оставьте ваши контактные данные для дальнейшей связи.</div>
+                        <div class="form">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                              <div class="form-group">
+                                <input class="form-control form__input form__input--message" name="name" type="text" placeholder="Введите ваше имя" data-validation-required-message="Введите корректные данные." required>
+                                <p class="help-block text-danger"></p>
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                              <div class="form-group">
+                                <input class="form-control form__input form__input--phone" name="phone" type="tel" data-validation-required-message="Введите корректные данные." placeholder="Введите ваш телефон" required>
+                                <p class="help-block text-danger"></p>
+                              </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                              <div class="success"></div>
+                            </div>
+                            <div class="col-sm-6 col-sm-offset-3 text-center">
+                              <button class="btn button test__btn" name="Форма Тестов" type="submit" data-loading-text="Файл отправляется...">Подобрать обогреватели</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -300,6 +303,7 @@
               <div class="col-xs-12">
                 <div class="text-center social">
                   <div class="social__item social__item--exam"><a class="social__link" href="#"><i class="fa social__icon fa-instagram"></i></a></div>
+                  <div class="social__item social__item--exam"><a class="social__link" href="https://www.facebook.com/groups/1091737997540057/"><i class="fa social__icon fa-facebook"></i></a></div>
                   <div class="social__item social__item--exam"><a class="social__link" href="#"><i class="fa social__icon fa-vk"></i></a></div>
                   <div class="social__item social__item--exam"><a class="social__link" href="#"><i class="fa social__icon fa-odnoklassniki"></i></a></div>
                   <div class="social__item social__item--exam"><a class="social__link" href="#"><i class="fa social__icon fa-paper-plane"></i></a></div>
@@ -327,14 +331,62 @@
     <script src="js/jquery.js"></script>
     <!-- Bootstrap JavaScript-->
     <script src="js/bootstrap.js"></script>
+    <!-- Jquery Cookie JavaScript-->
+    <script src="js/jquery.cookie.js"></script>
     <!-- Old browsers reject JavaScript-->
     <script src="js/jquery.reject.js"></script>
-    <!-- Form Send JavaScript-->
+    <!-- Bootstrap validation JavaScript-->
+    <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
     <!-- Phone masked input JavaScript-->
     <script src="js/jquery.maskedinput.js"></script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->
+    <!-- Yandex Metrika-->
+    <script type="text/javascript">
+      (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+      try {
+      w.yaCounter41686209 = new Ya.Metrika({
+      id:41686209,
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true,
+      trackHash:true
+      });
+      } catch(e) { }
+      });
+      var n = d.getElementsByTagName("script")[0],
+      s = d.createElement("script"),
+      f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://mc.yandex.ru/metrika/watch.js";
+      if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/41686209" style="position:absolute; left:-9999px;" alt=""></div>
+    </noscript>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-91325786-1', 'auto');
+      ga('require', 'displayfeatures');
+      ga('require', 'linkid', 'linkid.js');
+      ga('send', 'pageview');
+      /* Accurate bounce rate by time */
+      if (!document.referrer ||
+      document.referrer.split('/')[2].indexOf(location.hostname) != 0)
+      setTimeout(function(){
+      ga('send', 'event', 'Новый посетитель', location.pathname);
+      }, 20000);
+    </script>
   </body>
 </html>

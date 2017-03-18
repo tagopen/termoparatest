@@ -6,17 +6,19 @@
       .modal__head
         p.modal__heading Заказать обратный звонок
         p.modal__subheading Введите ваши данные. В течение 5 минут наш специалист Вам перезвонит.
-      form.contactForm.modal__form(name='Шапка', method='post', action='./mail/mail.php', novalidate)
+      form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
         .row
           .col-xs-12.col-sm-6.col-sm-offset-3
             .form-group
               input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required, data-validation-required-message='Заполните поле корректно.', name='name', type='text')
+              p.help-block.text-danger
             .form-group
               input.form-control.modal__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+              p.help-block.text-danger
             .clearfix
               .success
             .text-center
-              button.btn.button.modal__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок
+              button.btn.button.modal__btn(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок
 #product__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
   .modal-dialog.modal__size
     .modal-content.modal__content
@@ -24,18 +26,40 @@
         i.fa.fa-times(aria-hidden='true')
       .modal__head
         p.modal__heading Заказать обратный звонок
-        p.modal__subheading Введите ваши данные. В течение 5 минут наш специалист Вам перезвонит.
-      form.contactForm.modal__form(name='Шапка', method='post', action='./mail/mail.php', novalidate)
+        p.modal__subheading оставьте контакты и в течении 5 минут с вами свяжется мастер для уточнения деталей заказа
+      form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
         .row
-          .col-xs-12.col-sm-6.col-sm-offset-3
+          .col-xs-12.col-sm-8.col-sm-offset-2
             .form-group
               input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required, data-validation-required-message='Заполните поле корректно.', name='name', type='text')
+              p.help-block.text-danger
             .form-group
               input.form-control.modal__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+              p.help-block.text-danger
+            .form-group
+              input.form-control.modal__input.form__phone(placeholder='Количество', name='qty', type='number')
+              p.help-block.text-danger
+            .form-group
+              input.form-control.modal__input.form__phone(placeholder='Адрес, отделение почты', name='delivery', type='text')
+              p.help-block.text-danger
+            .form-group
+              p.modal__subheading Форма оплаты:
+              .question__radio-group.radio-btn
+                  input#question-11.radio-btn__control(type='radio', name='payment[]')
+                  label.radio-btn__box.radio-btn__box--check(for='question-11')
+                    span.radio-btn__icon.radio-btn__icon--check
+                    span.radio-btn__text Предоплата
+              .question__radio-group.radio-btn
+                input#question-12.radio-btn__control(type='radio', name='payment[]')
+                label.radio-btn__box.radio-btn__box--check(for='question-12')
+                  span.radio-btn__icon.radio-btn__icon--check
+                  span.radio-btn__text Оплата при получении
+            .form-group
+              input#product-name.form-control.modal__input(name='product', type='hidden')
             .clearfix
               .success
             .text-center
-              button.btn.button.modal__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок
+              button.btn.button.modal__btn(name='Заказать обратный звонок',type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок
 #service__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
   .modal-dialog.modal__size
     .modal-content.modal__content
@@ -45,7 +69,7 @@
         p.modal__heading Оставьте ваши контакты
         p.modal__subheading.
           и получите доступ к подробному описанию государственной программы “Теплый дом” и других вариантах рассрочки. Если же у Вас остануться вопросы, то наш специалист любезно вас проконсультирует. 
-      form.contactForm.modal__form(name='Шапка', method='post', action='./mail/mail.php', novalidate)
+      form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
         .row
           .col-xs-12.col-sm-8.col-sm-offset-2
             .form-group
@@ -57,4 +81,150 @@
             .clearfix
               .success
             .text-center
-              button.btn.button.modal__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок
+              button.btn.button.modal__btn(name='Оставьте ваши контакты', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок
+#about__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__size.modal__size--big
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal-body
+        .row
+          .col-xs-12.col-sm-6
+            p.modal__subheading.
+              Оставьте Ваш email и получите доступ к статье. Вы узнаете как на практике люди используют электро панели в конкретном случае.
+            p.modal__subheading.
+              Оставьте Ваш email и получите доступ к статье. Вы узнаете как на практике люди используют электро панели в конкретном случае.
+          .col-xs-12.col-sm-6
+            p.modal__subheading.
+              Оставьте Ваш email и получите доступ к статье. Вы узнаете как на практике люди используют электро панели в конкретном случае.
+            form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+              .row
+                .col-xs-12.col-md-8
+                  .form-group
+                    input.form-control.modal__input(placeholder='Введите Ваш Email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')
+                    p.help-block.text-danger
+                  .clearfix
+                    .success
+                  .text-center
+                    button.btn.button.modal__btn(name='Оставьте Ваш email и получите доступ к статье', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить статью
+
+#product1.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal-head
+        h2.heading TermoPlaza 225
+      .modal-body
+        .table-responsive
+          table.table.table-striped
+            tbody
+              each product in product1
+                tr
+                  td!= product.name
+                  td!= product.value
+#product2.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal-head
+        h2.heading TermoPlaza 375
+      .modal-body
+        .table-responsive
+          table.table.table-striped
+            tbody
+              each product in product2
+                tr
+                  td!= product.name
+                  td!= product.value
+#product3.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal-head
+        h2.heading TermoPlaza 475
+      .modal-body
+        .table-responsive
+          table.table.table-striped
+            tbody
+              each product in product3
+                tr
+                  td!= product.name
+                  td!= product.value
+#product4.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal-head
+        h2.heading TermoPlaza 700
+      .modal-body
+        .table-responsive
+          table.table.table-striped
+            tbody
+              each product in product4
+                tr
+                  td!= product.name
+                  td!= product.value
+#product5.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal-head
+        h2.heading TermoPlaza STP 225
+      .modal-body
+        .table-responsive
+          table.table.table-striped
+            tbody
+              each product in product5
+                tr
+                  td!= product.name
+                  td!= product.value
+#product6.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal-head
+        h2.heading TermoPlaza STP 375
+      .modal-body
+        .table-responsive
+          table.table.table-striped
+            tbody
+              each product in product6
+                tr
+                  td!= product.name
+                  td!= product.value
+#product7.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal-head
+        h2.heading TermoPlaza STP 475
+      .modal-body
+        .table-responsive
+          table.table.table-striped
+            tbody
+              each product in product7
+                tr
+                  td!= product.name
+                  td!= product.value
+#product8.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal-head
+        h2.heading TermoPlaza STP 700
+      .modal-body
+        .table-responsive
+          table.table.table-striped
+            tbody
+              each product in product8
+                tr
+                  td!= product.name
+                  td!= product.value

@@ -88,9 +88,9 @@
               <div class="header__form-title">Оставьте свой e-mail адрес и получите полный каталог элетроообогревателей TermoPlaza с актуальными ценами на <b>12.02.2017</b></div>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4"> 
-              <form class="contactForm form" name="Регистрация" method="post" action="./mail/mail.php" novalidate>
+              <form class="contactForm form" method="post" action="./mail/mail.php" novalidate>
                 <div class="form-group form__group">
-                  <input class="form-control form__input" placeholder="Введите ваш E-mail" data-validation-required-message="Заполните поле корректно." name="email" type="email" required>
+                  <input class="form-control modal__input form__name" aria-invalid="false" placeholder="Введите ваш E-mail" required data-validation-required-message="Заполните поле корректно." name="email" type="text">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="clearfix">
@@ -99,7 +99,7 @@
                   </div>
                 </div>
                 <div class="col-xs-12 text-center">
-                  <button class="btn button button--size" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется..." type="submit">Записаться на просмотр коттеджей</button>
+                  <button class="btn button button--size" name="form[шапка]" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется..." type="submit">Записаться на просмотр коттеджей</button>
                 </div>
               </form>
             </div>
@@ -141,25 +141,25 @@
           </div>
           <div class="row">
             <div class="col-xs-6 col-sm-3">
-              <div class="about__box about__box--1"><a class="about__link about__link--1" href="#">
+              <div class="about__box about__box--1"><a class="about__link about__link--1" href="#about__modal" data-toggle="modal">
                   <div class="about__info">
                     <p class="about__text">Как основное отопление </p>
                   </div></a></div>
             </div>
             <div class="col-xs-6 col-sm-3">
-              <div class="about__box about__box--2 about__box--position"><a class="about__link about__link--2" href="#">
+              <div class="about__box about__box--2 about__box--position"><a class="about__link about__link--2" href="#about__modal" data-toggle="modal">
                   <div class="about__info">
                     <p class="about__text">Как дополнительное отопление  </p>
                   </div></a></div>
             </div>
             <div class="col-xs-6 col-sm-3">
-              <div class="about__box about__box--3"><a class="about__link about__link--3" href="#">
+              <div class="about__box about__box--3"><a class="about__link about__link--3" href="#about__modal" data-toggle="modal">
                   <div class="about__info">
                     <p class="about__text">В офисах</p>
                   </div></a></div>
             </div>
             <div class="col-xs-6 col-sm-3">
-              <div class="about__box about__box--4 about__box--position"><a class="about__link about__link--4" href="#">
+              <div class="about__box about__box--4 about__box--position"><a class="about__link about__link--4" href="#about__modal" data-toggle="modal">
                   <div class="about__info">
                     <p class="about__text">В квартирах</p>
                   </div></a></div>
@@ -167,25 +167,25 @@
           </div>
           <div class="row">       
             <div class="col-xs-6 col-sm-3">
-              <div class="about__box about__box--5"><a class="about__link about__link--5" href="#">
+              <div class="about__box about__box--5"><a class="about__link about__link--5" href="#about__modal" data-toggle="modal">
                   <div class="about__info">
                     <p class="about__text">В частном доме</p>
                   </div></a></div>
             </div>
             <div class="col-xs-6 col-sm-3">
-              <div class="about__box about__box--6 about__box--position"><a class="about__link about__link--6" href="#">
+              <div class="about__box about__box--6 about__box--position"><a class="about__link about__link--6" href="#about__modal" data-toggle="modal">
                   <div class="about__info">
                     <p class="about__text">На даче</p>
                   </div></a></div>
             </div>
             <div class="col-xs-6 col-sm-3">
-              <div class="about__box about__box--7"><a class="about__link about__link--7" href="#">
+              <div class="about__box about__box--7"><a class="about__link about__link--7" href="#about__modal" data-toggle="modal">
                   <div class="about__info">
                     <p class="about__text">На предприятии  </p>
                   </div></a></div>
             </div>
             <div class="col-xs-6 col-sm-3">
-              <div class="about__box about__box--8 about__box--position"><a class="about__link about__link--8" href="#">
+              <div class="about__box about__box--8 about__box--position"><a class="about__link about__link--8" href="#about__modal" data-toggle="modal">
                   <div class="about__info">
                     <p class="about__text">В больших промышленных помещениях  </p>
                   </div></a></div>
@@ -220,10 +220,8 @@
               <div class="product product--group1">
                 <div class="row">
                   <div class="col-xs-6">
-                    <div class="product__name">Termoplaza 255</div>
-                    <div class="product__thumbnail"> <a class="product__link product__link--big" data-fancybox-group="group" href="img/product1.png"><img class="img-responsive" src="img/product1.png" alt="sort img"></a>
-                      <div class="product__images"><a class="product__link" data-fancybox-group="group" href="img/product1.png"><img class="img-responsive" src="img/product1.png" alt="sort img"></a><a class="product__link" data-fancybox-group="group" href="img/product1.png"><img class="img-responsive" src="img/product1.png" alt="sort img"></a><a class="product__link" data-fancybox-group="group" href="img/product1.png"><img class="img-responsive" src="img/product1.png" alt="sort img"></a><a class="product__link" data-fancybox-group="group" href="img/product1.png"><img class="img-responsive" src="img/product1.png" alt="sort img"></a></div>
-                    </div>
+                    <div class="product__name">Termoplaza 225</div>
+                    <div class="product__thumbnail"> <a class="product__link fancyimage product__link--big" data-fancybox-group="group1" href="img/product11-big.png"><img class="img-responsive product__img product__img--white" src="img/product11.png" alt="Termoplaza 255"></a><a class="product__link fancyimage product__link--big" data-fancybox-group="group1" href="img/product11-black-big.png"><img class="hidden img-responsive product__img product__img--black hidden" src="img/product11-black.png" alt="Termoplaza 255"></a></div>
                   </div>
                   <div class="col-xs-6">
                     <div class="product__content">
@@ -237,16 +235,16 @@
                         <div class="description__item"> <span class="description__text">7м<sup>2 </sup></span>площадь обогрева </div>
                         <div class="description__item"> <span class="description__text">5 кг </span>вес обогревателя </div>
                         <div class="description__item"> <span class="description__text">2,39 </span>грн в среднем за день</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="#product1" data-toggle="modal">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <div class="product__btn-group">
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn1" checked="" type="radio">
-                          <label class="product__radio-label" for="rbtn1"> <span class="product__radio-icon product__radio-icon--black"></span></label>
+                          <input class="product__radio-input" name="product1" id="product11" type="radio" data-color="black">
+                          <label class="product__radio-label" for="product11"> <span class="product__radio-icon product__radio-icon--black"></span></label>
                         </div>
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn2" type="radio">
-                          <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
+                          <input class="product__radio-input" name="product1" id="product12" type="radio" data-color="white">
+                          <label class="product__radio-label" for="product12"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить                   </button>
@@ -260,9 +258,7 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <div class="product__name">Termoplaza 375</div>
-                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group" href="img/product2.png"><img class="img-responsive" src="img/product2.png" alt="sort img"></a>
-                      <div class="product__image"></div>
-                    </div>
+                    <div class="product__thumbnail"> <a class="product__link fancyimage product__link--big" data-fancybox-group="group2" href="img/product21-big.png"><img class="img-responsive product__img product__img--white" src="img/product21.png" alt="Termoplaza 375"></a><a class="product__link fancyimage product__link--big" data-fancybox-group="group2" href="img/product21-black-big.png"><img class="hidden img-responsive product__img product__img--black hidden" src="img/product21-black.png" alt="Termoplaza 375"></a></div>
                   </div>
                   <div class="col-xs-6">
                     <div class="product__content">
@@ -276,16 +272,16 @@
                         <div class="description__item"> <span class="description__text">7м<sup>2 </sup></span>площадь обогрева </div>
                         <div class="description__item"> <span class="description__text">10 кг </span>вес обогревателя </div>
                         <div class="description__item"> <span class="description__text">3,92 </span>грн в среднем за день</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="#product2" data-toggle="modal">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <div class="product__btn-group">
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn1" checked="" type="radio">
-                          <label class="product__radio-label" for="rbtn1"> <span class="product__radio-icon product__radio-icon--black"></span></label>
+                          <input class="product__radio-input" name="product2" id="product21" type="radio" data-color="black">
+                          <label class="product__radio-label" for="product21"> <span class="product__radio-icon product__radio-icon--black"></span></label>
                         </div>
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn2" type="radio">
-                          <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
+                          <input class="product__radio-input" name="product2" id="product22" type="radio" data-color="white">
+                          <label class="product__radio-label" for="product22"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить    </button>
@@ -299,9 +295,7 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <div class="product__name">Termoplaza 475</div>
-                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group" href="img/product3.png"><img class="img-responsive" src="img/product3.png" alt="sort img"></a>
-                      <div class="product__image"></div>
-                    </div>
+                    <div class="product__thumbnail"> <a class="product__link fancyimage product__link--big" data-fancybox-group="group3" href="img/product31-big.png"><img class="img-responsive product__img product__img--white" src="img/product31.png" alt="Termoplaza 475"></a><a class="product__link fancyimage product__link--big" data-fancybox-group="group3" href="img/product31-black-big.png"><img class="hidden img-responsive product__img product__img--black hidden" src="img/product31-black.png" alt="Termoplaza 475"></a></div>
                   </div>
                   <div class="col-xs-6">
                     <div class="product__content">
@@ -315,16 +309,16 @@
                         <div class="description__item"> <span class="description__text">14м<sup>2 </sup></span>площадь обогрева </div>
                         <div class="description__item"> <span class="description__text">8.5 кг </span>вес обогревателя </div>
                         <div class="description__item"> <span class="description__text">4.95 </span>грн в среднем за день</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="#product3" data-toggle="modal">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <div class="product__btn-group">
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn1" checked="" type="radio">
-                          <label class="product__radio-label" for="rbtn1"> <span class="product__radio-icon product__radio-icon--black"></span></label>
+                          <input class="product__radio-input" name="product3" id="product31" type="radio" data-color="black">
+                          <label class="product__radio-label" for="product31"> <span class="product__radio-icon product__radio-icon--black"></span></label>
                         </div>
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn2" type="radio">
-                          <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
+                          <input class="product__radio-input" name="product3" id="product32" type="radio" data-color="white">
+                          <label class="product__radio-label" for="product32"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить          </button>
@@ -338,9 +332,7 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <div class="product__name">Termoplaza 700</div>
-                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group" href="img/product4.png"><img class="img-responsive" src="img/product4.png" alt="sort img"></a>
-                      <div class="product__image"></div>
-                    </div>
+                    <div class="product__thumbnail"> <a class="product__link fancyimage product__link--big" data-fancybox-group="group4" href="img/product41-big.png"><img class="img-responsive product__img product__img--white" src="img/product41.png" alt="Termoplaza 700"></a><a class="product__link fancyimage product__link--big" data-fancybox-group="group4" href="img/product41-black-big.png"><img class="hidden img-responsive product__img product__img--black hidden" src="img/product41-black.png" alt="Termoplaza 700"></a></div>
                   </div>
                   <div class="col-xs-6">
                     <div class="product__content">
@@ -354,16 +346,16 @@
                         <div class="description__item"> <span class="description__text">20м<sup>2 </sup></span>площадь обогрева </div>
                         <div class="description__item"> <span class="description__text">10 кг </span>вес обогревателя </div>
                         <div class="description__item"> <span class="description__text">7.28 </span>грн в среднем за день</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="#product4" data-toggle="modal">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <div class="product__btn-group">
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn1" checked="" type="radio">
-                          <label class="product__radio-label" for="rbtn1"> <span class="product__radio-icon product__radio-icon--black"></span></label>
+                          <input class="product__radio-input" name="product4" id="product41" type="radio" data-color="black">
+                          <label class="product__radio-label" for="product41"> <span class="product__radio-icon product__radio-icon--black"></span></label>
                         </div>
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn2" type="radio">
-                          <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
+                          <input class="product__radio-input" name="product4" id="product42" type="radio" data-color="white">
+                          <label class="product__radio-label" for="product42"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить    </button>
@@ -390,10 +382,8 @@
               <div class="product product--group2">
                 <div class="row">
                   <div class="col-xs-6">
-                    <div class="product__name">TermoPlaza STP 255</div>
-                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group2" href="img/product1.png"><img class="img-responsive" src="img/product1.png" alt="sort img"></a>
-                      <div class="product__image"></div>
-                    </div>
+                    <div class="product__name">TermoPlaza STP 225</div>
+                    <div class="product__thumbnail"> <a class="product__link fancyimage product__link--big" data-fancybox-group="group5" href="img/product51-big.png"><img class="img-responsive product__img product__img--white" src="img/product51.png" alt="TermoPlaza STP 255"></a><a class="product__link fancyimage product__link--big" data-fancybox-group="group5" href="img/product51-black-big.png"><img class="hidden img-responsive product__img product__img--black hidden" src="img/product51-black.png" alt="TermoPlaza STP 255"></a></div>
                   </div>
                   <div class="col-xs-6">
                     <div class="product__content">
@@ -407,16 +397,16 @@
                         <div class="description__item"> <span class="description__text">7м<sup>2 </sup></span>площадь обогрева </div>
                         <div class="description__item"> <span class="description__text">5 кг </span>вес обогревателя </div>
                         <div class="description__item"> <span class="description__text">2,39 </span>грн в среднем за день</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="#product5" data-toggle="modal">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <div class="product__btn-group">
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn1" checked="" type="radio">
-                          <label class="product__radio-label" for="rbtn1"> <span class="product__radio-icon product__radio-icon--black"></span></label>
+                          <input class="product__radio-input" name="product5" id="product51" type="radio" data-color="black">
+                          <label class="product__radio-label" for="product51"> <span class="product__radio-icon product__radio-icon--black"></span></label>
                         </div>
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn2" type="radio">
-                          <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
+                          <input class="product__radio-input" name="product5" id="product52" type="radio" data-color="white">
+                          <label class="product__radio-label" for="product52"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить                   </button>
@@ -430,9 +420,7 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <div class="product__name">TermoPlaza STP 375</div>
-                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group2" href="img/product2.png"><img class="img-responsive" src="img/product2.png" alt="sort img"></a>
-                      <div class="product__image"></div>
-                    </div>
+                    <div class="product__thumbnail"> <a class="product__link fancyimage product__link--big" data-fancybox-group="group6" href="img/product61-big.png"><img class="img-responsive product__img product__img--white" src="img/product61.png" alt="TermoPlaza STP 375"></a><a class="product__link fancyimage product__link--big" data-fancybox-group="group6" href="img/product61-black-big.png"><img class="hidden img-responsive product__img product__img--black hidden" src="img/product61-black.png" alt="TermoPlaza STP 375"></a></div>
                   </div>
                   <div class="col-xs-6">
                     <div class="product__content">
@@ -446,16 +434,16 @@
                         <div class="description__item"> <span class="description__text">10м<sup>2 </sup></span>площадь обогрева </div>
                         <div class="description__item"> <span class="description__text">7 кг </span>вес обогревателя </div>
                         <div class="description__item"> <span class="description__text">3,92 </span>грн в среднем за день</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="#product6" data-toggle="modal">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <div class="product__btn-group">
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn1" checked="" type="radio">
-                          <label class="product__radio-label" for="rbtn1"> <span class="product__radio-icon product__radio-icon--black"></span></label>
+                          <input class="product__radio-input" name="product6" id="product61" type="radio" data-color="black">
+                          <label class="product__radio-label" for="product61"> <span class="product__radio-icon product__radio-icon--black"></span></label>
                         </div>
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn2" type="radio">
-                          <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
+                          <input class="product__radio-input" name="product6" id="product62" type="radio" data-color="white">
+                          <label class="product__radio-label" for="product62"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить   </button>
@@ -469,7 +457,7 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <div class="product__name">Termoplaza 475</div>
-                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group2" href="img/product3.png"><img class="img-responsive" src="img/product3.png" alt="sort img"></a>
+                    <div class="product__thumbnail"> <a class="product__link fancyimage product__link--big" data-fancybox-group="group7" href="img/product71-big.png"><img class="img-responsive product__img product__img--white" src="img/product71.png" alt="Termoplaza 475"></a><a class="product__link fancyimage product__link--big" data-fancybox-group="group7" href="img/product71-black-big.png"><img class="hidden img-responsive product__img product__img--black hidden" src="img/product71-black.png" alt="Termoplaza 475"></a>
                       <div class="product__image"></div>
                     </div>
                   </div>
@@ -485,16 +473,16 @@
                         <div class="description__item"> <span class="description__text">14м<sup>2 </sup></span>площадь обогрева </div>
                         <div class="description__item"> <span class="description__text">8.5 кг </span>вес обогревателя </div>
                         <div class="description__item"> <span class="description__text">4.95 </span>грн в среднем за день</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="#product7" data-toggle="modal">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <div class="product__btn-group">
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn1" checked="" type="radio">
-                          <label class="product__radio-label" for="rbtn1"> <span class="product__radio-icon product__radio-icon--black"></span></label>
+                          <input class="product__radio-input" name="product7" id="product71" type="radio" data-color="black">
+                          <label class="product__radio-label" for="product71"> <span class="product__radio-icon product__radio-icon--black"></span></label>
                         </div>
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn2" type="radio">
-                          <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
+                          <input class="product__radio-input" name="product7" id="product72" type="radio" data-color="white">
+                          <label class="product__radio-label" for="product72"><span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить          </button>
@@ -508,7 +496,7 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <div class="product__name">Termoplaza 700</div>
-                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group2" href="img/product4.png"><img class="img-responsive" src="img/product4.png" alt="sort img"></a>
+                    <div class="product__thumbnail"> <a class="product__link fancyimage product__link--big" data-fancybox-group="group8" href="img/product81-big.png"><img class="img-responsive product__img product__img--white" src="img/product81.png" alt="Termoplaza 700"></a><a class="product__link fancyimage product__link--big" data-fancybox-group="group8" href="img/product81-black-big.png"><img class="hidden img-responsive product__img product__img--black hidden" src="img/product81-black.png" alt="Termoplaza 700"></a>
                       <div class="product__image"></div>
                     </div>
                   </div>
@@ -524,16 +512,16 @@
                         <div class="description__item"> <span class="description__text">20м<sup>2 </sup></span>площадь обогрева </div>
                         <div class="description__item"> <span class="description__text">10 кг </span>вес обогревателя </div>
                         <div class="description__item"> <span class="description__text">7.28 </span>грн в среднем за день</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="#product8" data-toggle="modal">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <div class="product__btn-group">
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn1" checked="" type="radio">
-                          <label class="product__radio-label" for="rbtn1"> <span class="product__radio-icon product__radio-icon--black"></span></label>
+                          <input class="product__radio-input" name="product8" id="product81" type="radio" data-color="black">
+                          <label class="product__radio-label" for="product81"> <span class="product__radio-icon product__radio-icon--black"></span></label>
                         </div>
                         <div class="radio product__radio">
-                          <input class="product__radio-input" name="amount" id="rbtn2" type="radio">
-                          <label class="product__radio-label" for="rbtn2"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
+                          <input class="product__radio-input" name="product8" id="product82" type="radio" data-color="white">
+                          <label class="product__radio-label" for="product82"> <span class="product__radio-icon product__radio-icon--white"> </span></label>
                         </div>
                       </div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить  </button>
@@ -616,9 +604,7 @@
                     <div class="product__name">Механический терморегулятор Cewal RQ</div>
                   </div>
                   <div class="col-xs-6">
-                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group3" href="img/product1.png"><img class="img-responsive" src="img/product31.png" alt="sort img"></a>
-                      <div class="product__image"></div>
-                    </div>
+                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group9" href="img/product91-big.png"><img class="img-responsive" src="img/product91.png" alt="Механический терморегулятор Cewal RQ"></a></div>
                   </div>
                   <div class="col-xs-6">
                     <div class="product__content">
@@ -630,7 +616,7 @@
                         <div class="description__item"> <span class="description__text"> <i class="fa fa-check" aria-hidden="true"></i></span> напряжение: 220В ± 10% </div>
                         <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"></i></span> максимальная сила тока 16А</div>
                         <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"></i></span> гарантия 1 год</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="http://newl.com.ua/files/rq.pdf">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить                  </button>
                     </div>
@@ -645,9 +631,7 @@
                     <div class="product__name">Терморегулятор розеточного типа Tessla TR</div>
                   </div>
                   <div class="col-xs-6"> 
-                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group3" href="img/product2.png"><img class="img-responsive" src="img/product32.png" alt="sort img"></a>
-                      <div class="product__image"></div>
-                    </div>
+                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group9" href="img/product101-big.png"><img class="img-responsive" src="img/product101.png" alt="Терморегулятор розеточного типа Tessla TR"></a></div>
                   </div>
                   <div class="col-xs-6">
                     <div class="product__content">
@@ -659,7 +643,7 @@
                         <div class="description__item"> <span class="description__text"> <i class="fa fa-check" aria-hidden="true"> </i></span> напряжение: 220В ± 10% </div>
                         <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"> </i></span> максимальная сила тока 16А</div>
                         <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"> </i></span> гарантия 5 лет</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="http://newl.com.ua/files/Tessla.pdf">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить   </button>
                     </div>
@@ -674,9 +658,7 @@
                     <div class="product__name">Недельный программатор Tessla TRW</div>
                   </div>
                   <div class="col-xs-6">
-                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group3" href="img/product3.png"><img class="img-responsive" src="img/product33.png" alt="sort img"></a>
-                      <div class="product__image"></div>
-                    </div>
+                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group9" href="img/product111-big.png"><img class="img-responsive" src="img/product111.png" alt="Недельный программатор Tessla TRW"></a></div>
                   </div>
                   <div class="col-xs-6">
                     <div class="product__content">
@@ -688,7 +670,7 @@
                         <div class="description__item"> <span class="description__text"> <i class="fa fa-check" aria-hidden="true"> </i></span> напряжение: 220В ± 10% </div>
                         <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"> </i></span> максимальная сила тока 16А</div>
                         <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"> </i></span> гарантия 5 лет</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="http://newl.com.ua/files/TRW.pdf">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить           </button>
                     </div>
@@ -703,7 +685,7 @@
                     <div class="product__name">Дистанционный Программатор Tessla TR WIFI</div>
                   </div>
                   <div class="col-xs-6">
-                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group3" href="img/product4.png"><img class="img-responsive" src="img/product34.png" alt="sort img"></a>
+                    <div class="product__thumbnail"> <a class="fancyimage product__image" data-fancybox-group="group9" href="img/product121-big.png"><img class="img-responsive" src="img/product121.png" alt="Дистанционный Программатор Tessla TR WIFI"></a>
                       <div class="product__image"></div>
                     </div>
                   </div>
@@ -717,7 +699,7 @@
                         <div class="description__item"> <span class="description__text"> <i class="fa fa-check" aria-hidden="true"> </i></span> напряжение: 220В ± 10% </div>
                         <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"> </i></span> максимальная сила тока 16А</div>
                         <div class="description__item"> <span class="description__text"><i class="fa fa-check" aria-hidden="true"> </i></span> гарантия 5 лет</div>
-                      </div><a class="product__all" href="#">Все характеристики</a>
+                      </div><a class="product__all" href="http://newl.com.ua/files/TRWi-Fi.pdf">Все характеристики</a>
                       <div class="product__status">Товар в наличии и готов к отправке</div>
                       <button class="btn button product__btn" data-toggle="modal" data-target="#product__modal">Купить  </button>
                     </div>
@@ -913,22 +895,22 @@
                   <div class="modal__head">
                     <p class="modal__subheading modal__subheading--color-white">Оставьте ваши контакты, что бы мы отправили вам маркетинг-кит и коммерческое предложение для партнеров</p>
                   </div>
-                  <form class="contactForm modal__form" name="Шапка" method="post" action="./mail/mail.php" novalidate>
+                  <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
                     <div class="row">
                       <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
                         <div class="form-group">
-                          <input class="form-control modal__input modal__input--color-white form__name" placeholder="Ваш Email" required data-validation-required-message="Заполните поле корректно." name="email" type="text">
-                          <p class="help-block text-danger"></p>
+                          <input class="form-control modal__input modal__input--color-white form__name" aria-invalid="false" placeholder="Ваш E-mail" required data-validation-required-message="Заполните поле корректно." name="email" type="text">
+                          <p class="help-block text-danger text-danger--white"></p>
                         </div>
                         <div class="form-group">
-                          <input class="form-control modal__input modal__input--color-white form__phone" placeholder="Ваш телефон" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel">
-                          <p class="help-block text-danger"></p>
+                          <input class="form-control modal__input modal__input--color-white form__phone" aria-invalid="false" placeholder="Ваш телефон" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel">
+                          <p class="help-block text-danger text-danger--white"></p>
                         </div>
                         <div class="clearfix">
                           <div class="success"></div>
                         </div>
                         <div class="text-center">
-                          <button class="btn button buyer__btn" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить материалы</button>
+                          <button class="btn button buyer__btn" name="Шапка" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить материалы</button>
                         </div>
                       </div>
                     </div>
@@ -952,20 +934,22 @@
               <p class="modal__heading">Заказать обратный звонок</p>
               <p class="modal__subheading">Введите ваши данные. В течение 5 минут наш специалист Вам перезвонит.</p>
             </div>
-            <form class="contactForm modal__form" name="Шапка" method="post" action="./mail/mail.php" novalidate>
+            <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
               <div class="row">
                 <div class="col-xs-12 col-sm-6 col-sm-offset-3">
                   <div class="form-group">
                     <input class="form-control modal__input form__name" aria-invalid="false" placeholder="Ваше имя" required data-validation-required-message="Заполните поле корректно." name="name" type="text">
+                    <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
                     <input class="form-control modal__input form__phone" aria-invalid="false" placeholder="Ваш телефон" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel">
+                    <p class="help-block text-danger"></p>
                   </div>
                   <div class="clearfix">
                     <div class="success"></div>
                   </div>
                   <div class="text-center">
-                    <button class="btn button modal__btn" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
+                    <button class="btn button modal__btn" name="Заказать обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
                   </div>
                 </div>
               </div>
@@ -979,22 +963,46 @@
             <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
             <div class="modal__head">
               <p class="modal__heading">Заказать обратный звонок</p>
-              <p class="modal__subheading">Введите ваши данные. В течение 5 минут наш специалист Вам перезвонит.</p>
+              <p class="modal__subheading">оставьте контакты и в течении 5 минут с вами свяжется мастер для уточнения деталей заказа</p>
             </div>
-            <form class="contactForm modal__form" name="Шапка" method="post" action="./mail/mail.php" novalidate>
+            <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
               <div class="row">
-                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                   <div class="form-group">
                     <input class="form-control modal__input form__name" aria-invalid="false" placeholder="Ваше имя" required data-validation-required-message="Заполните поле корректно." name="name" type="text">
+                    <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
                     <input class="form-control modal__input form__phone" aria-invalid="false" placeholder="Ваш телефон" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control modal__input form__phone" placeholder="Количество" name="qty" type="number">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control modal__input form__phone" placeholder="Адрес, отделение почты" name="delivery" type="text">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <p class="modal__subheading">Форма оплаты:</p>
+                    <div class="question__radio-group radio-btn">
+                      <input class="radio-btn__control" id="question-11" type="radio" name="payment[]">
+                      <label class="radio-btn__box radio-btn__box--check" for="question-11"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Предоплата</span></label>
+                    </div>
+                    <div class="question__radio-group radio-btn">
+                      <input class="radio-btn__control" id="question-12" type="radio" name="payment[]">
+                      <label class="radio-btn__box radio-btn__box--check" for="question-12"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Оплата при получении</span></label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control modal__input" id="product-name" name="product" type="hidden">
                   </div>
                   <div class="clearfix">
                     <div class="success"></div>
                   </div>
                   <div class="text-center">
-                    <button class="btn button modal__btn" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
+                    <button class="btn button modal__btn" name="Заказать обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
                   </div>
                 </div>
               </div>
@@ -1010,7 +1018,7 @@
               <p class="modal__heading">Оставьте ваши контакты</p>
               <p class="modal__subheading">и получите доступ к подробному описанию государственной программы “Теплый дом” и других вариантах рассрочки. Если же у Вас остануться вопросы, то наш специалист любезно вас проконсультирует. </p>
             </div>
-            <form class="contactForm modal__form" name="Шапка" method="post" action="./mail/mail.php" novalidate>
+            <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
               <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                   <div class="form-group">
@@ -1025,11 +1033,541 @@
                     <div class="success"></div>
                   </div>
                   <div class="text-center">
-                    <button class="btn button modal__btn" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
+                    <button class="btn button modal__btn" name="Оставьте ваши контакты" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
                   </div>
                 </div>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="about__modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal__size modal__size--big">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <p class="modal__subheading">Оставьте Ваш email и получите доступ к статье. Вы узнаете как на практике люди используют электро панели в конкретном случае.</p>
+                  <p class="modal__subheading">Оставьте Ваш email и получите доступ к статье. Вы узнаете как на практике люди используют электро панели в конкретном случае.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <p class="modal__subheading">Оставьте Ваш email и получите доступ к статье. Вы узнаете как на практике люди используют электро панели в конкретном случае.</p>
+                  <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+                    <div class="row">
+                      <div class="col-xs-12 col-md-8">
+                        <div class="form-group">
+                          <input class="form-control modal__input" placeholder="Введите Ваш Email" required data-validation-required-message="Заполните поле корректно." name="email" type="text">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="clearfix">
+                          <div class="success"></div>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn button modal__btn" name="Оставьте Ваш email и получите доступ к статье" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить статью</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="product1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal-head">
+              <h2 class="heading">TermoPlaza 225</h2>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td>Площадь обогрева</td>
+                      <td>До 7 м<sup>2</sup> ( 19 м<sup>3</sup>)</td>
+                    </tr>
+                    <tr>
+                      <td>Габариты обогревателя(Д× В× Ш)</td>
+                      <td>49 x 49 x 4 см</td>
+                    </tr>
+                    <tr>
+                      <td>Тип обогрева</td>
+                      <td>Инфракрасный, конвекционный</td>
+                    </tr>
+                    <tr>
+                      <td>Температура нагрева</td>
+                      <td>82 <sup>о</sup>С (+-5 <sup>о</sup>С)</td>
+                    </tr>
+                    <tr>
+                      <td>Степень защиты</td>
+                      <td>ІР21</td>
+                    </tr>
+                    <tr>
+                      <td>Гарантия</td>
+                      <td>24 месяца</td>
+                    </tr>
+                    <tr>
+                      <td>Срок эксплуатации</td>
+                      <td>25 лет</td>
+                    </tr>
+                    <tr>
+                      <td>Материал корпуса</td>
+                      <td>Металл</td>
+                    </tr>
+                    <tr>
+                      <td>Внешнее покрытие</td>
+                      <td>Итальянская краска ECOLABLE</td>
+                    </tr>
+                    <tr>
+                      <td>Длинна кабеля</td>
+                      <td>1,5 метра с вилкой</td>
+                    </tr>
+                    <tr>
+                      <td>Крепления в комплекте</td>
+                      <td>Настенные и напольные</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="product2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal-head">
+              <h2 class="heading">TermoPlaza 375</h2>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td>Площадь обогрева</td>
+                      <td>До 10 м<sup>2</sup> ( 27 м<sup>3</sup>)</td>
+                    </tr>
+                    <tr>
+                      <td>Габариты обогревателя(Д× В× Ш)</td>
+                      <td>87 x 49 x 4 см</td>
+                    </tr>
+                    <tr>
+                      <td>Тип обогрева</td>
+                      <td>Инфракрасный, конвекционный</td>
+                    </tr>
+                    <tr>
+                      <td>Температура нагрева</td>
+                      <td>82 <sup>о</sup>С (+-5 <sup>о</sup>С)</td>
+                    </tr>
+                    <tr>
+                      <td>Степень защиты</td>
+                      <td>ІР21</td>
+                    </tr>
+                    <tr>
+                      <td>Гарантия</td>
+                      <td>24 месяца</td>
+                    </tr>
+                    <tr>
+                      <td>Срок эксплуатации</td>
+                      <td>25 лет</td>
+                    </tr>
+                    <tr>
+                      <td>Материал корпуса</td>
+                      <td>Металл</td>
+                    </tr>
+                    <tr>
+                      <td>Внешнее покрытие</td>
+                      <td>Итальянская краска ECOLABLE</td>
+                    </tr>
+                    <tr>
+                      <td>Длинна кабеля</td>
+                      <td>1,5 метра с вилкой</td>
+                    </tr>
+                    <tr>
+                      <td>Крепления в комплекте</td>
+                      <td>Настенные и напольные</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="product3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal-head">
+              <h2 class="heading">TermoPlaza 475</h2>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td>Площадь обогрева</td>
+                      <td>До 14 м<sup>2</sup> ( 38 м<sup>3</sup>)</td>
+                    </tr>
+                    <tr>
+                      <td>Габариты обогревателя(Д× В× Ш)</td>
+                      <td>107 x 49 x 4 см</td>
+                    </tr>
+                    <tr>
+                      <td>Тип обогрева</td>
+                      <td>Инфракрасный, конвекционный</td>
+                    </tr>
+                    <tr>
+                      <td>Температура нагрева</td>
+                      <td>82 <sup>о</sup>С (+-5 <sup>о</sup>С)</td>
+                    </tr>
+                    <tr>
+                      <td>Степень защиты</td>
+                      <td>ІР21</td>
+                    </tr>
+                    <tr>
+                      <td>Гарантия</td>
+                      <td>24 месяца</td>
+                    </tr>
+                    <tr>
+                      <td>Срок эксплуатации</td>
+                      <td>25 лет</td>
+                    </tr>
+                    <tr>
+                      <td>Материал корпуса</td>
+                      <td>Металл</td>
+                    </tr>
+                    <tr>
+                      <td>Внешнее покрытие</td>
+                      <td>Итальянская краска ECOLABLE</td>
+                    </tr>
+                    <tr>
+                      <td>Длинна кабеля</td>
+                      <td>1,5 метра с вилкой</td>
+                    </tr>
+                    <tr>
+                      <td>Крепления в комплекте</td>
+                      <td>Настенные и напольные</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="product4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal-head">
+              <h2 class="heading">TermoPlaza 700</h2>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td>Площадь обогрева</td>
+                      <td>До 20 м<sup>2</sup> ( 54 м<sup>3</sup>)</td>
+                    </tr>
+                    <tr>
+                      <td>Габариты обогревателя(Д× В× Ш)</td>
+                      <td>128 x 49 x 4 см</td>
+                    </tr>
+                    <tr>
+                      <td>Тип обогрева</td>
+                      <td>Инфракрасный, конвекционный</td>
+                    </tr>
+                    <tr>
+                      <td>Температура нагрева</td>
+                      <td>82 <sup>о</sup>С (+-5 <sup>о</sup>С)</td>
+                    </tr>
+                    <tr>
+                      <td>Степень защиты</td>
+                      <td>ІР21</td>
+                    </tr>
+                    <tr>
+                      <td>Гарантия</td>
+                      <td>24 месяца</td>
+                    </tr>
+                    <tr>
+                      <td>Срок эксплуатации</td>
+                      <td>25 лет</td>
+                    </tr>
+                    <tr>
+                      <td>Материал корпуса</td>
+                      <td>Металл</td>
+                    </tr>
+                    <tr>
+                      <td>Внешнее покрытие</td>
+                      <td>Итальянская краска ECOLABLE</td>
+                    </tr>
+                    <tr>
+                      <td>Длинна кабеля</td>
+                      <td>1,5 метра с вилкой</td>
+                    </tr>
+                    <tr>
+                      <td>Крепления в комплекте</td>
+                      <td>Настенные и напольные</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="product5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal-head">
+              <h2 class="heading">TermoPlaza STP 225</h2>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td>Площадь обогрева</td>
+                      <td>До 7 м<sup>2</sup> ( 19 м<sup>3</sup>)</td>
+                    </tr>
+                    <tr>
+                      <td>Габариты обогревателя(Д× В× Ш)</td>
+                      <td>49 x 49 x 4 см</td>
+                    </tr>
+                    <tr>
+                      <td>Тип обогрева</td>
+                      <td>Инфракрасный, конвекционный</td>
+                    </tr>
+                    <tr>
+                      <td>Температура нагрева</td>
+                      <td>82 <sup>о</sup>С (+-5 <sup>о</sup>С)</td>
+                    </tr>
+                    <tr>
+                      <td>Степень защиты</td>
+                      <td>ІР21</td>
+                    </tr>
+                    <tr>
+                      <td>Гарантия</td>
+                      <td>24 месяца</td>
+                    </tr>
+                    <tr>
+                      <td>Срок эксплуатации</td>
+                      <td>25 лет</td>
+                    </tr>
+                    <tr>
+                      <td>Материал корпуса</td>
+                      <td>Металл</td>
+                    </tr>
+                    <tr>
+                      <td>Внешнее покрытие</td>
+                      <td>Итальянская краска ECOLABLE</td>
+                    </tr>
+                    <tr>
+                      <td>Длинна кабеля</td>
+                      <td>1,5 метра с вилкой</td>
+                    </tr>
+                    <tr>
+                      <td>Крепления в комплекте</td>
+                      <td>Настенные и напольные</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="product6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal-head">
+              <h2 class="heading">TermoPlaza STP 375</h2>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td>Площадь обогрева</td>
+                      <td>До 10 м<sup>2</sup> ( 27 м<sup>3</sup>)</td>
+                    </tr>
+                    <tr>
+                      <td>Габариты обогревателя(Д× В× Ш)</td>
+                      <td>87 x 49 x 4 см</td>
+                    </tr>
+                    <tr>
+                      <td>Тип обогрева</td>
+                      <td>Инфракрасный, конвекционный</td>
+                    </tr>
+                    <tr>
+                      <td>Температура нагрева</td>
+                      <td>82 <sup>о</sup>С (+-5 <sup>о</sup>С)</td>
+                    </tr>
+                    <tr>
+                      <td>Степень защиты</td>
+                      <td>ІР21</td>
+                    </tr>
+                    <tr>
+                      <td>Гарантия</td>
+                      <td>24 месяца</td>
+                    </tr>
+                    <tr>
+                      <td>Срок эксплуатации</td>
+                      <td>25 лет</td>
+                    </tr>
+                    <tr>
+                      <td>Материал корпуса</td>
+                      <td>Металл</td>
+                    </tr>
+                    <tr>
+                      <td>Внешнее покрытие</td>
+                      <td>Итальянская краска ECOLABLE</td>
+                    </tr>
+                    <tr>
+                      <td>Длинна кабеля</td>
+                      <td>1,5 метра с вилкой</td>
+                    </tr>
+                    <tr>
+                      <td>Крепления в комплекте</td>
+                      <td>Настенные и напольные</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="product7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal-head">
+              <h2 class="heading">TermoPlaza STP 475</h2>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td>Площадь обогрева</td>
+                      <td>До 14 м<sup>2</sup> ( 38 м<sup>3</sup>)</td>
+                    </tr>
+                    <tr>
+                      <td>Габариты обогревателя(Д× В× Ш)</td>
+                      <td>107 x 49 x 4 см</td>
+                    </tr>
+                    <tr>
+                      <td>Тип обогрева</td>
+                      <td>Инфракрасный, конвекционный</td>
+                    </tr>
+                    <tr>
+                      <td>Температура нагрева</td>
+                      <td>82 <sup>о</sup>С (+-5 <sup>о</sup>С)</td>
+                    </tr>
+                    <tr>
+                      <td>Степень защиты</td>
+                      <td>ІР21</td>
+                    </tr>
+                    <tr>
+                      <td>Гарантия</td>
+                      <td>24 месяца</td>
+                    </tr>
+                    <tr>
+                      <td>Срок эксплуатации</td>
+                      <td>25 лет</td>
+                    </tr>
+                    <tr>
+                      <td>Материал корпуса</td>
+                      <td>Металл</td>
+                    </tr>
+                    <tr>
+                      <td>Внешнее покрытие</td>
+                      <td>Итальянская краска ECOLABLE</td>
+                    </tr>
+                    <tr>
+                      <td>Длинна кабеля</td>
+                      <td>1,5 метра с вилкой</td>
+                    </tr>
+                    <tr>
+                      <td>Крепления в комплекте</td>
+                      <td>Настенные и напольные</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="product8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal-head">
+              <h2 class="heading">TermoPlaza STP 700</h2>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td>Площадь обогрева</td>
+                      <td>До 20 м<sup>2</sup> ( 54 м<sup>3</sup>)</td>
+                    </tr>
+                    <tr>
+                      <td>Габариты обогревателя(Д× В× Ш)</td>
+                      <td>128 x 49 x 4 см</td>
+                    </tr>
+                    <tr>
+                      <td>Тип обогрева</td>
+                      <td>Инфракрасный, конвекционный</td>
+                    </tr>
+                    <tr>
+                      <td>Температура нагрева</td>
+                      <td>82 <sup>о</sup>С (+-5 <sup>о</sup>С)</td>
+                    </tr>
+                    <tr>
+                      <td>Степень защиты</td>
+                      <td>ІР21</td>
+                    </tr>
+                    <tr>
+                      <td>Гарантия</td>
+                      <td>24 месяца</td>
+                    </tr>
+                    <tr>
+                      <td>Срок эксплуатации</td>
+                      <td>25 лет</td>
+                    </tr>
+                    <tr>
+                      <td>Материал корпуса</td>
+                      <td>Металл</td>
+                    </tr>
+                    <tr>
+                      <td>Внешнее покрытие</td>
+                      <td>Итальянская краска ECOLABLE</td>
+                    </tr>
+                    <tr>
+                      <td>Длинна кабеля</td>
+                      <td>1,5 метра с вилкой</td>
+                    </tr>
+                    <tr>
+                      <td>Крепления в комплекте</td>
+                      <td>Настенные и напольные</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1059,6 +1597,7 @@
               <div class="col-xs-2">
                 <div class="social">
                   <div class="social__item"><a class="social__link" href="https://www.instagram.com/obigrivachi/"><i class="fa social__icon fa-instagram"></i></a></div>
+                  <div class="social__item"><a class="social__link" href="https://www.facebook.com/groups/1091737997540057/"><i class="fa social__icon fa-facebook"></i></a></div>
                   <div class="social__item"><a class="social__link" href="https://vk.com/paneli_termoplaza"><i class="fa social__icon fa-vk"></i></a></div>
                   <div class="social__item"><a class="social__link" href="https://ok.ru/group/54940480241672"><i class="fa social__icon fa-odnoklassniki"></i></a></div>
                   <div class="social__item"><a class="social__link" href="https://telegram.me/termopIaza_bot"><i class="fa social__icon fa-paper-plane"></i></a></div>
@@ -1086,6 +1625,8 @@
     <script src="js/jquery.js"></script>
     <!-- Bootstrap JavaScript-->
     <script src="js/bootstrap.js"></script>
+    <!-- Jquery Cookie JavaScript-->
+    <script src="js/jquery.cookie.js"></script>
     <!-- Old browsers reject JavaScript-->
     <script src="js/jquery.reject.js"></script>
     <!-- Fancybox JavaScript    -->
@@ -1093,12 +1634,58 @@
     <script src="js/jquery.fancybox.pack.js"> </script>
     <!-- Slick-Slider JavaScript-->
     <script src="js/slick.js"></script>
-    <!-- Form Send JavaScript-->
+    <!-- Bootstrap validation JavaScript-->
+    <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
     <!-- Phone masked input JavaScript-->
     <script src="js/jquery.maskedinput.js"></script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->
+    <!-- Yandex Metrika-->
+    <script type="text/javascript">
+      (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+      try {
+      w.yaCounter41686209 = new Ya.Metrika({
+      id:41686209,
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true,
+      trackHash:true
+      });
+      } catch(e) { }
+      });
+      var n = d.getElementsByTagName("script")[0],
+      s = d.createElement("script"),
+      f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://mc.yandex.ru/metrika/watch.js";
+      if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/41686209" style="position:absolute; left:-9999px;" alt=""></div>
+    </noscript>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-91325786-1', 'auto');
+      ga('require', 'displayfeatures');
+      ga('require', 'linkid', 'linkid.js');
+      ga('send', 'pageview');
+      /* Accurate bounce rate by time */
+      if (!document.referrer ||
+      document.referrer.split('/')[2].indexOf(location.hostname) != 0)
+      setTimeout(function(){
+      ga('send', 'event', 'Новый посетитель', location.pathname);
+      }, 20000);
+    </script>
   </body>
 </html>

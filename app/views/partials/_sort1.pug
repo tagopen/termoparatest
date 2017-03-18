@@ -10,19 +10,19 @@ section.sort
         .product.product--group1
           .row
             .col-xs-6
-              .product__name Termoplaza 255
+              .product__name Termoplaza 225
               .product__thumbnail 
-                a.product__link.product__link--big(data-fancybox-group="group" href="img/product1.png")
-                  img.img-responsive(src='img/product1.png' alt='sort img')
-                .product__images
-                  a.product__link(data-fancybox-group="group" href="img/product1.png")
-                    img.img-responsive(src='img/product1.png' alt='sort img')
-                  a.product__link(data-fancybox-group="group" href="img/product1.png")
-                    img.img-responsive(src='img/product1.png' alt='sort img')
-                  a.product__link(data-fancybox-group="group" href="img/product1.png")
-                    img.img-responsive(src='img/product1.png' alt='sort img')
-                  a.product__link(data-fancybox-group="group" href="img/product1.png")
-                    img.img-responsive(src='img/product1.png' alt='sort img')
+                a.product__link.fancyimage.product__link--big(data-fancybox-group="group1" href="img/product11-big.png")
+                  img.img-responsive.product__img.product__img--white(src='img/product11.png' alt='Termoplaza 255')
+                a.product__link.fancyimage.product__link--big(data-fancybox-group="group1" href="img/product11-black-big.png")
+                  img.hidden.img-responsive.product__img.product__img--black.hidden(src='img/product11-black.png' alt='Termoplaza 255')
+                //-.product__images
+                //-  a.product__link.fancyimage(data-fancybox-group="group1" href="img/product12.png")
+                //-    img.img-responsive.product__img.product__img--white(src='img/product12.png' alt='sort img')
+                //-  a.product__link.fancyimage(data-fancybox-group="group1" href="img/product13.png")
+                //-    img.img-responsive.product__img.product__img--white(src='img/product13.png' alt='sort img')
+                //-  a.product__link.fancyimage(data-fancybox-group="group1" href="img/product14.png")
+                //-    img.img-responsive.product__img.product__img--white(src='img/product14.png' alt='sort img')
             .col-xs-6
               .product__content
                 .product__price.price
@@ -46,16 +46,16 @@ section.sort
                   .description__item 
                     span.description__text 2,39 
                     | грн в среднем за день
-                a.product__all(href="#") Все характеристики
+                a.product__all(href="#product1", data-toggle='modal') Все характеристики
                 .product__status Товар в наличии и готов к отправке
                 .product__btn-group
                   .radio.product__radio
-                    input.product__radio-input(name="amount" id="rbtn1" checked="" type="radio")
-                    label.product__radio-label(for="rbtn1")  
+                    input.product__radio-input(name="product1" id="product11" type="radio" data-color='black')
+                    label.product__radio-label(for="product11")  
                       span.product__radio-icon.product__radio-icon--black
                   .radio.product__radio
-                    input.product__radio-input(name="amount" id="rbtn2" type="radio")
-                    label.product__radio-label(for="rbtn2")  
+                    input.product__radio-input(name="product1" id="product12" type="radio" data-color='white')
+                    label.product__radio-label(for="product12")  
                       span.product__radio-icon.product__radio-icon--white 
                 button.btn.button.product__btn(data-toggle='modal', data-target='#product__modal') Купить                   
       .col-xs-12.col-sm-6
@@ -64,9 +64,10 @@ section.sort
             .col-xs-6
               .product__name Termoplaza 375
               .product__thumbnail 
-                a.fancyimage.product__image(data-fancybox-group="group" href="img/product2.png")
-                  img.img-responsive(src='img/product2.png' alt='sort img')
-                .product__image
+                a.product__link.fancyimage.product__link--big(data-fancybox-group="group2" href="img/product21-big.png")
+                  img.img-responsive.product__img.product__img--white(src='img/product21.png' alt='Termoplaza 375')
+                a.product__link.fancyimage.product__link--big(data-fancybox-group="group2" href="img/product21-black-big.png")
+                  img.hidden.img-responsive.product__img.product__img--black.hidden(src='img/product21-black.png' alt='Termoplaza 375')
             .col-xs-6
               .product__content
                 .product__price.price
@@ -90,16 +91,16 @@ section.sort
                   .description__item 
                     span.description__text 3,92 
                     | грн в среднем за день
-                a.product__all(href="#") Все характеристики
+                a.product__all(href="#product2", data-toggle='modal') Все характеристики
                 .product__status Товар в наличии и готов к отправке
                 .product__btn-group
                   .radio.product__radio
-                    input.product__radio-input(name="amount" id="rbtn1" checked="" type="radio")
-                    label.product__radio-label(for="rbtn1")  
+                    input.product__radio-input(name="product2" id="product21" type="radio" data-color='black')
+                    label.product__radio-label(for="product21")  
                       span.product__radio-icon.product__radio-icon--black
                   .radio.product__radio
-                    input.product__radio-input(name="amount" id="rbtn2" type="radio")
-                    label.product__radio-label(for="rbtn2")  
+                    input.product__radio-input(name="product2" id="product22" type="radio" data-color='white')
+                    label.product__radio-label(for="product22")  
                       span.product__radio-icon.product__radio-icon--white 
                 button.btn.button.product__btn(data-toggle='modal', data-target='#product__modal') Купить    
       .col-xs-12.col-sm-6
@@ -108,9 +109,10 @@ section.sort
             .col-xs-6
               .product__name Termoplaza 475
               .product__thumbnail 
-                a.fancyimage.product__image(data-fancybox-group="group" href="img/product3.png")
-                  img.img-responsive(src='img/product3.png' alt='sort img')
-                .product__image
+                a.product__link.fancyimage.product__link--big(data-fancybox-group="group3" href="img/product31-big.png")
+                  img.img-responsive.product__img.product__img--white(src='img/product31.png' alt='Termoplaza 475')
+                a.product__link.fancyimage.product__link--big(data-fancybox-group="group3" href="img/product31-black-big.png")
+                  img.hidden.img-responsive.product__img.product__img--black.hidden(src='img/product31-black.png' alt='Termoplaza 475')
             .col-xs-6
               .product__content
                 .product__price.price
@@ -134,16 +136,16 @@ section.sort
                   .description__item 
                     span.description__text 4.95 
                     | грн в среднем за день
-                a.product__all(href="#") Все характеристики
+                a.product__all(href="#product3", data-toggle='modal') Все характеристики
                 .product__status Товар в наличии и готов к отправке
                 .product__btn-group
                   .radio.product__radio
-                    input.product__radio-input(name="amount" id="rbtn1" checked="" type="radio")
-                    label.product__radio-label(for="rbtn1")  
+                    input.product__radio-input(name="product3" id="product31" type="radio" data-color='black')
+                    label.product__radio-label(for="product31")  
                       span.product__radio-icon.product__radio-icon--black
                   .radio.product__radio
-                    input.product__radio-input(name="amount" id="rbtn2" type="radio")
-                    label.product__radio-label(for="rbtn2")  
+                    input.product__radio-input(name="product3" id="product32" type="radio" data-color='white')
+                    label.product__radio-label(for="product32")  
                       span.product__radio-icon.product__radio-icon--white 
                 button.btn.button.product__btn(data-toggle='modal', data-target='#product__modal') Купить          
       .col-xs-12.col-sm-6
@@ -152,9 +154,10 @@ section.sort
             .col-xs-6
               .product__name Termoplaza 700
               .product__thumbnail 
-                a.fancyimage.product__image(data-fancybox-group="group" href="img/product4.png")
-                  img.img-responsive(src='img/product4.png' alt='sort img')
-                .product__image
+                a.product__link.fancyimage.product__link--big(data-fancybox-group="group4" href="img/product41-big.png")
+                  img.img-responsive.product__img.product__img--white(src='img/product41.png' alt='Termoplaza 700')
+                a.product__link.fancyimage.product__link--big(data-fancybox-group="group4" href="img/product41-black-big.png")
+                  img.hidden.img-responsive.product__img.product__img--black.hidden(src='img/product41-black.png' alt='Termoplaza 700')
             .col-xs-6
               .product__content
                 .product__price.price
@@ -178,15 +181,17 @@ section.sort
                   .description__item 
                     span.description__text 7.28 
                     | грн в среднем за день
-                a.product__all(href="#") Все характеристики
+                a.product__all(href="#product4", data-toggle='modal') Все характеристики
                 .product__status Товар в наличии и готов к отправке
                 .product__btn-group
                   .radio.product__radio
-                    input.product__radio-input(name="amount" id="rbtn1" checked="" type="radio")
-                    label.product__radio-label(for="rbtn1")  
+                    input.product__radio-input(name="product4" id="product41" type="radio"  data-color='black')
+                    label.product__radio-label(for="product41")  
                       span.product__radio-icon.product__radio-icon--black
                   .radio.product__radio
-                    input.product__radio-input(name="amount" id="rbtn2" type="radio")
-                    label.product__radio-label(for="rbtn2")  
+                    input.product__radio-input(name="product4" id="product42" type="radio"  data-color='white')
+                    label.product__radio-label(for="product42")  
                       span.product__radio-icon.product__radio-icon--white 
                 button.btn.button.product__btn(data-toggle='modal', data-target='#product__modal') Купить    
+
+

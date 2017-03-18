@@ -680,6 +680,8 @@ $color-orange: #ff5800
 .text-danger
   color: #e74c3c
   text-align: left
+  &--white
+    color: #fff
 a
   outline: none  
 .heading
@@ -722,6 +724,9 @@ a
   .button
     font: 400 14px/16px $main-open-sans 
 .form
+  &-control
+    &:focus
+      outline: none
   &__input
     text-align: center
     padding: 15px 0
@@ -979,6 +984,13 @@ a
     color: $color-grey
     font: 700 14px/27px $main-open-sans
     margin-bottom: 20px  
+  &__link
+    display: inline-block
+    width: 45px
+    height: 45px
+    &--big
+      width: auto
+      height: auto
   &__all
     display: inline-block
     color: $color-grey 
@@ -1037,19 +1049,19 @@ a
     height: 3px
     width: 45px
     background-color: $color-orange
-  &__text  
+  &__text
     color: $color-grey 
     font: 400 12px/16px $main-open-sans 
     margin-bottom: 10px  
   &__old  
-    font: 400 14px/16px $main-open-sans 
+    font: 600 14px/16px $main-open-sans 
     text-decoration: line-through
   &__new
     color: $color-orange 
     font: 700 14px/16px $main-open-sans 
-  &__discount  
-    color: $color-orange 
-    font: 600 14px/16px $main-open-sans  
+  &__discount
+    color: $color-orange
+    font: 600 14px/16px $main-open-sans
 .description
   margin-bottom: 15px
   &__item
@@ -1067,7 +1079,7 @@ a
       margin-bottom: 100px  
   .product
     &__name    
-      font: 700 16px/27px $main-open-sans  
+      font: 700 16px/27px $main-open-sans
     &__btn
       width: 130px  
   .price
@@ -1139,6 +1151,12 @@ a
     display: inline-block
     margin: 20px auto 0
     padding: 15px 30px    
+    opacity: 1
+    visibility: visible
+    transition: opacity .3s ease-out
+    &--hidden
+      visibility: hidden
+      opacity: 0
 +r(768)  
   .test
     &__subheading  
@@ -1227,7 +1245,13 @@ a
       text-transform: uppercase
       font-weight: 700
   &__img
+    position: relative
     text-align: center
+    &:before,
+    &:after
+      content: ''
+      +coverdiv
+      z-index: 99
     img
       display: inline-block
 +r(768)   
@@ -1324,7 +1348,8 @@ a
       display: inline-block
       vertical-align: middle
       color: $color-grey 
-      font: 600 18px/normal $main-open-sans  
+      font: 600 18px/18px $main-open-sans  
+      line-height: normal
     &__number
       font: 600 187px/190px $main-open-sans 
       top: -65px
@@ -1351,7 +1376,8 @@ a
       line-height: 350px    
     &__text
       color: $color-grey 
-      font: 600 20px/normal $main-open-sans 
+      font: 600 20px/20px $main-open-sans 
+      line-height: normal
     &__number
       left: -30px
       &--right
@@ -1667,7 +1693,7 @@ a
 .modal 
   &__size
     width: 300px
-    margin: 30 auto
+    margin: 30px auto
   &__content
     position: relative
     padding: 50px 25px
@@ -1715,16 +1741,27 @@ a
       font: 600 18px/24px $main-open-sans     
 +r(992)   
   .modal
+    &__size
+      &--big
+        width: 800px
     &__heading
       font: 600 30px/45px $main-open-sans 
     &__subheading   
-      font: 600 20px/30px $main-open-sans                 
+      font: 600 20px/30px $main-open-sans     
++r(1200)            
+  .modal
+    &__size
+      &--big
+        width: 1000px
 +comment('page test style')
 .social
   &__item
+    text-align: center
     &--exam
       display: inline-block
 .header
+  &--margin
+    margin: 0
   &--exam
     padding: 0
 .test

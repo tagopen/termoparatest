@@ -11,16 +11,19 @@
           .modal-content.buyer__content
             .modal__head
               p.modal__subheading.modal__subheading--color-white Оставьте дополнительные контакты и получите рекомендации по выбору обогревателей на 2017 год.
-            form.contactForm.modal__form(name='Шапка', method='post', action='./mail/mail.php', novalidate)
+            form.contactForm.modal__form.buyer__modal--inputnotexist(method='post', action='./mail/mail.php', novalidate)
               .row
                 .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
                   .form-group
-                    input.form-control.modal__input.modal__input--color-white.form__name(placeholder='Ваш Email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')
+                    input.hidden.form-control.modal__input.modal__input--color-white.form__name(placeholder='Ваш Email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')
+                    p.help-block.text-danger.text-danger--white
+                  .form-group
+                    input.hidden.form-control.modal__input.modal__input--color-white.form__phone(placeholder='Ваш телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
                     p.help-block.text-danger
                   .form-group
-                    input.form-control.modal__input.modal__input--color-white.form__phone(placeholder='Ваш телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
-                    p.help-block.text-danger
+                    input.hidden.form-control.modal__input.modal__input--color-white.form__phone(placeholder='Ваше имя', required, data-validation-required-message='Заполните поле корректно.', name='name', type='text')
+                    p.help-block.text-danger.text-danger--white
                   .clearfix
                     .success
                   .text-center
-                    button.btn.button.buyer__btn(type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить материалы
+                    button.btn.button.buyer__btn(name='Success страница', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить материалы
