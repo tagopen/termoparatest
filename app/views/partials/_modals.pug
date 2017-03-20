@@ -20,7 +20,7 @@
             .text-center
               button.btn.button.modal__btn(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок
 #product__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
-  .modal-dialog.modal__size
+  .modal-dialog.modal-lg
     .modal-content.modal__content
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
         i.fa.fa-times(aria-hidden='true')
@@ -29,19 +29,23 @@
         p.modal__subheading оставьте контакты и в течении 5 минут с вами свяжется мастер для уточнения деталей заказа
       form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
         .row
-          .col-xs-12.col-sm-8.col-sm-offset-2
+          .col-xs-12.col-sm-6
             .form-group
               input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Ваше имя', required, data-validation-required-message='Заполните поле корректно.', name='name', type='text')
               p.help-block.text-danger
+          .col-xs-12.col-sm-6     
             .form-group
               input.form-control.modal__input.form__phone(aria-invalid='false', placeholder='Ваш телефон', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
               p.help-block.text-danger
+          .col-xs-12.col-sm-6    
             .form-group
               input.form-control.modal__input.form__phone(placeholder='Количество', name='qty', type='number')
               p.help-block.text-danger
+          .col-xs-12.col-sm-6     
             .form-group
               input.form-control.modal__input.form__phone(placeholder='Адрес, отделение почты', name='delivery', type='text')
               p.help-block.text-danger
+          .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.text-center      
             .form-group
               p.modal__subheading Форма оплаты:
               .question__radio-group.radio-btn
