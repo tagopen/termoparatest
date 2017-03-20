@@ -1478,7 +1478,9 @@ a {
   position: relative;
   padding: 50px 25px;
   -webkit-border-radius: 0;
-          border-radius: 0; }
+          border-radius: 0;
+  border: 5px solid #ff5800;
+  background: rgba(255, 255, 255, 0.9); }
 
 .modal__close {
   position: absolute;
