@@ -453,6 +453,11 @@ a {
 /* ---------------------------------------- */
 .navbar {
   margin-bottom: 20px; }
+  .navbar__col {
+    text-align: center; }
+  .navbar__text {
+    color: #151515;
+    font: 400 16px/18px "Open Sans", sans-serif; }
 
 .logo {
   display: inline-block;
@@ -540,6 +545,8 @@ a {
     padding-bottom: 100px;
     background: url(../img/bg1.jpg) no-repeat;
     background-size: cover; }
+    .header__input {
+      padding: 12px 0; }
     .header__heading {
       font: 700 30px/45px "Open Sans", sans-serif; }
       .header__heading:after {
@@ -557,6 +564,8 @@ a {
       margin-bottom: 25px; } }
 
 @media only screen and (min-width: 992px) {
+  .navbar__text {
+    font: 400 18px/27px "Open Sans", sans-serif; }
   .header {
     padding-bottom: 115px; }
     .header__heading {

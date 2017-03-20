@@ -21,16 +21,19 @@ block content
         .col-xs-12.col-sm-8.col-sm-offset-2.text-center  
           .header__subheading равномерно отапливают все помещение, при этом в 2 раза экономичнее и на 300% эффективнее аналогов
           .header__form-title Оставьте свой e-mail адрес и получите полный каталог элетроообогревателей TermoPlaza с актуальными ценами на <b>12.02.2017</b>
-        .col-xs-12.col-sm-6.col-sm-offset-3.col-lg-4.col-lg-offset-4  
+        .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
           form.contactForm.form(method='post' action='./mail/mail.php' novalidate)
-            .form-group.form__group
-              input.form-control.modal__input.form__name(aria-invalid='false', placeholder='Введите ваш E-mail', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')
-              p.help-block.text-danger
-            .clearfix
-              .col-xs-12
-                .success
-            .col-xs-12.text-center
-              button.btn.button.button--size(name='form[шапка]', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...", type='submit') Записаться на просмотр коттеджей
+            .row
+              .col-sm-6
+                .form-group.form__group
+                  input.form-control.modal__input.form__name.header__input(aria-invalid='false', placeholder='Введите ваш E-mail', required, data-validation-required-message='Заполните поле корректно.', name='email', type='text')
+                  p.help-block.text-danger
+                .clearfix
+                  .col-xs-12
+                    .success
+              .col-sm-6        
+                .text-center
+                  button.btn.button.button--size(name='form[шапка]', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...", type='submit') Записаться на просмотр коттеджей
   include partials/_intro.pug 
   include partials/_about.pug  
   include partials/_table.pug                     

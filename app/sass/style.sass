@@ -736,6 +736,11 @@ a
 +comment("header styles")
 .navbar
   margin-bottom: 20px
+  &__col
+    text-align: center
+  &__text
+    color: $color-grey
+    font: 400 16px/18px $main-open-sans  
 .logo
   display: inline-block
   text-align: center
@@ -821,6 +826,8 @@ a
     padding-bottom: 100px
     background: url(../img/bg1.jpg) no-repeat
     background-size: cover
+    &__input
+      padding: 12px 0
     &__heading
       font: 700 30px/45px $main-open-sans 
       &:after
@@ -837,6 +844,9 @@ a
     &__form-title
       margin-bottom: 25px    
 +r(992)   
+  .navbar
+    &__text
+      font: 400 18px/27px $main-open-sans 
   .header
     padding-bottom: 115px
     &__heading
