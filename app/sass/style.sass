@@ -1275,10 +1275,26 @@ a
       font: 400 20px/27px $main-open-sans
 +comment("table styles")       
 .table-ttx
-  &__image
-    text-align: center
-    img
-      display: inline-block
+  padding-bottom: 50px
+.table
+  &__row
+    &--bg
+      background-color: #f0f0f0  
+  &__item
+    color: $color-grey
+    font: 400 14px/21px $main-open-sans
+    padding: 10px  
+    &--color 
+      color: $color-orange
+      font: 700 16px/21px $main-open-sans
+    &--name
+      font: 600 16px/21px $main-open-sans
++r(992)
+  .table
+    &__item
+      padding: 14px  
+      &--name
+        padding-right: 30px     
 +comment("material styles") 
 .material
   padding: 20px 0   

@@ -1025,10 +1025,27 @@ a {
 /* ---------------------------------------- */
 /* T A B L E    S T Y L E S                 */
 /* ---------------------------------------- */
-.table-ttx__image {
-  text-align: center; }
-  .table-ttx__image img {
-    display: inline-block; }
+.table-ttx {
+  padding-bottom: 50px; }
+
+.table__row--bg {
+  background-color: #f0f0f0; }
+
+.table__item {
+  color: #151515;
+  font: 400 14px/21px "Open Sans", sans-serif;
+  padding: 10px; }
+  .table__item--color {
+    color: #ff5800;
+    font: 700 16px/21px "Open Sans", sans-serif; }
+  .table__item--name {
+    font: 600 16px/21px "Open Sans", sans-serif; }
+
+@media only screen and (min-width: 992px) {
+  .table__item {
+    padding: 14px; }
+    .table__item--name {
+      padding-right: 30px; } }
 
 /* ---------------------------------------- */
 /* M A T E R I A L    S T Y L E S           */
