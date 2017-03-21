@@ -8,20 +8,22 @@ block scripts
 block content
   .content
     header.header.header--examnav.navbar.header--margin
-      div.container
-        .row
-          .col-xs-12.col-sm-4
-            .logo
-              a.logo__img(href='#')
-                img.img-responsive(src='img/logo/logo.png' alt='logo')
-              p.logo__text Производство и продажа энергосберегающих обогревателей с доставкой по Украине  
-          .col-xs-12.col-sm-4.pull-right
-            .navbar__contact.contact
-              .contact__phone
-                .contact__number
-                  a.contact__link(href="tel:+380981285440") +38 (098) 128-54-40
-                .contact__number
-                  a.contact__link(href="tel:+380939360818") +38 (093) 936-08-18 
-                .contact__number
-                  a.contact__link(href="tel:+380992753363") +38 (099) 275-33-63  
+      nav.navbar
+        div.container
+          .row
+            .col-xs-12.col-sm-4.col-md-3.navbar__col
+              .logo
+                a.logo__img(href='#')
+                  img.img-responsive(src='img/logo/logo.png' alt='logo')
+            .col-xs-12.col-sm-4.col-md-6.text-center    
+              p.navbar__text Производство и продажа энергосберегающих 
+                br/ 
+                | обогревателей с доставкой по Украине  
+            .col-xs-12.col-sm-4.col-md-3.pull-right
+              .navbar__contact.contact
+                .contact__phone
+                  .contact__number
+                    a.contact__link(href="tel:+380504002969") +38 (050) 400-29-69
+                  .contact__number
+                    a.contact__link(href="tel:+380676201871") +38 (067) 620-18-71
       include partials/_thanks.pug

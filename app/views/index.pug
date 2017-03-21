@@ -20,8 +20,9 @@ block content
           h1.header__heading Энергосберегающие обогреватели Termoplaza 
         .col-xs-12.col-sm-8.col-sm-offset-2.text-center  
           .header__subheading равномерно отапливают все помещение, при этом в 2 раза экономичнее и на 300% эффективнее аналогов
-          .header__form-title Оставьте свой e-mail адрес и получите полный каталог элетроообогревателей TermoPlaza с актуальными ценами на <b>12.02.2017</b>
+          .header__form-title Оставьте свой e-mail адрес и получите полный каталог элетроообогревателей TermoPlaza с актуальными ценами на <b class="current-day">12.02.2017</b>
         .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+
           form.contactForm.form(method='post' action='./mail/mail.php' novalidate)
             .row
               .col-sm-6
@@ -31,9 +32,9 @@ block content
                 .clearfix
                   .col-xs-12
                     .success
-              .col-sm-6        
+              .col-sm-6
                 .text-center
-                  button.btn.button.button--size(name='form[шапка]', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...", type='submit') Записаться на просмотр коттеджей
+                  button.btn.button.button--size.button--riple-in(name='form[шапка]', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...", type='submit') Получить доступ к каталогу со скидками
   include partials/_intro.pug 
   include partials/_about.pug  
   include partials/_table.pug                     

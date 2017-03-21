@@ -62,15 +62,25 @@
     e.preventDefault();
   });
 
+  // Today date
+  $(function() {
+    var dateobj = new Date();
+    var month = ("0" + (dateobj.getMonth() + 1)).slice(-2);
+    var day = ("0" + dateobj.getDate()).slice(-2) ;
+    var year = dateobj.getFullYear();
+
+    $('.current-day').text(day + '.' + month + '.' + year);
+  });
+
   // Change product images color
   $(function() {
     $('.product__radio-input').on('click, change', function() {
       var $this     = $(this),
           $products = $this.parents('.product'),
           color     = $this.data('color') || 'white',
-          $images = $products.find('.product__link--big');
-
-      var $currImg = $images.find('.product__img--' + color);
+          $images   = $products.find('.product__link--big'),
+          $currImg = $images.find('.product__img--' + color);
+          
       $currImg.removeClass('hidden').parent().siblings().find('.product__img').addClass('hidden');
     });
   });

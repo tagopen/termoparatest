@@ -2,27 +2,23 @@ footer.footer
   .container
     .row
       .col-xs-12.col-sm-3.col-sm-push-4.col-md-4.col-md-push-4.text-center
-        button.btn.button.footer__btn(data-toggle='modal', data-target='#callback__modal') Заказать звонок
+        button.btn.button.footer__btn.button--riple-in(data-toggle='modal', data-target='#callback__modal') Нужна помощь? Задайте вопрос специалисту!
       .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-pull-3.col-sm-offset-0.col-md-4.col-md-pull-4
         .footer__text
           a.footer__link(href="mailto:info@termoplaza.net") info@termoplaza.net 
+          br/
           | г. Киев, ул. Старонаводницкая, д.4
+          include ../components/_social.pug       
       .col-xs-10.col-xs-offset-1.col-sm-5.col-sm-offset-0.col-md-4
         .row
           .col-xs-10.footer__col
             .contact
               .contact__phone
                 .contact__number
-                  a.contact__link(href="tel:+380981285440") 
+                  a.contact__link(href="tel:+380676201871") 
                     .contact__icon.contact__icon--kyivstar
-                    | +38 (098) 128-54-40
-                .contact__number
-                  a.contact__link(href="tel:+380939360818") 
-                    .contact__icon.contact__icon--life
-                    | +38 (093) 936-08-18 
+                    | +38 (067) 620-18-71
                 a.contact__number
-                  a.contact__link(href="tel:+380992753363") 
+                  a.contact__link(href="tel:+380504002969") 
                     .contact__icon.contact__icon--mts
-                    | +38 (099) 275-33-63
-          .col-xs-2
-            include ../components/_social.pug          
+                    | +38 (050) 400-29-69

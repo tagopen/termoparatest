@@ -524,6 +524,21 @@ $btn-default-border: #ccc
 $color-grey: #151515
 $color-orange: #ff5800
 
+
+%btn-ripple-in
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: #fff
+    top: 0
+    left: 0
+    transform: scale(0)
+    opacity: .5
+    animation: ripple-in 7s infinite
+
 // @import base/reset
 +comment('preloader styles')
 .loaded #loading
@@ -719,7 +734,9 @@ a
     background: $btn-default-bg-hover
 
   &--size
-    width: 100%   
+    width: 100% 
+  &--riple-in  
+    @extend %btn-ripple-in
 +r(768)
   .button
     font: 400 14px/16px $main-open-sans 
@@ -800,7 +817,7 @@ a
     margin: 0 0 15px
     &:after
       display: block
-      margin: 15px auto 0
+      margin: 25px auto 0
       content: ''
       height: 5px
       width: 100px
@@ -808,14 +825,14 @@ a
   &__subheading  
     color: $color-grey
     font: 600 18px/27px $main-open-sans 
-    margin-bottom: 20px
+    margin-bottom: 60px
   &__form-title
     color: $color-grey 
     font: 400 14px/21px $main-open-sans 
     margin-bottom: 15px
 +r(768)    
   .navbar
-    margin-bottom: 75px
+    margin-bottom: 105px
   .logo
     text-align: left
     &__text
@@ -823,7 +840,7 @@ a
   .contact
     text-align: right
   .header
-    padding-bottom: 100px
+    padding-bottom: 135px
     background: url(../img/bg1.jpg) no-repeat
     background-size: cover
     &__input
@@ -836,7 +853,7 @@ a
       font: 600 20px/30px $main-open-sans 
       &:after
         display: block
-        margin: 25px auto 0
+        margin: 50px auto 0
         content: ''
         height: 5px
         width: 100px
@@ -855,6 +872,7 @@ a
       font: 600 24px/36px $main-open-sans 
     &__form-title
       margin-bottom: 35px  
+      font: 400 18px/27px $main-open-sans 
 +comment("intro styles")   
 .intro
   padding: 60px 0 0
@@ -893,6 +911,7 @@ a
     position: relative
     display: block 
     height: 130px  
+    overflow: hidden
     &--1
       background: url(../img/about1.jpg) no-repeat
       background-size: cover
@@ -916,7 +935,23 @@ a
       background-size: cover
     &--8
       background: url(../img/about8.jpg) no-repeat
-      background-size: cover        
+      background-size: cover 
+    &:before
+      content: ''
+      +coverdiv
+      transform: scale(0)
+      opacity: 1
+      transition: all .4s ease-out 
+    &:hover
+      &:before
+        background: #000
+        opacity: .8
+        transform: scale(1)
+        z-index: 5
+      .about__text--hover
+        opacity: 1
+        visibility: visible
+
   &__info
     position: absolute
     bottom: 20px
@@ -935,6 +970,17 @@ a
       height: 5px
       width: 100%
       background-color: $color-orange
+    &--hover
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
+      visibility: hidden
+      transition: all .3s ease-out
+      z-index: 10
+      &:after
+        content: none
 +r(768)  
   .about
     &__heading
@@ -1530,7 +1576,7 @@ a
       height: 300px
 +comment('comment style')  
 .comment
-  padding-bottom: 60px
+  padding: 20px 0 60px
   &__slider
     .slick
       &-dots
@@ -1575,6 +1621,9 @@ a
     color: $color-grey
     font: 600 16px/18px $main-open-sans
     margin-bottom: 20px
+  &__link
+    display: block
+    text-align: center
 +r(768)
   .comment
     &__text
@@ -1680,7 +1729,7 @@ a
 .footer
   padding: 30px 0    
   &__btn
-    margin-bottom: 25px 
+    margin: 25px 0
   &__text
     text-align: center
     font: 600 16px/20px $main-open-sans 
@@ -1694,6 +1743,7 @@ a
 .social
   &__icon
     color: $color-orange  
+    font-size: 26px
 .contact
   &__icon
     display: inline-block
@@ -1711,10 +1761,13 @@ a
   .footer
     &__text
       text-align: left   
+      line-height: 30px
     &__col
       float: right  
     .contact
       text-align: center 
+      &__phone
+        padding: 17px 0
 +comment('modals style')
 .modal 
   &__size
@@ -1784,6 +1837,8 @@ a
 +comment('page test style')
 .social
   &__item
+    display: inline-block
+    padding: 10px 10px 10px 0px
     text-align: center
     &--exam
       display: inline-block
@@ -1866,6 +1921,38 @@ a
   .thanks
     &__video
       height: 350px
+@keyframes ripple-in
+  0%
+    transform: scale(0)
 
+  2%
+    transform: scale(0)
+
+  3%
+    transform: scale(0)
+
+  20%
+    transform: scale(1)
+    opacity: 0.3
+
+  21%
+    transform: scale(1)
+    opacity: 0.3
+
+  22%
+    transform: scale(1)
+    opacity: 0.3
+
+  98%
+    transform: scale(1)
+    opacity: 0
+
+  99%
+    transform: scale(1)
+    opacity: 0
+
+  100%
+    transform: scale(1)
+    opacity: 0
 
 
