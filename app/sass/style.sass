@@ -1316,22 +1316,38 @@ a
   &__img
     position: relative
     text-align: center
-    &:before,
+    &:before
+      content: ''
+      display: block
+      width: 100%
+      height: 171px
+      background: url(../img/scheme.jpg) no-repeat scroll 50% 50%
+      background-size: contain
+      z-index: -1
     &:after
       content: ''
       +coverdiv
       z-index: 99
-    img
-      display: inline-block
 +r(768)   
   .scheme
     padding: 30px 0  
     &__subheading 
       font: 400 16px/24px $main-open-sans
+    &__img
+      &:before
+        height: 426px
 +r(992)      
   .scheme
     &__subheading
       font: 400 20px/27px $main-open-sans
+    &__img
+      &:before
+        height: 556px
++r(1200)
+  .scheme
+    &__img
+      &:before
+        height: 840px
 +comment("table styles")       
 .table-ttx
   padding-bottom: 50px
@@ -1552,6 +1568,7 @@ a
     padding: 0 5px
   &__item
     position: relative
+    display: block
     text-align: center
     margin-bottom: 20px
     height: 160px
@@ -1810,6 +1827,8 @@ a
     margin-bottom: 40px
     &--color-white
       color: #fff
+    &--product
+      margin-bottom: 0
   &__input
     text-align: center
     &--color-white
@@ -1835,6 +1854,9 @@ a
       font: 600 18px/24px $main-open-sans     
 +r(992)   
   .modal
+    &__form
+      &--padding
+        padding: 85px 0
     &__size
       &--big
         width: 800px

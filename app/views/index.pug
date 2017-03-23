@@ -20,9 +20,10 @@ block content
           h1.header__heading Энергосберегающие обогреватели Termoplaza 
         .col-xs-12.col-sm-8.col-sm-offset-2.text-center  
           .header__subheading равномерно отапливают все помещение, при этом в 2 раза экономичнее и на 300% эффективнее аналогов
-          .header__form-title Оставьте свой e-mail адрес и получите полный каталог элетроообогревателей TermoPlaza с актуальными ценами на <b class="current-day">12.02.2017</b>
+          .header__form-title Оставьте свой e-mail адрес и получите полный каталог элетроообогревателей TermoPlaza с актуальными ценами на 
+            b.current-day 12.02.2017
         .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
-          form.contactForm.form(method='post' action='./mail/mail.php' novalidate)
+          form.form(accept-charset='utf-8', action='https://app.getresponse.com/add_subscriber.html', method='post')
             .row
               .col-sm-6
                 .form-group.form__group
@@ -31,9 +32,19 @@ block content
                 .clearfix
                   .col-xs-12
                     .success
-              .col-sm-6        
+              .col-sm-6
                 .text-center
-                  button.btn.button.button--size.button--riple-in(name='form[шапка]', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...", type='submit') Получить доступ к каталогу со скидками
+                  button#url.btn.button.button--size.button--riple-in(name='form[шапка]', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...", type='submit') Получить доступ к каталогу со скидками
+                  input#order_page_referer(type='hidden', name='order_page_referer')
+                  input(name='campaign_token', type='hidden', value='nyoBG') 
+                  input(name='thankyou_url', type='hidden', value='http://tagopen.com/termoplaza/mail/mail.php')
+                  input(name='start_day', type='hidden', value='0')
+                  input(name='forward_data', type='hidden', value='post')
+            script.
+              var order_page_referer = document.querySelector("order_page_referer") ;
+              document.getElementById("url").onclick = function() {
+              order_page_referer.value = window.location.href;
+              }
   include partials/_intro.pug 
   include partials/_about.pug  
   include partials/_table.pug                     

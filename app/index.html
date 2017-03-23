@@ -91,7 +91,7 @@
               <div class="header__form-title">Оставьте свой e-mail адрес и получите полный каталог элетроообогревателей TermoPlaza с актуальными ценами на <b class="current-day">12.02.2017</b></div>
             </div>
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-              <form class="contactForm form" method="post" action="./mail/mail.php" novalidate>
+              <form class="form" accept-charset="utf-8" action="https://app.getresponse.com/add_subscriber.html" method="post">
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="form-group form__group">
@@ -104,12 +104,23 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6">       
+                  <div class="col-sm-6">
                     <div class="text-center">
-                      <button class="btn button button--size button--riple-in" name="form[шапка]" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется..." type="submit">Получить доступ к каталогу со скидками</button>
+                      <button class="btn button button--size button--riple-in" id="url" name="form[шапка]" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется..." type="submit">Получить доступ к каталогу со скидками</button>
+                      <input id="order_page_referer" type="hidden" name="order_page_referer">
+                      <input name="campaign_token" type="hidden" value="nyoBG">
+                      <input name="thankyou_url" type="hidden" value="http://tagopen.com/termoplaza/mail/mail.php">
+                      <input name="start_day" type="hidden" value="0">
+                      <input name="forward_data" type="hidden" value="post">
                     </div>
                   </div>
                 </div>
+                <script>
+                  var order_page_referer = document.querySelector("order_page_referer") ;
+                  document.getElementById("url").onclick = function() {
+                  order_page_referer.value = window.location.href;
+                  }
+                </script>
               </form>
             </div>
           </div>
@@ -671,7 +682,7 @@
               <div class="scheme__subheading"> <span class="scheme__subheading--span">TERMOPLAZA</span> - Работает по принципу 2 в 1, совмещая мягкое инфракрасное тепло и естественную конвекцию воздуха, что в свою очередь увеличивает эффективность прогрева</div>
             </div>
             <div class="col-xs-12">
-              <div class="scheme__img"><img class="img-responsive" src="img/scheme.jpg" alt="scheme"></div>
+              <div class="scheme__img"></div>
             </div>
           </div>
         </div>
@@ -891,26 +902,10 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-12 col-sm-6">
-              <div class="quality__item quality__item--1">
-                <div class="quality__text">Можно использовать как основное источник отопления</div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <div class="quality__item quality__item--2">
-                <div class="quality__text">Производство в городе Киев с 2009 года</div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <div class="quality__item quality__item--3">
-                <div class="quality__text">Итальянская шероховато-матовая краска придает элитного вида</div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <div class="quality__item quality__item--4"> 
-                <div class="quality__text">Мы получили 26 сертификатов качества и прошли 31 испытание на безопасность        </div>
-              </div>
-            </div>
+            <div class="col-xs-12 col-sm-6"><a class="quality__item quality__item--1" href="#quality__modal" data-toggle="modal"><span class="quality__text">Можно использовать как основное источник отопления</span></a></div>
+            <div class="col-xs-12 col-sm-6"><a class="quality__item quality__item--2" href="#quality__modal" data-toggle="modal"><span class="quality__text">Производство в городе Киев с 2009 года</span></a></div>
+            <div class="col-xs-12 col-sm-6"><a class="quality__item quality__item--3" href="#quality__modal" data-toggle="modal"><span class="quality__text">Итальянская шероховато-матовая краска придает элитного вида</span></a></div>
+            <div class="col-xs-12 col-sm-6"><a class="quality__item quality__item--4" href="#quality__modal" data-toggle="modal"> <span class="quality__text">Мы получили 26 сертификатов качества и прошли 31 испытание на безопасность        </span></a></div>
           </div>
         </div>
       </section>
@@ -983,7 +978,7 @@
               <div class="modal-dialog buyer__modal">
                 <div class="modal-content buyer__content">
                   <div class="modal__head">
-                    <p class="modal__subheading modal__subheading--color-white">Оставьте ваши контакты, что бы мы отправили вам маркетинг-кит и коммерческое предложение для партнеров</p>
+                    <p class="modal__subheading modal__subheading--color-white">Оставьте ваши контакты, что бы мы отправили вам презентацию и коммерческое предложение для партнеров</p>
                   </div>
                   <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
                     <div class="row">
@@ -1055,7 +1050,7 @@
               <p class="modal__heading">Заказать обратный звонок</p>
               <p class="modal__subheading">оставьте контакты и в течении 5 минут с вами свяжется мастер для уточнения деталей заказа</p>
             </div>
-            <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+            <form class="modal__form" accept-charset="utf-8" action="https://app.getresponse.com/add_subscriber.html" method="post">
               <div class="row">
                 <div class="col-xs-12 col-sm-6">
                   <div class="form-group">
@@ -1067,6 +1062,11 @@
                   <div class="form-group">
                     <input class="form-control modal__input form__phone" aria-invalid="false" placeholder="Ваш телефон" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel">
                     <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="form-group">
+                    <input class="form-control modal__input" id="product-name" name="product" type="text" disabled="disabled">
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6">   
@@ -1081,27 +1081,42 @@
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="form-group">
+                    <input class="form-control modal__input form__phone" aria-invalid="false" placeholder="Ваш Email" required data-validation-required-message="Заполните поле корректно." name="email" type="email">
+                    <p class="help-block text-dangers"></p>
+                  </div>
+                </div>
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">     
                   <div class="form-group">
-                    <p class="modal__subheading">Форма оплаты:</p>
+                    <p class="modal__subheading modal__subheading--product">Форма оплаты:</p>
                     <div class="question__radio-group radio-btn">
-                      <input class="radio-btn__control" id="question-11" type="radio" name="payment[]">
+                      <input class="radio-btn__control" id="question-11" type="radio" name="payment1">
                       <label class="radio-btn__box radio-btn__box--check" for="question-11"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Предоплата</span></label>
                     </div>
                     <div class="question__radio-group radio-btn">
-                      <input class="radio-btn__control" id="question-12" type="radio" name="payment[]">
+                      <input class="radio-btn__control" id="question-12" type="radio" name="payment1">
                       <label class="radio-btn__box radio-btn__box--check" for="question-12"><span class="radio-btn__icon radio-btn__icon--check"></span><span class="radio-btn__text">Оплата при получении</span></label>
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control modal__input" id="product-name" name="product" type="hidden">
+                    <input class="payment__value" type="hidden" name="payment[]">
                   </div>
                   <div class="clearfix">
                     <div class="success"></div>
                   </div>
                   <div class="text-center">
-                    <button class="btn button modal__btn" name="Заказать обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
+                    <button class="btn button modal__btn" id="url4" name="Заказать обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
+                    <input id="order_page_referer4" type="hidden" name="order_page_referer4">
+                    <input name="campaign_token" type="hidden" value="n8lG2">
+                    <input name="thankyou_url" type="hidden" value="http://tagopen.com/termoplaza/mail/mail.php">
+                    <input name="start_day" type="hidden" value="0">
+                    <input name="forward_data" type="hidden" value="post">
                   </div>
+                  <script>
+                    var order_page_referer = document.getElementById("order_page_referer4") ;
+                    document.getElementById("url4").onclick = function() {
+                    order_page_referer.value = window.location.href;
+                    }
+                  </script>
                 </div>
               </div>
             </form>
@@ -1116,7 +1131,7 @@
               <p class="modal__heading">Оставьте ваши контакты</p>
               <p class="modal__subheading">и получите доступ к подробному описанию государственной программы “Теплый дом” и других вариантах рассрочки. Если же у Вас остануться вопросы, то наш специалист любезно вас проконсультирует. </p>
             </div>
-            <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+            <form class="modal__form form" accept-charset="utf-8" action="https://app.getresponse.com/add_subscriber.html" method="post">
               <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                   <div class="form-group">
@@ -1131,8 +1146,19 @@
                     <div class="success"></div>
                   </div>
                   <div class="text-center">
-                    <button class="btn button modal__btn" name="Оставьте ваши контакты" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
+                    <button class="btn button modal__btn" id="url3" name="Оставьте ваши контакты" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок</button>
+                    <input type="hidden" name="order_page_referer3">
+                    <input name="campaign_token" type="hidden" value="nyZ1s">
+                    <input name="thankyou_url" type="hidden" value="http://tagopen.com/termoplaza/mail/mail.php">
+                    <input name="start_day" type="hidden" value="0">
+                    <input name="forward_data" type="hidden" value="post">
                   </div>
+                  <script>
+                    var order_page_referer = document.querySelector("order_page_referer3") ;
+                    document.getElementById("url3").onclick = function() {
+                    order_page_referer.value = window.location.href;
+                    }
+                  </script>
                 </div>
               </div>
             </form>
@@ -1146,25 +1172,34 @@
             <div class="modal-body">
               <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                  <p class="modal__subheading">
-                    Оставьте Ваш email и получите доступ к статье. Вы узнаете как на практике люди используют электро панели в конкретном случае.
-                    Оставьте Ваш email и получите доступ к статье. Вы узнаете как на практике люди используют электро панели в конкретном случае.
-                  </p>
+                  <p class="modal__subheading">Уже более 35 227 Украинцев используют TermoPlaza для обогрева различных помещений. На основе опыта наших Клиентов мы подготовили для Вас статью. Из нее Вы узнаете, как на практике люди используют электропанели для обогрева различных помощений. Оставьте Ваш email и получите доступ к статье.</p>
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                  <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+                  <form class="modal__form modal__form--padding" accept-charset="utf-8" action="https://app.getresponse.com/add_subscriber.html" method="post">
                     <div class="row">
-                      <div class="col-xs-12 col-md-8">
+                      <div class="col-xs-12 col-md-8 col-md-offset-2">
                         <div class="form-group">
                           <input class="form-control modal__input" placeholder="Введите Ваш Email" required data-validation-required-message="Заполните поле корректно." name="email" type="text">
                           <p class="help-block text-danger"></p>
+                          <input type="hidden" name="order_page_referer2">
+                          <input name="campaign_token" type="hidden" value="nyiaD">
+                          <input name="thankyou_url" type="hidden" value="http://tagopen.com/termoplaza/mail/mail.php">
+                          <input name="start_day" type="hidden" value="0">
+                          <input name="forward_data" type="hidden" value="post">
                         </div>
                         <div class="clearfix">
                           <div class="success"></div>
                         </div>
                         <div class="text-center">
-                          <button class="btn button modal__btn" name="Оставьте Ваш email и получите доступ к статье" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить статью</button>
+                          <button class="btn button modal__btn" id="url2" name="Оставьте Ваш email и получите доступ к статье" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить статью</button>
                         </div>
+                        <script>
+                          var order_page_referer = document.querySelector("order_page_referer2") ;
+                          document.getElementById("url2").onclick = function() {
+                          order_page_referer.value = window.location.href;
+                          }
+                          
+                        </script>
                       </div>
                     </div>
                   </form>
@@ -1665,6 +1700,54 @@
                     </tr>
                   </tbody>
                 </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="quality__modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal__size modal__size--big">
+          <div class="modal-content modal__content">
+            <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <p class="modal__subheading">Оставьте ваши контакты и получите просчет стоимости обогревателей для вашего объекта. В подарок, мы отправим вам на почту статью "Как не потратить лишнего при выборе обогревателя?"</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <form class="modal__form" accept-charset="utf-8" action="https://app.getresponse.com/add_subscriber.html" method="post">
+                    <div class="row">
+                      <div class="col-xs-12 col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                          <input class="form-control modal__input" placeholder="Введите Ваш Email" required data-validation-required-message="Заполните поле корректно." name="email" type="email">
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                          <input class="form-control modal__input" placeholder="Введите Ваш телефон" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel">
+                          <p class="help-block text-danger"></p>
+                          <input type="hidden" name="order_page_referer5">
+                          <input name="campaign_token" type="hidden" value="n8lG2">
+                          <input name="thankyou_url" type="hidden" value="http://tagopen.com/termoplaza/mail/mail.php">
+                          <input name="start_day" type="hidden" value="0">
+                          <input name="forward_data" type="hidden" value="post">
+                        </div>
+                        <div class="clearfix">
+                          <div class="success"></div>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn button modal__btn" id="url5" name="Оставьте Ваш email и получите доступ к статье" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить статью</button>
+                        </div>
+                        <script>
+                          var order_page_referer = document.querySelector("order_page_referer5") ;
+                          document.getElementById("url5").onclick = function() {
+                          order_page_referer.value = window.location.href;
+                          }
+                        </script>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>

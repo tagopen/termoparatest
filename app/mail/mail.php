@@ -38,27 +38,41 @@
     }
   }
 
-  if (!empty($_POST["personalID"])) {
+  if (!empty($_COOKIE["personalID"])) {
     $post['user_id'] = filter_input(INPUT_POST, 'personalID', FILTER_SANITIZE_STRING);
     $body .= 'Индентификатор пользователя: ' . $post['user_id'] . chr(10) . chr(13);
   } else {
     $post['user_id'] = uniqid('_');
+    setcookie("personalID",  $post['user_id'], time()+ 60 * 5, "/");
     $body .= 'Индентификатор пользователя: ' . $post['user_id'] . chr(10) . chr(13);
   }
 
   if (!empty($_POST["email"])) {
     $post['user_email'] = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $body .= 'Email адресс: ' . $post['user_email'] . chr(10) . chr(13);
+  } else {
+    setcookie("existEmail",  'email', time()+ 60 * 5, "/");
   }
 
   if (!empty($_POST["name"])) {
     $post['user_name'] = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
     $body .= 'Имя: ' . $post['user_name'] . chr(10) . chr(13);
+
+    if ($post['user_name'] =='Friend') {
+      setcookie("existName",  'name', time()+ 60 * 5, "/");
+    }
+
+  } else {
+    if ($post['user_name'] =='Friend') {
+      setcookie("existName",  'name', time()+ 60 * 5, "/");
+    }
   }
 
   if (!empty($_POST["phone"])) {
     $post['user_phone'] = filter_input(INPUT_POST,'phone', FILTER_SANITIZE_STRING);
     $body .= 'Телефон: ' . $post['user_phone'] . chr(10) . chr(13);
+  } else {
+    setcookie("existPhone",  'phone', time()+ 60 * 5, "/");
   }
 
   if (!empty($_POST["message"])) {
@@ -124,6 +138,28 @@
     return false;
   } else {
     echo 'Сообщение отправлено';
+    if ($post['user_form'] != "Success страница") { 
+      header("Location: ../success.html");
+    } else {
+
+      if (isset($_COOKIE['personalID'])) {
+          unset($_COOKIE['personalID']);
+          setcookie('personalID', '', time() - 3600, '/'); // empty value and old timestamp
+      }
+      if (isset($_COOKIE['existEmail'])) {
+          unset($_COOKIE['existEmail']);
+          setcookie('existEmail', '', time() - 3600, '/'); // empty value and old timestamp
+      }
+      if (isset($_COOKIE['existName'])) {
+          unset($_COOKIE['existName']);
+          setcookie('existName', '', time() - 3600, '/'); // empty value and old timestamp
+      }
+      if (isset($_COOKIE['existPhone'])) {
+          unset($_COOKIE['existPhone']);
+          setcookie('existPhone', '', time() - 3600, '/'); // empty value and old timestamp
+      }
+      header("Location: http://newl.com.ua/files/sovet_po_vblboru_obogrevatelei.pdf");
+    }
     return true;
   }
 

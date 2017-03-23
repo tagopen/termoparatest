@@ -47,15 +47,30 @@
       .find('.test__btn')
       .removeClass('test__btn--hidden');
   });
+
+  $('.question__radio-group .radio-btn__control').on('click, change', function() {
+    var $node   = $(this).parents(".form-group"),
+        $value  = $node.find('.payment__value');
+    $node.find("[name^=\"payment\"]:checked").each(function() {
+      if ($(this).prop("checked")) {
+        var radioText       = $(this).siblings(".radio-btn__box").find(".radio-btn__text").text();
+        $value.val(radioText);
+      }
+    });
+  });
   $(function() {
     var total = +$('.discount-price__total--total').text();
     $('.test__btn[data-target]').on('click', function(e) {
    
-      var $contentItem  = $('.tabs__item'),
-          itemPosition = $(this).data('target'),
-          $question    = $('.question'),
-          price        = $(this).data('price'),
-          $totalPrice  = $('.discount-price__total--total');
+      var $contentItem    = $('.tabs__item'),
+          itemPosition    = $(this).data('target'),
+          $question       = $('.question'),
+          price           = $(this).data('price'),
+          $totalPrice     = $('.discount-price__total--total'),
+          $node           = $(this).parents(".question"),
+          questionHeding  = $node.find(".question__heading").text(),
+          currQuestion    = $node.find(".question__current").text(),
+          $value          = $node.find('.test__value');
 
       $contentItem.filter(itemPosition)
       .addClass('tabs__item--active')
@@ -64,6 +79,14 @@
 
       total += +price;
       $totalPrice.text(total);
+
+      $value.val();
+      $node.find("[name^=\"question\"]:checked").each(function() {
+        if ($(this).prop("checked")) {
+          var radioText       = $(this).siblings(".radio-btn__box").find(".radio-btn__text").text();
+          $value.val("Вопрос " + $.trim(currQuestion) + ". " + $.trim(questionHeding) + "\n" + "Ответ: " + $.trim(radioText));
+        }
+      });
 
       e.preventDefault();
     });
@@ -103,15 +126,15 @@
     var $form     = $('.buyer__modal--inputnotexist'),
         switchBtn = false;
 
-    if ($.cookie("existName") !== undefined) {
+    if (($.cookie("existName") !== undefined) && ($.cookie("existName") !== '')) {
       $form.find('[name=name]').removeClass('hidden');
       switchBtn = true;
     }
-    if ($.cookie("existEmail") !== undefined) {
+    if (($.cookie("existEmail") !== undefined) && ($.cookie("existEmail") !== '')) {
       $form.find('[name=email]').removeClass('hidden');
       switchBtn = true;
     }
-    if ($.cookie("existPhone") !== undefined) {
+    if (($.cookie("existPhone") !== undefined) && ($.cookie("existPhone") !== ''))  {
       $form.find('[name=phone]').removeClass('hidden');
       switchBtn = true;
     }
