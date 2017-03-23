@@ -47,19 +47,26 @@
       .find('.test__btn')
       .removeClass('test__btn--hidden');
   });
+  $(function() {
+    var total = +$('.discount-price__total--total').text();
+    $('.test__btn[data-target]').on('click', function(e) {
+   
+      var $contentItem  = $('.tabs__item'),
+          itemPosition = $(this).data('target'),
+          $question    = $('.question'),
+          price        = $(this).data('price'),
+          $totalPrice  = $('.discount-price__total--total');
 
-  $('.test__btn[data-target]').on('click', function(e) {
- 
-    var $contentItem  = $('.tabs__item'),
-        itemPosition = $(this).data('target'),
-        $question    = $('.question');
+      $contentItem.filter(itemPosition)
+      .addClass('tabs__item--active')
+      .siblings()
+      .removeClass('tabs__item--active');
 
-    $contentItem.filter(itemPosition)
-    .addClass('tabs__item--active')
-    .siblings()
-    .removeClass('tabs__item--active');
+      total += +price;
+      $totalPrice.text(total);
 
-    e.preventDefault();
+      e.preventDefault();
+    });
   });
 
   // Today date

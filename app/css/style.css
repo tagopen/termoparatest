@@ -913,6 +913,23 @@ a {
 /* ---------------------------------------- */
 /* T E S T    S T Y L E S                   */
 /* ---------------------------------------- */
+.discount {
+  padding: 38px 15px;
+  border: 1px solid #151515;
+  -webkit-border-radius: 10px;
+          border-radius: 10px; }
+  .discount__text {
+    font: 400 16px/21px "Open Sans", sans-serif;
+    color: #151515; }
+
+.discount-price__text {
+  font: 700 16px/21px "Open Sans", sans-serif;
+  color: #151515; }
+
+.discount-price__total {
+  font: 700 16px/21px "Open Sans", sans-serif;
+  color: #ff5800; }
+
 .test {
   padding: 75px 0;
   background: url(../img/testbg.jpg) no-repeat;
