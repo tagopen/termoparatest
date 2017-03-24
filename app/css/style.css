@@ -1666,6 +1666,10 @@ a {
 /* ---------------------------------------- */
 /* P A G E    T E S T    S T Y L E          */
 /* ---------------------------------------- */
+.content {
+  padding-top: 30px;
+  background: url(../img/bg1-320.jpg) no-repeat; }
+
 .social__item {
   display: inline-block;
   padding: 10px 10px 10px 0px;
@@ -1730,6 +1734,8 @@ a {
           border-radius: 5px; }
 
 @media only screen and (min-width: 768px) {
+  .content {
+    background: url(../img/bg1.jpg) no-repeat; }
   .question__heading {
     font: 600 24px/30px "Open Sans", sans-serif; }
   .radio-btn__box--check {
