@@ -1550,6 +1550,8 @@ a {
     color: #151515; }
     .footer__link:hover, .footer__link:focus {
       text-decoration: none; }
+  .footer__btn {
+    white-space: normal; }
 
 .social__icon {
   color: #ff5800;

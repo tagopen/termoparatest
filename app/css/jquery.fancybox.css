@@ -109,7 +109,7 @@
 
 .fancybox-nav {
 	position: absolute;
-	top: 50%;
+	bottom: -15px;
 	height: 50px;
 	width: 50px;
 	cursor: pointer;
@@ -118,11 +118,11 @@
 }
 
 .fancybox-prev {
-	left: -65px;
+	left: -15px;
 }
 
 .fancybox-next {
-	right: -65px;
+	right: -15px;
 }
 
 .fancybox-nav span {
@@ -249,7 +249,16 @@
 	background: #000;
 	background: rgba(0, 0, 0, .8);
 }
-
+@media only screen and (min-width: 768px) {
+  .fancybox-prev {
+	left: -65px;
+	bottom: 50%;
+}
+.fancybox-next {
+	right: -65px;
+	bottom: 50%;
+}
+ };
 /*Retina graphics!*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 	   only screen and (min--moz-device-pixel-ratio: 1.5),

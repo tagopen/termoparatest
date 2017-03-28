@@ -204,9 +204,8 @@ $(window).on('resize', function(){
     $('.product--group1').equialHeight();
     $('.product--group2').equialHeight();
     $('.product--group3').equialHeight();
-    $('.service').equialHeight();
     $('.service__text').equialHeight();
-    $('.service__name3').equialHeight();
+    $('.service__name').equialHeight();
   }
 
   $('.comment__text').equialHeight();
