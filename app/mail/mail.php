@@ -39,7 +39,7 @@
   }
 
   if (!empty($_COOKIE["personalID"])) {
-    $post['user_id'] = filter_input(INPUT_POST, 'personalID', FILTER_SANITIZE_STRING);
+    $post['user_id'] = filter_input(INPUT_COOKIE, 'personalID', FILTER_SANITIZE_STRING);
     $body .= 'Индентификатор пользователя: ' . $post['user_id'] . chr(10) . chr(13);
   } else {
     $post['user_id'] = uniqid('_');
